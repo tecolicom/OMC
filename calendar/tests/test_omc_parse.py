@@ -1,4 +1,5 @@
 import sys, os, datetime
+import datetime as _dt
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "bin"))
 import omc_parse
 
@@ -21,9 +22,6 @@ def test_parse_rss_extracts_items_in_order():
     assert items[0]["link"] == "https://okumusashimtb.wixsite.com/omcweb/post/a"
     assert items[0]["pub_date"] == datetime.date(2026, 6, 11)
     assert items[1]["title"] == "6/14第13回総会のお知らせ"
-
-
-import datetime as _dt
 
 
 def test_extract_event_date_basic():
