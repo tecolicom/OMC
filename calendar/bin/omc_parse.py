@@ -69,3 +69,16 @@ def classify_activity(title: str) -> str:
         if any(k in title for k in keywords):
             return label
     return "その他"
+
+
+_LEADING_DATE_RE = re.compile(r"^\s*[【\[]?\s*\d{1,2}\s*[/／]\s*\d{1,2}\s*(?:\([^)]*\))?\s*の?")
+_TRAILING_RE = re.compile(
+    r"(?:のお知らせ|のご報告|の報告|を開催しました|を開催します|報告)\s*[】\]]?\s*$"
+)
+
+
+def clean_summary(title: str) -> str:
+    s = _LEADING_DATE_RE.sub("", title)
+    s = _TRAILING_RE.sub("", s)
+    s = s.strip(" 　【】[]")
+    return s if s else title.strip()

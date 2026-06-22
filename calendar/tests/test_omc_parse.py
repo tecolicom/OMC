@@ -67,3 +67,11 @@ def test_classify_activity():
     assert omc_parse.classify_activity("6/14第13回総会のお知らせ") == "総会"
     assert omc_parse.classify_activity("1/18日高市道路清掃") == "清掃活動"
     assert omc_parse.classify_activity("謎のイベント") == "その他"
+
+
+def test_clean_summary():
+    assert omc_parse.clean_summary("6/7 名栗定期作業の報告") == "名栗定期作業"
+    assert omc_parse.clean_summary("6/14第13回総会のお知らせ") == "第13回総会"
+    assert omc_parse.clean_summary("4/19子ども自転車教室を開催しました") == "子ども自転車教室"
+    assert omc_parse.clean_summary("【2/15(日)の活動報告】") == "活動"
+    assert omc_parse.clean_summary("1/18日高市道路清掃") == "日高市道路清掃"
