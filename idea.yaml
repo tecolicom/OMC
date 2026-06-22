@@ -1,0 +1,12 @@
+# 暦体「奥武蔵マウンテンバイク友の会」の正規メタ。
+# city-tecoli/src/data/global-ideas.yaml の ideas[] へこの内容を転記する (Phase 4)。
+# id は idea:global:okumusashi-mtb、公開 URL は https://city.tecoli.com/ideas/okumusashi-mtb/
+slug: okumusashi-mtb
+name_ja: 奥武蔵マウンテンバイク友の会
+name_en: Okumusashi MTB Club
+url: https://okumusashimtb.wixsite.com/omcweb
+calendars:
+  - ical_url: https://calendar.google.com/calendar/ical/okumusashi.mtb%40gmail.com/public/basic.ics
+    label: 日本語
+    default_on: true
+google_calendar_id: okumusashi.mtb@gmail.com
