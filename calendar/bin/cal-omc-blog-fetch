@@ -23,8 +23,12 @@ def _load_feed(feed_file: str | None) -> str:
         with open(feed_file, encoding="utf-8") as f:
             return f.read()
     req = urllib.request.Request(FEED_URL, headers={"User-Agent": "Mozilla/5.0"})
-    with urllib.request.urlopen(req, timeout=30) as r:
-        return r.read().decode("utf-8")
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return r.read().decode("utf-8")
+    except Exception as e:
+        print(f"error: failed to fetch {FEED_URL}: {e}", file=sys.stderr)
+        raise SystemExit(1)
 
 
 def main() -> int:
@@ -49,7 +53,7 @@ def main() -> int:
             yaml.safe_dump(doc, f, allow_unicode=True, sort_keys=False)
         written += 1
 
-    skipped = len(items) - sum(len(e["sources"]) for e in events)
+    skipped = len(items) - sum(len(e.get("sources", [])) for e in events)
     print(f"items={len(items)} events={written} skipped_items={skipped}")
     return 0
 
