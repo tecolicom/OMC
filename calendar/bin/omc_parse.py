@@ -25,3 +25,22 @@ def parse_rss(xml: str) -> list[dict]:
             "pub_date": _parse_pubdate(text("pubDate")),
         })
     return items
+
+
+_MD_RE = re.compile(r"(\d{1,2})\s*[/／]\s*(\d{1,2})")
+
+
+def extract_event_date(title: str, pub_date: datetime.date) -> datetime.date | None:
+    m = _MD_RE.search(title)
+    if not m:
+        return None
+    month, day = int(m.group(1)), int(m.group(2))
+    if not (1 <= month <= 12 and 1 <= day <= 31):
+        return None
+    year = pub_date.year
+    if month - pub_date.month > 6:
+        year -= 1
+    try:
+        return datetime.date(year, month, day)
+    except ValueError:
+        return None

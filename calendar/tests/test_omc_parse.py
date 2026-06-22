@@ -21,3 +21,32 @@ def test_parse_rss_extracts_items_in_order():
     assert items[0]["link"] == "https://okumusashimtb.wixsite.com/omcweb/post/a"
     assert items[0]["pub_date"] == datetime.date(2026, 6, 11)
     assert items[1]["title"] == "6/14第13回総会のお知らせ"
+
+
+import datetime as _dt
+
+
+def test_extract_event_date_basic():
+    d = omc_parse.extract_event_date("6/7 名栗定期作業の報告", _dt.date(2026, 6, 11))
+    assert d == _dt.date(2026, 6, 7)
+
+
+def test_extract_event_date_no_space():
+    d = omc_parse.extract_event_date("1/18日高市道路清掃", _dt.date(2026, 1, 20))
+    assert d == _dt.date(2026, 1, 18)
+
+
+def test_extract_event_date_in_brackets():
+    d = omc_parse.extract_event_date("【2/15(日)の活動報告】", _dt.date(2026, 2, 20))
+    assert d == _dt.date(2026, 2, 15)
+
+
+def test_extract_event_date_fullwidth_slash():
+    d = omc_parse.extract_event_date("12／28 年末作業の報告", _dt.date(2027, 1, 5))
+    # 12 月のイベントを 1 月に報告 → 前年補正
+    assert d == _dt.date(2026, 12, 28)
+
+
+def test_extract_event_date_none():
+    d = omc_parse.extract_event_date("【日高市感謝状贈呈式出席の報告】", _dt.date(2026, 2, 28))
+    assert d is None
