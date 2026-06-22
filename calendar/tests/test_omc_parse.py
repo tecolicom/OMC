@@ -75,3 +75,41 @@ def test_clean_summary():
     assert omc_parse.clean_summary("4/19子ども自転車教室を開催しました") == "子ども自転車教室"
     assert omc_parse.clean_summary("【2/15(日)の活動報告】") == "活動"
     assert omc_parse.clean_summary("1/18日高市道路清掃") == "日高市道路清掃"
+
+
+def test_build_events_dedups_announce_and_report():
+    items = omc_parse.parse_rss("""<?xml version="1.0"?><rss><channel>
+<item><title><![CDATA[6/7 名栗定期作業の報告]]></title><link>https://x/report</link>
+<guid>g1</guid><pubDate>Thu, 11 Jun 2026 10:44:12 GMT</pubDate></item>
+<item><title><![CDATA[6/7名栗定期作業のお知らせ]]></title><link>https://x/announce</link>
+<guid>g2</guid><pubDate>Fri, 05 Jun 2026 00:49:28 GMT</pubDate></item>
+<item><title><![CDATA[6/14第13回総会のお知らせ]]></title><link>https://x/soukai</link>
+<guid>g3</guid><pubDate>Fri, 05 Jun 2026 00:49:28 GMT</pubDate></item>
+</channel></rss>""")
+    events = omc_parse.build_events(items)
+    assert len(events) == 2
+    e0 = events[0]
+    assert e0["date"].isoformat() == "2026-06-07"
+    assert e0["summary"] == "名栗定期作業"
+    assert e0["category"] == "定期作業"
+    assert e0["all_day"] is True
+    assert {s["kind"] for s in e0["sources"]} == {"report", "announce"}
+    assert events[1]["summary"] == "第13回総会"
+
+
+def test_build_events_skips_dateless():
+    items = omc_parse.parse_rss("""<?xml version="1.0"?><rss><channel>
+<item><title><![CDATA[【日高市感謝状贈呈式出席の報告】]]></title><link>https://x/k</link>
+<guid>g</guid><pubDate>Sat, 28 Feb 2026 00:00:00 GMT</pubDate></item>
+</channel></rss>""")
+    assert omc_parse.build_events(items) == []
+
+
+def test_build_events_uid_stable_regardless_of_order():
+    a = omc_parse.parse_rss("""<?xml version="1.0"?><rss><channel>
+<item><title><![CDATA[6/7 名栗定期作業の報告]]></title><link>https://x/r</link>
+<guid>g1</guid><pubDate>Thu, 11 Jun 2026 10:44:12 GMT</pubDate></item></channel></rss>""")
+    b = omc_parse.parse_rss("""<?xml version="1.0"?><rss><channel>
+<item><title><![CDATA[6/7名栗定期作業のお知らせ]]></title><link>https://x/a</link>
+<guid>g2</guid><pubDate>Fri, 05 Jun 2026 00:49:28 GMT</pubDate></item></channel></rss>""")
+    assert omc_parse.build_events(a)[0]["uid"] == omc_parse.build_events(b)[0]["uid"]

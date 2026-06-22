@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import datetime
+import hashlib
 import re
 import xml.etree.ElementTree as ET
 
@@ -82,3 +83,42 @@ def clean_summary(title: str) -> str:
     s = _TRAILING_RE.sub("", s)
     s = s.strip(" 　【】[]")
     return s if s else title.strip()
+
+
+def _uid_for(date: datetime.date, category: str) -> str:
+    return hashlib.sha1(f"{date.isoformat()}|{category}".encode("utf-8")).hexdigest()[:12]
+
+
+def build_events(items: list[dict]) -> list[dict]:
+    groups: dict[tuple, dict] = {}
+    for it in items:
+        date = extract_event_date(it["title"], it["pub_date"])
+        if date is None:
+            continue
+        category = classify_activity(it["title"])
+        key = (date, category)
+        src = {
+            "kind": post_kind(it["title"]),
+            "url": it["link"],
+            "title": it["title"],
+            "published": it["pub_date"],
+        }
+        if key not in groups:
+            groups[key] = {
+                "date": date, "category": category, "all_day": True,
+                "uid": _uid_for(date, category),
+                "summary": clean_summary(it["title"]),
+                "_summary_from_report": src["kind"] == "report",
+                "sources": [src],
+            }
+        else:
+            g = groups[key]
+            g["sources"].append(src)
+            if src["kind"] == "report" and not g["_summary_from_report"]:
+                g["summary"] = clean_summary(it["title"])
+                g["_summary_from_report"] = True
+    events = []
+    for g in sorted(groups.values(), key=lambda g: g["date"]):
+        g.pop("_summary_from_report", None)
+        events.append(g)
+    return events
