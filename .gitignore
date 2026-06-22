@@ -1,0 +1,14 @@
+# クロール入力キャッシュ (再取得可能・大きい)
+/calendar/sources/
+
+# Service Account 鍵など機密
+*.sa.json
+sa.json
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
