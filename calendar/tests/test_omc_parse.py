@@ -50,3 +50,20 @@ def test_extract_event_date_fullwidth_slash():
 def test_extract_event_date_none():
     d = omc_parse.extract_event_date("【日高市感謝状贈呈式出席の報告】", _dt.date(2026, 2, 28))
     assert d is None
+
+
+def test_post_kind():
+    assert omc_parse.post_kind("6/7 名栗定期作業の報告") == "report"
+    assert omc_parse.post_kind("4/19子ども自転車教室を開催しました") == "report"
+    assert omc_parse.post_kind("6/14第13回総会のお知らせ") == "announce"
+    assert omc_parse.post_kind("4/19子ども自転車教室を開催します") == "announce"
+
+
+def test_classify_activity():
+    assert omc_parse.classify_activity("6/7 名栗定期作業の報告") == "定期作業"
+    assert omc_parse.classify_activity("5/17飯能市里山清掃活動の報告") == "里山整備"
+    assert omc_parse.classify_activity("5/31日高市ごみゼロの日活動報告") == "清掃活動"
+    assert omc_parse.classify_activity("4/19子ども自転車教室を開催します") == "自転車教室"
+    assert omc_parse.classify_activity("6/14第13回総会のお知らせ") == "総会"
+    assert omc_parse.classify_activity("1/18日高市道路清掃") == "清掃活動"
+    assert omc_parse.classify_activity("謎のイベント") == "その他"

@@ -44,3 +44,28 @@ def extract_event_date(title: str, pub_date: datetime.date) -> datetime.date | N
         return datetime.date(year, month, day)
     except ValueError:
         return None
+
+
+def post_kind(title: str) -> str:
+    if "報告" in title or "しました" in title:
+        return "report"
+    if "お知らせ" in title or "します" in title:
+        return "announce"
+    return "other"
+
+
+# 判定順に評価 (先にマッチした種別を採用)。里山は清掃語より先に見る。
+_ACTIVITY_RULES = [
+    ("総会", ["総会"]),
+    ("自転車教室", ["自転車教室"]),
+    ("里山整備", ["里山"]),
+    ("定期作業", ["名栗定期作業", "定期作業"]),
+    ("清掃活動", ["清掃", "ごみゼロ", "ごみゼロの日"]),
+]
+
+
+def classify_activity(title: str) -> str:
+    for label, keywords in _ACTIVITY_RULES:
+        if any(k in title for k in keywords):
+            return label
+    return "その他"
