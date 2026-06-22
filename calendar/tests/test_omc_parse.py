@@ -113,6 +113,58 @@ def test_build_events_uid_stable_regardless_of_order():
     assert omc_parse.build_events(a)[0]["uid"] == omc_parse.build_events(b)[0]["uid"]
 
 
+def test_build_events_merges_generic_report_with_typed_announce():
+    # 同じ 2/15 のイベントが、型付き告知(里山整備) と 汎用報告(活動報告) に分かれている。
+    # date ベース dedup で 1 件に統合され、category/summary は型付き側を採る。
+    items = omc_parse.parse_rss("""<?xml version="1.0"?><rss><channel>
+<item><title><![CDATA[【2/15(日)の活動報告】]]></title><link>https://x/rep</link>
+<guid>g1</guid><pubDate>Fri, 20 Feb 2026 00:00:00 GMT</pubDate></item>
+<item><title><![CDATA[2/15里山整備活動のお知らせ]]></title><link>https://x/ann</link>
+<guid>g2</guid><pubDate>Sun, 01 Feb 2026 00:00:00 GMT</pubDate></item>
+</channel></rss>""")
+    events = omc_parse.build_events(items)
+    assert len(events) == 1
+    e = events[0]
+    assert e["date"].isoformat() == "2026-02-15"
+    assert e["category"] == "里山整備"
+    assert e["summary"] == "里山整備活動"
+    assert len(e["sources"]) == 2
+
+
+def test_build_events_combined_announce_does_not_create_phantom():
+    # 複合告知(5/31清掃 ＆ 6/7定期作業) は 5/31 の実報告に吸収され、(5/31,定期作業) の幻を作らない。
+    # 6/7 は独自の報告で別イベントになる。
+    items = omc_parse.parse_rss("""<?xml version="1.0"?><rss><channel>
+<item><title><![CDATA[5/31日高市ごみゼロの日活動報告]]></title><link>https://x/r531</link>
+<guid>g1</guid><pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate></item>
+<item><title><![CDATA[5/31日高市清掃作業＆6/7名栗定期作業のお知らせ]]></title><link>https://x/a</link>
+<guid>g2</guid><pubDate>Sat, 16 May 2026 00:00:00 GMT</pubDate></item>
+<item><title><![CDATA[6/7 名栗定期作業の報告]]></title><link>https://x/r67</link>
+<guid>g3</guid><pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate></item>
+</channel></rss>""")
+    events = omc_parse.build_events(items)
+    dates = [e["date"].isoformat() for e in events]
+    assert dates == ["2026-05-31", "2026-06-07"]
+    e531 = events[0]
+    assert e531["category"] == "清掃活動"
+    assert e531["summary"] == "日高市ごみゼロの日活動"
+    assert len(e531["sources"]) == 2  # 報告 + 複合告知
+    assert events[1]["category"] == "定期作業"
+
+
+def test_build_events_all_other_uses_report_summary():
+    items = omc_parse.parse_rss("""<?xml version="1.0"?><rss><channel>
+<item><title><![CDATA[3/15(日)の新規地域の活動報告]]></title><link>https://x/r</link>
+<guid>g1</guid><pubDate>Fri, 20 Mar 2026 00:00:00 GMT</pubDate></item>
+<item><title><![CDATA[3/15(日) 新規活動地域の初回活動のお知らせ]]></title><link>https://x/a</link>
+<guid>g2</guid><pubDate>Fri, 06 Mar 2026 00:00:00 GMT</pubDate></item>
+</channel></rss>""")
+    events = omc_parse.build_events(items)
+    assert len(events) == 1
+    assert events[0]["category"] == "その他"
+    assert events[0]["summary"] == "新規地域の活動"  # report 優先
+
+
 def test_event_to_yaml_dict_and_filename():
     items = omc_parse.parse_rss("""<?xml version="1.0"?><rss><channel>
 <item><title><![CDATA[6/7 名栗定期作業の報告]]></title><link>https://x/report</link>
