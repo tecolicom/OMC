@@ -165,6 +165,19 @@ def test_build_events_all_other_uses_report_summary():
     assert events[0]["summary"] == "新規地域の活動"  # report 優先
 
 
+def test_parse_sitemap_returns_post_locs_in_order():
+    xml = """<?xml version="1.0"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>https://okumusashimtb.wixsite.com/omcweb/post/5-31a</loc><lastmod>2026-06-03</lastmod></url>
+<url><loc>https://okumusashimtb.wixsite.com/omcweb/post/2017/02/01/b</loc><lastmod>2017-02-01</lastmod></url>
+<url><loc>https://okumusashimtb.wixsite.com/omcweb/about-us</loc></url>
+</urlset>"""
+    locs = omc_parse.parse_sitemap(xml)
+    assert locs == [
+        "https://okumusashimtb.wixsite.com/omcweb/post/5-31a",
+        "https://okumusashimtb.wixsite.com/omcweb/post/2017/02/01/b",
+    ]
+
+
 def test_event_to_yaml_dict_and_filename():
     items = omc_parse.parse_rss("""<?xml version="1.0"?><rss><channel>
 <item><title><![CDATA[6/7 名栗定期作業の報告]]></title><link>https://x/report</link>

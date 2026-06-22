@@ -17,6 +17,17 @@ def _item_text(item, tag: str) -> str:
     return (el.text or "").strip() if el is not None else ""
 
 
+def parse_sitemap(xml: str) -> list[str]:
+    root = ET.fromstring(xml)
+    locs = []
+    for el in root.iter():
+        if el.tag.endswith("}loc") or el.tag == "loc":
+            url = (el.text or "").strip()
+            if "/post/" in url:
+                locs.append(url)
+    return locs
+
+
 def parse_rss(xml: str) -> list[dict]:
     root = ET.fromstring(xml)
     items = []
