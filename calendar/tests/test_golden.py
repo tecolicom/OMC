@@ -22,3 +22,10 @@ def test_golden_matches(tmp_path):
         assert os.path.exists(got), f"未生成: {rel}"
         assert filecmp.cmp(os.path.join(GOLDEN, rel), got, shallow=False), \
             f"差分: {rel}"
+    generated = []
+    for root, _, files in os.walk(str(out)):
+        for fn in files:
+            generated.append(os.path.relpath(os.path.join(root, fn), str(out)))
+    assert sorted(generated) == sorted(expected), \
+        "生成ファイル集合が golden と不一致 (余分/欠落): %s" % (
+            set(generated) ^ set(expected))
