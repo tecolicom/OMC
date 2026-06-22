@@ -165,6 +165,26 @@ def test_build_events_all_other_uses_report_summary():
     assert events[0]["summary"] == "新規地域の活動"  # report 優先
 
 
+def test_extract_post_meta_recent():
+    html = open(os.path.join(os.path.dirname(__file__), "fixtures", "post-recent.html"),
+                encoding="utf-8").read()
+    meta = omc_parse.extract_post_meta(html)
+    assert meta["title"] == "5/31日高市ごみゼロの日活動報告"
+    assert meta["pub_date"] == _dt.date(2026, 6, 3)
+
+
+def test_extract_post_meta_old():
+    html = open(os.path.join(os.path.dirname(__file__), "fixtures", "post-old.html"),
+                encoding="utf-8").read()
+    meta = omc_parse.extract_post_meta(html)
+    assert meta["title"] == "桜並木の整備（２月１６日）"
+    assert meta["pub_date"] == _dt.date(2017, 2, 1)
+
+
+def test_extract_post_meta_none():
+    assert omc_parse.extract_post_meta("<html><body>no json-ld</body></html>") is None
+
+
 def test_parse_sitemap_returns_post_locs_in_order():
     xml = """<?xml version="1.0"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>https://okumusashimtb.wixsite.com/omcweb/post/5-31a</loc><lastmod>2026-06-03</lastmod></url>

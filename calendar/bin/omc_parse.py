@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import datetime
 import hashlib
+import json
 import re
 import xml.etree.ElementTree as ET
 
@@ -15,6 +16,28 @@ def _parse_pubdate(s: str) -> datetime.date:
 def _item_text(item, tag: str) -> str:
     el = item.find(tag)
     return (el.text or "").strip() if el is not None else ""
+
+
+def extract_post_meta(html: str) -> dict | None:
+    for block in re.findall(r'<script type="application/ld\+json">(.*?)</script>', html, re.S):
+        try:
+            data = json.loads(block)
+        except ValueError:
+            continue
+        for item in (data if isinstance(data, list) else [data]):
+            if not isinstance(item, dict):
+                continue
+            if item.get("@type") in ("BlogPosting", "Article", "NewsArticle"):
+                headline = item.get("headline")
+                published = item.get("datePublished")
+                if not headline or not published:
+                    continue
+                try:
+                    pub = datetime.date.fromisoformat(str(published)[:10])
+                except ValueError:
+                    continue
+                return {"title": headline, "pub_date": pub}
+    return None
 
 
 def parse_sitemap(xml: str) -> list[str]:
