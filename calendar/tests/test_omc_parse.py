@@ -113,3 +113,23 @@ def test_build_events_uid_stable_regardless_of_order():
 <item><title><![CDATA[6/7名栗定期作業のお知らせ]]></title><link>https://x/a</link>
 <guid>g2</guid><pubDate>Fri, 05 Jun 2026 00:49:28 GMT</pubDate></item></channel></rss>""")
     assert omc_parse.build_events(a)[0]["uid"] == omc_parse.build_events(b)[0]["uid"]
+
+
+def test_event_to_yaml_dict_and_filename():
+    items = omc_parse.parse_rss("""<?xml version="1.0"?><rss><channel>
+<item><title><![CDATA[6/7 名栗定期作業の報告]]></title><link>https://x/report</link>
+<guid>g1</guid><pubDate>Thu, 11 Jun 2026 10:44:12 GMT</pubDate></item>
+<item><title><![CDATA[6/7名栗定期作業のお知らせ]]></title><link>https://x/announce</link>
+<guid>g2</guid><pubDate>Fri, 05 Jun 2026 00:49:28 GMT</pubDate></item>
+</channel></rss>""")
+    e = omc_parse.build_events(items)[0]
+    d = omc_parse.event_to_yaml_dict(e, _dt.date(2026, 6, 22))
+    assert d["summary"] == "名栗定期作業"
+    assert d["date"] == "2026-06-07"
+    assert d["all_day"] is True
+    assert d["category"] == "定期作業"
+    assert "出典: https://x/report" in d["description"]
+    assert d["source"]["type"] == "omc-blog"
+    assert d["source"]["fetched"] == "2026-06-22"
+    assert len(d["source"]["posts"]) == 2
+    assert omc_parse.event_filename(e) == "2026/06-07_%s.yaml" % e["uid"]

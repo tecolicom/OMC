@@ -122,3 +122,36 @@ def build_events(items: list[dict]) -> list[dict]:
         g.pop("_summary_from_report", None)
         events.append(g)
     return events
+
+
+def _report_or_first_url(event: dict) -> str:
+    for s in event["sources"]:
+        if s["kind"] == "report":
+            return s["url"]
+    return event["sources"][0]["url"]
+
+
+def event_to_yaml_dict(event: dict, fetched: datetime.date) -> dict:
+    posts = [
+        {"kind": s["kind"], "url": s["url"], "title": s["title"],
+         "published": s["published"].isoformat()}
+        for s in event["sources"]
+    ]
+    return {
+        "summary": event["summary"],
+        "date": event["date"].isoformat(),
+        "all_day": event["all_day"],
+        "category": event["category"],
+        "description": "出典: " + _report_or_first_url(event),
+        "source": {
+            "type": "omc-blog",
+            "crawler": "cal-omc-blog-fetch",
+            "fetched": fetched.isoformat(),
+            "posts": posts,
+        },
+    }
+
+
+def event_filename(event: dict) -> str:
+    d = event["date"]
+    return "%04d/%02d-%02d_%s.yaml" % (d.year, d.month, d.day, event["uid"])
