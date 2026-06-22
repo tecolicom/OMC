@@ -1,0 +1,18 @@
+summary: 第13回総会
+date: '2026-06-14'
+all_day: true
+category: 総会
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/6-14%E7%AC%AC13%E5%9B%9E%E7%B7%8F%E4%BC%9A%E3%81%AE%E5%A0%B1%E5%91%8A'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/6-14%E7%AC%AC13%E5%9B%9E%E7%B7%8F%E4%BC%9A%E3%81%AE%E5%A0%B1%E5%91%8A
+    title: 6/14第13回総会の報告
+    published: '2026-06-16'
+  - kind: announce
+    url: https://okumusashimtb.wixsite.com/omcweb/post/6-14%E7%AC%AC13%E5%9B%9E%E7%B7%8F%E4%BC%9A%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B
+    title: 6/14第13回総会のお知らせ
+    published: '2026-06-05'
