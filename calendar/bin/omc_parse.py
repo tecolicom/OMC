@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import datetime
 import hashlib
+import html as _html
 import json
 import re
 import unicodedata
@@ -32,6 +33,9 @@ def extract_post_meta(html: str) -> dict | None:
                 headline = item.get("headline")
                 published = item.get("datePublished")
                 if not headline or not published:
+                    continue
+                headline = re.sub(r"\s+", " ", _html.unescape(headline)).strip()
+                if not headline:
                     continue
                 try:
                     pub = datetime.date.fromisoformat(str(published)[:10])
@@ -97,9 +101,9 @@ def post_kind(title: str) -> str:
 # 判定順に評価 (先にマッチした種別を採用)。里山は清掃語より先に見る。
 _ACTIVITY_RULES = [
     ("総会", ["総会"]),
-    ("自転車教室", ["自転車教室"]),
+    ("自転車教室", ["自転車教室", "じてんしゃ教室", "マウンテンバイク教室"]),
     ("里山整備", ["里山", "里山道整備", "道普請"]),
-    ("定期作業", ["名栗定期作業", "定期作業", "じてんしゃ広場", "自転車広場"]),
+    ("定期作業", ["名栗定期作業", "定期作業", "定期整備", "じてんしゃ広場", "自転車広場"]),
     ("清掃活動", ["清掃", "ごみゼロ", "ごみゼロの日"]),
     ("ライド", ["ライド"]),
 ]
@@ -127,7 +131,7 @@ def clean_summary(title: str) -> str:
     s = _LEADING_DATE_RE.sub("", s)
     s = _TRAILING_PAREN_RE.sub("", s)
     s = _TRAILING_RE.sub("", s)
-    s = s.strip(" 　【】[]-－")
+    s = s.strip(" 　【】[]-－、，")
     return s if s else unicodedata.normalize("NFKC", title).strip()
 
 
@@ -157,9 +161,11 @@ def build_events(items: list[dict]) -> list[dict]:
     events = []
     for date in sorted(groups):
         recs = groups[date]
-        category = next((r["category"] for r in recs if r["category"] != "その他"), "その他")
+        ordered = [r for r in recs if r["kind"] == "report"] + \
+                  [r for r in recs if r["kind"] != "report"]
+        category = next((r["category"] for r in ordered if r["category"] != "その他"), "その他")
         if category != "その他":
-            summary = next(r["summary"] for r in recs if r["category"] == category)
+            summary = next(r["summary"] for r in ordered if r["category"] == category)
         else:
             report = next((r for r in recs if r["kind"] == "report"), None)
             summary = report["summary"] if report else recs[0]["summary"]

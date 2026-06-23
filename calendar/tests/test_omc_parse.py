@@ -237,6 +237,39 @@ def test_parse_sitemap_returns_post_locs_in_order():
     ]
 
 
+def test_extract_post_meta_unescapes_entities():
+    html = ('<script type="application/ld+json">'
+            '{"@type":"BlogPosting","headline":"活動報告&#010;",'
+            '"datePublished":"2020-01-19T00:00:00.000Z"}</script>')
+    meta = omc_parse.extract_post_meta(html)
+    assert meta["title"] == "活動報告"           # &#010; がデコード+trim される
+    assert meta["pub_date"] == _dt.date(2020, 1, 19)
+
+
+def test_build_events_prefers_report_for_category():
+    # 同日に 告知(定期作業) が先、報告(清掃活動) が後でも、報告の category/summary を採る
+    items = [
+        {"title": "5/31日高市清掃作業＆6/7名栗定期作業のお知らせ", "link": "https://x/a",
+         "guid": "a", "pub_date": _dt.date(2026, 5, 16)},
+        {"title": "5/31日高市ごみゼロの日活動報告", "link": "https://x/r",
+         "guid": "r", "pub_date": _dt.date(2026, 6, 3)},
+    ]
+    events = omc_parse.build_events(items)
+    assert len(events) == 1
+    assert events[0]["category"] == "清掃活動"
+    assert events[0]["summary"] == "日高市ごみゼロの日活動"
+
+
+def test_clean_summary_strips_leading_punctuation():
+    assert omc_parse.clean_summary("3/18、子どもマウンテンバイク教室") == "子どもマウンテンバイク教室"
+
+
+def test_classify_activity_more_vocab():
+    assert omc_parse.classify_activity("名栗定期整備について") == "定期作業"
+    assert omc_parse.classify_activity("子どもマウンテンバイク教室開催") == "自転車教室"
+    assert omc_parse.classify_activity("じてんしゃ教室の報告") == "自転車教室"
+
+
 def test_event_to_yaml_dict_and_filename():
     items = omc_parse.parse_rss("""<?xml version="1.0"?><rss><channel>
 <item><title><![CDATA[6/7 名栗定期作業の報告]]></title><link>https://x/report</link>
