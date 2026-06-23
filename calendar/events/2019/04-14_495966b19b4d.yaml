@@ -1,0 +1,14 @@
+summary: に開催されたじてんしゃ教室
+date: '2019-04-14'
+all_day: true
+category: 自転車教室
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/2019/04/16/4月14日に開催されたじてんしゃ教室'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/2019/04/16/4月14日に開催されたじてんしゃ教室
+    title: 4月14日に開催されたじてんしゃ教室
+    published: '2019-04-16'

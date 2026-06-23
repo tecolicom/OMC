@@ -1,0 +1,14 @@
+summary: じてんしゃ広場イベント
+date: '2018-10-21'
+all_day: true
+category: 定期作業
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/2018/10/16/１０月２１日じてんしゃ広場イベント'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/2018/10/16/１０月２１日じてんしゃ広場イベント
+    title: １０月２１日じてんしゃ広場イベント
+    published: '2018-10-16'

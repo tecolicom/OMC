@@ -1,0 +1,14 @@
+summary: 鳩山活動
+date: '2023-10-21'
+all_day: true
+category: その他
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/10月21日（日）鳩山活動報告'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/10月21日（日）鳩山活動報告
+    title: 10月21日（日）鳩山活動報告
+    published: '2023-10-23'

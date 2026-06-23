@@ -1,0 +1,18 @@
+summary: 子ども自転車教室
+date: '2023-12-10'
+all_day: true
+category: 自転車教室
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/12-10子ども自転車教室を開催しました'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/12-10子ども自転車教室を開催しました
+    title: 12/10子ども自転車教室を開催しました
+    published: '2023-12-13'
+  - kind: announce
+    url: https://okumusashimtb.wixsite.com/omcweb/post/12-10（日）子どもじてんしゃ教室開催のお知らせ
+    title: 12/10（日）子どもじてんしゃ教室開催のお知らせ
+    published: '2023-11-28'

@@ -1,0 +1,14 @@
+summary: 桜並木の整備
+date: '2017-02-16'
+all_day: true
+category: その他
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/2017/02/01/桜並木の整備（２月１６日）'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/2017/02/01/桜並木の整備（２月１６日）
+    title: 桜並木の整備（２月１６日）
+    published: '2017-02-01'

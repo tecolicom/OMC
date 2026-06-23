@@ -1,0 +1,14 @@
+summary: 名栗じてんしゃ広場の活動中止について
+date: '2022-02-06'
+all_day: true
+category: 定期作業
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/2月6日名栗じてんしゃ広場の活動中止について'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/2月6日名栗じてんしゃ広場の活動中止について
+    title: 2月6日名栗じてんしゃ広場の活動中止について
+    published: '2022-01-26'

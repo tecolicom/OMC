@@ -1,0 +1,14 @@
+summary: 遊歩道整備
+date: '2019-10-20'
+all_day: true
+category: その他
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/2019/10/16/1020日遊歩道整備'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: announce
+    url: https://okumusashimtb.wixsite.com/omcweb/post/2019/10/16/1020日遊歩道整備
+    title: 10/20(日)遊歩道整備のお知らせ
+    published: '2019-10-15'

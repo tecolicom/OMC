@@ -1,0 +1,18 @@
+summary: 名栗定期整備について
+date: '2023-02-05'
+all_day: true
+category: 定期作業
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/2月5日名栗定期整備について'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/2月5日名栗定期整備について
+    title: 2月5日名栗定期整備について
+    published: '2023-01-23'
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/2月5日名栗定期整備
+    title: 2月5日名栗定期整備
+    published: '2023-02-06'

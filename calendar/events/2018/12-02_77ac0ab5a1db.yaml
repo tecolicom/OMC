@@ -1,0 +1,22 @@
+summary: 名栗じてんしゃ広場活動
+date: '2018-12-02'
+all_day: true
+category: 定期作業
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/2018/12/04/12月2日名栗じてんしゃ広場活動の報告'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/2018/12/04/12月2日名栗じてんしゃ広場活動の報告
+    title: 12月2日名栗じてんしゃ広場活動の報告
+    published: '2018-12-04'
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/2018/11/20/12月活動日12月2日・12月16日
+    title: 12月活動日(12月2日 里山道整備)
+    published: '2018-11-22'
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/2018/11/22/12月じてんしゃ広場活動日（12月2日、16日）
+    title: 12月じてんしゃ広場活動日（12月2日、16日）
+    published: '2018-11-22'

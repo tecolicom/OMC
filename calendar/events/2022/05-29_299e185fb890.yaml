@@ -1,0 +1,18 @@
+summary: 日高市清掃活動
+date: '2022-05-29'
+all_day: true
+category: 清掃活動
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/5月29日-日高市ゴミゼロの日'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/5月29日-日高市ゴミゼロの日
+    title: 5月29日 日高市ゴミゼロの日
+    published: '2022-05-30'
+  - kind: announce
+    url: https://okumusashimtb.wixsite.com/omcweb/post/5月29日-日高市清掃活動のお知らせ
+    title: 5月29日 日高市清掃活動のお知らせ
+    published: '2022-05-19'

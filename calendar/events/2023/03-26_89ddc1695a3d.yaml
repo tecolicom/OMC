@@ -1,0 +1,14 @@
+summary: 子ども教室中止
+date: '2023-03-26'
+all_day: true
+category: その他
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/26日子ども教室中止のお知らせ'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: announce
+    url: https://okumusashimtb.wixsite.com/omcweb/post/26日子ども教室中止のお知らせ
+    title: 3月26日 子ども教室中止のお知らせ
+    published: '2023-03-25'

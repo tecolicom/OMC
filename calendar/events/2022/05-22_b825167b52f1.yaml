@@ -1,0 +1,18 @@
+summary: 飯能市民清掃デーの活動
+date: '2022-05-22'
+all_day: true
+category: 清掃活動
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/5月22日-飯能市民清掃デーの活動報告'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/5月22日-飯能市民清掃デーの活動報告
+    title: 5月22日 飯能市民清掃デーの活動報告
+    published: '2022-05-23'
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/【5月22日-里山清掃活動のお誘い】
+    title: 【5月22日 里山清掃活動のお誘い】
+    published: '2022-05-14'

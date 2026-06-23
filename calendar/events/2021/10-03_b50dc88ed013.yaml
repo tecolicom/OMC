@@ -1,0 +1,22 @@
+summary: 名栗じてんしゃ広場活動
+date: '2021-10-03'
+all_day: true
+category: 定期作業
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/10月3日名栗じてんしゃ広場活動報告'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/10-3-日-の名栗じてんしゃ広場の定期整備作業にご参加くださる皆様へ
+    title: 10/3(日)の名栗じてんしゃ広場の定期整備作業にご参加くださる皆様へ
+    published: '2021-10-01'
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/10月3日名栗じてんしゃ広場活動報告
+    title: 10月3日名栗じてんしゃ広場活動報告
+    published: '2021-10-04'
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/10月3日名栗じてんしゃ広場定期整備
+    title: 10月3日名栗じてんしゃ広場定期整備
+    published: '2021-09-20'

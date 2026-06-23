@@ -1,0 +1,18 @@
+summary: 名栗自然体験会の件
+date: '2019-07-07'
+all_day: true
+category: その他
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/2019/06/18/7月7日名栗自然体験会の件'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/2019/06/18/7月7日名栗自然体験会の件
+    title: 7月7日名栗自然体験会の件
+    published: '2019-06-18'
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/2019/07/03/7月7日名栗自然体験会について
+    title: 7月7日名栗自然体験会について
+    published: '2019-07-03'

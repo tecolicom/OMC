@@ -1,0 +1,14 @@
+summary: 交流活動
+date: '2020-12-13'
+all_day: true
+category: その他
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/【12-月13日-交流活動報告】'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/【12-月13日-交流活動報告】
+    title: 【12 月13日 交流活動報告】
+    published: '2020-12-13'

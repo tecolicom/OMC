@@ -1,0 +1,14 @@
+summary: 第7回総会実施
+date: '2020-08-24'
+all_day: true
+category: 総会
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/８月２４日-第７回総会実施報告'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/８月２４日-第７回総会実施報告
+    title: ８月２４日 第７回総会実施報告
+    published: '2020-08-25'

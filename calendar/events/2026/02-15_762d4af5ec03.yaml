@@ -2,17 +2,17 @@ summary: 里山整備活動
 date: '2026-02-15'
 all_day: true
 category: 里山整備
-description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/%E3%80%902-15-%E6%97%A5-%E3%81%AE%E6%B4%BB%E5%8B%95%E5%A0%B1%E5%91%8A%E3%80%91'
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/【2-15-日-の活動報告】'
 source:
   type: omc-blog
   crawler: cal-omc-blog-fetch
   fetched: '2026-06-22'
   posts:
-  - kind: report
-    url: https://okumusashimtb.wixsite.com/omcweb/post/%E3%80%902-15-%E6%97%A5-%E3%81%AE%E6%B4%BB%E5%8B%95%E5%A0%B1%E5%91%8A%E3%80%91
-    title: 【2/15(日)の活動報告】
-    published: '2026-02-20'
   - kind: announce
-    url: https://okumusashimtb.wixsite.com/omcweb/post/2-15%E9%87%8C%E5%B1%B1%E6%95%B4%E5%82%99%E6%B4%BB%E5%8B%95%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B
+    url: https://okumusashimtb.wixsite.com/omcweb/post/2-15里山整備活動のお知らせ
     title: 2/15里山整備活動のお知らせ
     published: '2026-02-01'
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/【2-15-日-の活動報告】
+    title: 【2/15(日)の活動報告】
+    published: '2026-02-20'

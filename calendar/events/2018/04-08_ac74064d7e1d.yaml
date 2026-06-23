@@ -1,0 +1,14 @@
+summary: じてんしゃ広場体験会
+date: '2018-04-08'
+all_day: true
+category: 定期作業
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/2018/03/31/４月８日じてんしゃ広場体験会'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/2018/03/31/４月８日じてんしゃ広場体験会
+    title: ４月８日じてんしゃ広場体験会
+    published: '2018-03-31'

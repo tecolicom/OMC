@@ -1,0 +1,14 @@
+summary: 鳩山活動
+date: '2025-02-23'
+all_day: true
+category: その他
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/2月23日-日-の鳩山活動報告'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/2月23日-日-の鳩山活動報告
+    title: 2月23日(日)の鳩山活動報告
+    published: '2025-02-27'

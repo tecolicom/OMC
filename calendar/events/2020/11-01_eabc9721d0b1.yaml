@@ -1,0 +1,18 @@
+summary: 日高市の活動
+date: '2020-11-01'
+all_day: true
+category: その他
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/11月1日（日）日高市の活動のお知らせ'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: announce
+    url: https://okumusashimtb.wixsite.com/omcweb/post/11月1日（日）日高市の活動のお知らせ
+    title: 11月1日（日）日高市の活動のお知らせ
+    published: '2020-10-17'
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/11-月1日-日高市美化活動
+    title: 11 月1日 日高市美化活動
+    published: '2020-11-02'

@@ -1,0 +1,18 @@
+summary: 日高市里山道整備の活動
+date: '2024-03-17'
+all_day: true
+category: 里山整備
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/3-17-日高市里山道整備の活動報告'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/3-17-日高市里山道整備の活動報告
+    title: 3/17 日高市里山道整備の活動報告
+    published: '2024-03-22'
+  - kind: announce
+    url: https://okumusashimtb.wixsite.com/omcweb/post/3-17-日高市里山道整備のお知らせ
+    title: 3/17 日高市里山道整備のお知らせ
+    published: '2024-03-06'

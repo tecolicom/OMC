@@ -1,0 +1,18 @@
+summary: 名栗定期作業中止
+date: '2024-08-04'
+all_day: true
+category: 定期作業
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/8-4-名栗定期作業中止のお知らせ'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: announce
+    url: https://okumusashimtb.wixsite.com/omcweb/post/8-4-名栗定期作業中止のお知らせ
+    title: 8/4 名栗定期作業中止のお知らせ
+    published: '2024-08-03'
+  - kind: announce
+    url: https://okumusashimtb.wixsite.com/omcweb/post/8-4（日）名栗じてんしゃ広場定期作業のお知らせ
+    title: 8/4（日）名栗じてんしゃ広場定期作業のお知らせ
+    published: '2024-07-22'

@@ -1,0 +1,18 @@
+summary: 子供じてんしゃ教室を行いました
+date: '2021-04-18'
+all_day: true
+category: 自転車教室
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/4-18-子供じてんしゃ教室を行いました'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/4-18-子供じてんしゃ教室を行いました
+    title: 4/18 子供じてんしゃ教室を行いました
+    published: '2021-04-19'
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/子供じてんしゃ教室の実施について
+    title: 4月18日子供じてんしゃ教室の実施について
+    published: '2021-04-13'

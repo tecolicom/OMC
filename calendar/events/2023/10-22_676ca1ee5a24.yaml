@@ -1,0 +1,18 @@
+summary: 日高市清掃作業
+date: '2023-10-22'
+all_day: true
+category: 清掃活動
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/10月22日-日高市清掃作業の報告'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: announce
+    url: https://okumusashimtb.wixsite.com/omcweb/post/10月22日-日高市清掃作業のお知らせ
+    title: 10月22日 日高市清掃作業のお知らせ
+    published: '2023-10-16'
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/10月22日-日高市清掃作業の報告
+    title: 10月22日 日高市清掃作業の報告
+    published: '2023-10-23'

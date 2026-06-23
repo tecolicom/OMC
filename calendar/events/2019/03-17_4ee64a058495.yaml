@@ -1,0 +1,14 @@
+summary: 名栗 じてんしゃ広場 整備
+date: '2019-03-17'
+all_day: true
+category: 定期作業
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/2019/03/15/316-名栗-じてんしゃ広場-整備'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/2019/03/15/316-名栗-じてんしゃ広場-整備
+    title: 3/17(日) 名栗 じてんしゃ広場 整備
+    published: '2019-03-15'

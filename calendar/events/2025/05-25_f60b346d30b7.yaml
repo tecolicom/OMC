@@ -1,0 +1,18 @@
+summary: 日高市ごみゼロの日の案内
+date: '2025-05-25'
+all_day: true
+category: 清掃活動
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/5-25日高市ごみゼロの日の案内'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/5-25日高市ごみゼロの日の案内
+    title: 5/25日高市ごみゼロの日の案内
+    published: '2025-05-10'
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/5-25日高市ごみゼロの日清掃作業
+    title: 5/25日高市ごみゼロの日清掃作業
+    published: '2025-05-27'

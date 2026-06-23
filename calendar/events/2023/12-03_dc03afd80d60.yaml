@@ -1,0 +1,18 @@
+summary: 名栗定期作業
+date: '2023-12-03'
+all_day: true
+category: 定期作業
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/12-3名栗定期作業の報告'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: announce
+    url: https://okumusashimtb.wixsite.com/omcweb/post/12-3-名栗じてんしゃ広場定期作業のお知らせ
+    title: 12/3 名栗じてんしゃ広場定期作業のお知らせ
+    published: '2023-11-20'
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/12-3名栗定期作業の報告
+    title: 12/3名栗定期作業の報告
+    published: '2023-12-05'

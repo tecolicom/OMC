@@ -1,0 +1,18 @@
+summary: 里山整備の活動
+date: '2024-11-24'
+all_day: true
+category: 里山整備
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/11-24-里山整備の活動報告'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/11-24-里山整備の活動報告
+    title: 11/24 里山整備の活動報告
+    published: '2024-11-25'
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/11-24-飯能市-里山整備のお誘い
+    title: 11/24 飯能市 里山整備のお誘い
+    published: '2024-11-18'

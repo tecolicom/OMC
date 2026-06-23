@@ -1,0 +1,14 @@
+summary: 里山清掃のお知らせ(体験会&交流会)
+date: '2020-02-15'
+all_day: true
+category: 里山整備
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/【２月１５日（土）里山清掃のお知らせ（体験会＆交流会）】'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: announce
+    url: https://okumusashimtb.wixsite.com/omcweb/post/【２月１５日（土）里山清掃のお知らせ（体験会＆交流会）】
+    title: 【２月１５日（土）里山清掃のお知らせ（体験会＆交流会）】
+    published: '2020-02-07'

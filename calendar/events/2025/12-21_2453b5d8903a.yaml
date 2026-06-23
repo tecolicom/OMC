@@ -1,0 +1,18 @@
+summary: 忘年ライド
+date: '2025-12-21'
+all_day: true
+category: ライド
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/12月21日（日）の活動報告'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/12月21日（日）の活動報告
+    title: 12月21日（日）の活動報告
+    published: '2025-12-23'
+  - kind: announce
+    url: https://okumusashimtb.wixsite.com/omcweb/post/12-21忘年ライドのお知らせ
+    title: 12/21忘年ライドのお知らせ
+    published: '2025-12-09'

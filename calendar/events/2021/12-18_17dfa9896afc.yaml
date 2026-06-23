@@ -1,0 +1,18 @@
+summary: 里山整備活動
+date: '2021-12-18'
+all_day: true
+category: 里山整備
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/【12月18日-土-の活動報告】'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/12-18-土-里山整備活動のご案内
+    title: 12/18(土) 里山整備活動のご案内
+    published: '2021-12-15'
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/【12月18日-土-の活動報告】
+    title: 【12月18日(土) の活動報告】
+    published: '2021-12-21'

@@ -1,0 +1,18 @@
+summary: 子ども自転車教室
+date: '2024-04-21'
+all_day: true
+category: 自転車教室
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/4-21（日）子ども自転車教室のお知らせ'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: announce
+    url: https://okumusashimtb.wixsite.com/omcweb/post/4-21（日）子ども自転車教室のお知らせ
+    title: 4/21（日）子ども自転車教室のお知らせ
+    published: '2024-03-14'
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/4-21子ども自転車教室
+    title: 4/21子ども自転車教室
+    published: '2024-04-22'

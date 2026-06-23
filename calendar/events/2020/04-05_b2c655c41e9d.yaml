@@ -1,0 +1,18 @@
+summary: 名栗じてんしゃ広場定期整備について
+date: '2020-04-05'
+all_day: true
+category: 定期作業
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/4月5日名栗じてんしゃ広場定期整備について'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/4月5日名栗じてんしゃ広場定期整備について
+    title: 4月5日名栗じてんしゃ広場定期整備について
+    published: '2020-03-23'
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/4月5日名栗じてんしゃ広場定期整備中止の件
+    title: 4月5日名栗じてんしゃ広場定期整備中止の件
+    published: '2020-03-31'

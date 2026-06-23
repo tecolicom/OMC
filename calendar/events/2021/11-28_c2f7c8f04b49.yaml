@@ -1,0 +1,18 @@
+summary: 里山清掃活動
+date: '2021-11-28'
+all_day: true
+category: 里山整備
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/11月28日活動報告'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/【11月28日-里山清掃活動のご案内】
+    title: 【11月28日 里山清掃活動のご案内】
+    published: '2021-11-21'
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/11月28日活動報告
+    title: 11月28日活動報告
+    published: '2021-11-30'

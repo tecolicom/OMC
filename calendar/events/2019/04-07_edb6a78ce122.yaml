@@ -1,0 +1,18 @@
+summary: 名栗じてんしゃ広場定例整備
+date: '2019-04-07'
+all_day: true
+category: 定期作業
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/2019/04/08/4月7日定例整備報告'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/2019/03/26/4月7日名栗じてんしゃ広場定例整備
+    title: 4月7日名栗じてんしゃ広場定例整備
+    published: '2019-03-26'
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/2019/04/08/4月7日定例整備報告
+    title: 4月7日定例整備報告
+    published: '2019-04-07'

@@ -2,17 +2,17 @@ summary: 日高市ごみゼロの日活動
 date: '2026-05-31'
 all_day: true
 category: 清掃活動
-description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/5-31%E6%97%A5%E9%AB%98%E5%B8%82%E3%81%94%E3%81%BF%E3%82%BC%E3%83%AD%E3%81%AE%E6%97%A5%E6%B4%BB%E5%8B%95%E5%A0%B1%E5%91%8A'
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/5-31日高市ごみゼロの日活動報告'
 source:
   type: omc-blog
   crawler: cal-omc-blog-fetch
   fetched: '2026-06-22'
   posts:
-  - kind: report
-    url: https://okumusashimtb.wixsite.com/omcweb/post/5-31%E6%97%A5%E9%AB%98%E5%B8%82%E3%81%94%E3%81%BF%E3%82%BC%E3%83%AD%E3%81%AE%E6%97%A5%E6%B4%BB%E5%8B%95%E5%A0%B1%E5%91%8A
-    title: 5/31日高市ごみゼロの日活動報告
-    published: '2026-06-03'
   - kind: announce
-    url: https://okumusashimtb.wixsite.com/omcweb/post/5-31%E6%97%A5%E9%AB%98%E5%B8%82%E6%B8%85%E6%8E%83%E4%BD%9C%E6%A5%AD%EF%BC%866-7%E5%90%8D%E6%A0%97%E5%AE%9A%E6%9C%9F%E4%BD%9C%E6%A5%AD%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B
+    url: https://okumusashimtb.wixsite.com/omcweb/post/5-31日高市清掃作業＆6-7名栗定期作業のお知らせ
     title: 5/31日高市清掃作業＆6/7名栗定期作業のお知らせ
     published: '2026-05-16'
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/5-31日高市ごみゼロの日活動報告
+    title: 5/31日高市ごみゼロの日活動報告
+    published: '2026-06-03'

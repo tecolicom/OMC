@@ -1,0 +1,18 @@
+summary: 活動
+date: '2020-01-19'
+all_day: true
+category: その他
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/1月19日活動報告'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/【1月19日-日-の作業について】
+    title: 【1月19日(日)の作業について】
+    published: '2020-01-06'
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/1月19日活動報告
+    title: 1月19日活動報告
+    published: '2020-01-23'

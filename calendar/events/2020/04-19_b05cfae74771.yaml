@@ -1,0 +1,14 @@
+summary: 子どもじてんしゃ教室中止の件
+date: '2020-04-19'
+all_day: true
+category: 自転車教室
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/4月19日子どもじてんしゃ教室中止の件'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/4月19日子どもじてんしゃ教室中止の件
+    title: 4月19日子どもじてんしゃ教室中止の件
+    published: '2020-04-05'

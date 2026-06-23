@@ -1,0 +1,18 @@
+summary: じてんしゃ広場整備作業
+date: '2023-03-19'
+all_day: true
+category: 定期作業
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/3月19日じてんしゃ広場整備作業報告'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: announce
+    url: https://okumusashimtb.wixsite.com/omcweb/post/3月19日-名栗臨時作業と26日-子ども教室開催のお知らせ
+    title: 3月19日 名栗臨時作業と26日 子ども教室開催のお知らせ
+    published: '2023-02-23'
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/3月19日じてんしゃ広場整備作業報告
+    title: 3月19日じてんしゃ広場整備作業報告
+    published: '2023-03-20'

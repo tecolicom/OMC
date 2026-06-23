@@ -1,0 +1,14 @@
+summary: 第10回 OMC 総会
+date: '2023-06-11'
+all_day: true
+category: 総会
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/6-11-第10回-omc-総会の報告'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/6-11-第10回-omc-総会の報告
+    title: 6/11 第10回 OMC 総会の報告
+    published: '2023-06-12'

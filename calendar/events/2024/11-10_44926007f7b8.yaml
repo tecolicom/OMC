@@ -1,0 +1,18 @@
+summary: 鳩山活動
+date: '2024-11-10'
+all_day: true
+category: その他
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/11月10日-日-鳩山活動報告'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: announce
+    url: https://okumusashimtb.wixsite.com/omcweb/post/11-10-鳩山での活動についてのお知らせ
+    title: 11/10 鳩山での活動についてのお知らせ
+    published: '2024-10-29'
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/11月10日-日-鳩山活動報告
+    title: 11月10日(日)鳩山活動報告
+    published: '2024-11-12'

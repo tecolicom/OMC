@@ -1,0 +1,18 @@
+summary: 里山整備活動
+date: '2022-09-18'
+all_day: true
+category: 里山整備
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/9-18-日）里山整備活動のご案内'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/9-18-日）里山整備活動のご案内
+    title: 9/18(日）里山整備活動のご案内
+    published: '2022-09-13'
+  - kind: announce
+    url: https://okumusashimtb.wixsite.com/omcweb/post/9-18-日）里山整備活動の中止のお知らせ
+    title: 9/18(日）里山整備活動の中止のお知らせ
+    published: '2022-09-17'

@@ -1,0 +1,14 @@
+summary: 子どもじてんしゃ教室
+date: '2022-11-06'
+all_day: true
+category: 自転車教室
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/11-6-子どもじてんしゃ教室の報告'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/11-6-子どもじてんしゃ教室の報告
+    title: 11/6 子どもじてんしゃ教室の報告
+    published: '2022-11-14'

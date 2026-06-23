@@ -1,0 +1,14 @@
+summary: お掃除ツーリング
+date: '2024-01-21'
+all_day: true
+category: その他
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/1月21日-お掃除ツーリングのご案内'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/1月21日-お掃除ツーリングのご案内
+    title: 1月21日 お掃除ツーリングのご案内
+    published: '2024-01-13'

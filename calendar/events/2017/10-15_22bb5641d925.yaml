@@ -1,0 +1,14 @@
+summary: 子どもマウンテンバイク教室 (悪天候により11月23日に延期します)
+date: '2017-10-15'
+all_day: true
+category: 自転車教室
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/2017/10/08/10月15日-子どもマウンテンバイク教室'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: announce
+    url: https://okumusashimtb.wixsite.com/omcweb/post/2017/10/08/10月15日-子どもマウンテンバイク教室
+    title: 10月15日 子どもマウンテンバイク教室 (悪天候により１１月２３日に延期します)
+    published: '2017-10-07'

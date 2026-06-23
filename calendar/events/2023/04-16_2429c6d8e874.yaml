@@ -1,0 +1,18 @@
+summary: 里山整備
+date: '2023-04-16'
+all_day: true
+category: 里山整備
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/4-16（日）里山整備の報告'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/4-16（日）里山整備の報告
+    title: 4/16（日）里山整備の報告
+    published: '2023-04-17'
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/4-16-日-里山道の整備活動の募集
+    title: 4/16(日) 里山道の整備活動の募集
+    published: '2023-04-10'

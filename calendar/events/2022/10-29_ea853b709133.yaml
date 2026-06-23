@@ -1,0 +1,14 @@
+summary: 鳩山での活動のお知らせ。
+date: '2022-10-29'
+all_day: true
+category: その他
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/10月29日-土-鳩山での活動のお知らせ。'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: announce
+    url: https://okumusashimtb.wixsite.com/omcweb/post/10月29日-土-鳩山での活動のお知らせ。
+    title: 10月29日(土)鳩山での活動のお知らせ。
+    published: '2022-10-20'

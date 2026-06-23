@@ -1,0 +1,14 @@
+summary: 7月の活動日(7/21(日)の里山道整備)
+date: '2019-07-21'
+all_day: true
+category: 里山整備
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/2019/07/16/7月の活動日（721日の里山道整備）'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/2019/07/16/7月の活動日（721日の里山道整備）
+    title: 7月の活動日（7/21(日)の里山道整備）
+    published: '2019-07-16'

@@ -1,0 +1,18 @@
+summary: 子どもマウンテンバイク教室の開催について
+date: '2019-11-17'
+all_day: true
+category: 自転車教室
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/2019/11/12/【１１月１７日-子どもマウンテンバイク教室の開催について】'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/2019/11/12/【１１月１７日-子どもマウンテンバイク教室の開催について】
+    title: 【１１月１７日 子どもマウンテンバイク教室の開催について】
+    published: '2019-11-12'
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/2019/11/18/11月17日子どもじてんしゃ教室
+    title: 11月17日子どもマウンテンバイク教室
+    published: '2019-11-18'

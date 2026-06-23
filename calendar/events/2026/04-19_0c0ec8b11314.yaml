@@ -2,17 +2,17 @@ summary: 子ども自転車教室
 date: '2026-04-19'
 all_day: true
 category: 自転車教室
-description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/4-19%E5%AD%90%E3%81%A9%E3%82%82%E8%87%AA%E8%BB%A2%E8%BB%8A%E6%95%99%E5%AE%A4%E3%82%92%E9%96%8B%E5%82%AC%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F'
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/4-19子ども自転車教室を開催しました'
 source:
   type: omc-blog
   crawler: cal-omc-blog-fetch
   fetched: '2026-06-22'
   posts:
   - kind: report
-    url: https://okumusashimtb.wixsite.com/omcweb/post/4-19%E5%AD%90%E3%81%A9%E3%82%82%E8%87%AA%E8%BB%A2%E8%BB%8A%E6%95%99%E5%AE%A4%E3%82%92%E9%96%8B%E5%82%AC%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F
+    url: https://okumusashimtb.wixsite.com/omcweb/post/4-19子ども自転車教室を開催しました
     title: 4/19子ども自転車教室を開催しました
     published: '2026-04-27'
   - kind: announce
-    url: https://okumusashimtb.wixsite.com/omcweb/post/4-19%E5%AD%90%E3%81%A9%E3%82%82%E8%87%AA%E8%BB%A2%E8%BB%8A%E6%95%99%E5%AE%A4%E3%82%92%E9%96%8B%E5%82%AC%E3%81%97%E3%81%BE%E3%81%99
+    url: https://okumusashimtb.wixsite.com/omcweb/post/4-19子ども自転車教室を開催します
     title: 4/19子ども自転車教室を開催します
     published: '2026-04-13'

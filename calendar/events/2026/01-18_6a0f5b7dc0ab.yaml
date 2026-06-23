@@ -1,18 +1,18 @@
-summary: 日高市道路清掃
+summary: 日高市清掃作業
 date: '2026-01-18'
 all_day: true
 category: 清掃活動
-description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/1-18%E6%97%A5%E9%AB%98%E5%B8%82%E9%81%93%E8%B7%AF%E6%B8%85%E6%8E%83'
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/1-18日高市清掃作業のお知らせ'
 source:
   type: omc-blog
   crawler: cal-omc-blog-fetch
   fetched: '2026-06-22'
   posts:
-  - kind: other
-    url: https://okumusashimtb.wixsite.com/omcweb/post/1-18%E6%97%A5%E9%AB%98%E5%B8%82%E9%81%93%E8%B7%AF%E6%B8%85%E6%8E%83
-    title: 1/18日高市道路清掃
-    published: '2026-01-20'
   - kind: announce
-    url: https://okumusashimtb.wixsite.com/omcweb/post/1-18%E6%97%A5%E9%AB%98%E5%B8%82%E6%B8%85%E6%8E%83%E4%BD%9C%E6%A5%AD%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B
+    url: https://okumusashimtb.wixsite.com/omcweb/post/1-18日高市清掃作業のお知らせ
     title: 1/18日高市清掃作業のお知らせ
     published: '2026-01-04'
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/1-18日高市道路清掃
+    title: 1/18日高市道路清掃
+    published: '2026-01-20'

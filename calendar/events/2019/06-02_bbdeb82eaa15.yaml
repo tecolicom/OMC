@@ -1,0 +1,18 @@
+summary: 名栗じてんしゃ広場定期活動
+date: '2019-06-02'
+all_day: true
+category: 定期作業
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/2019/06/02/【6月2日日-名栗じてんしゃ広場定期活動報告】'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/2019/06/02/【6月2日日-名栗じてんしゃ広場定期活動報告】
+    title: 【6月2日(日) 名栗じてんしゃ広場定期活動報告】
+    published: '2019-06-02'
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/2019/05/20/6月2日名栗じてんしゃ広場定期整備
+    title: 6月2日名栗じてんしゃ広場定期整備
+    published: '2019-05-20'

@@ -1,0 +1,18 @@
+summary: 里山整備(入会体験)
+date: '2019-09-15'
+all_day: true
+category: 里山整備
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/2019/09/17/915日里山整備（入会体験）の報告'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/2019/09/17/915日里山整備（入会体験）の報告
+    title: 9/15(日)里山整備（入会体験）の報告
+    published: '2019-09-17'
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/2019/09/04/915日里山整備（入会体験）
+    title: 9/15(日)里山整備（入会体験）
+    published: '2019-09-04'

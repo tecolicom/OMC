@@ -1,0 +1,18 @@
+summary: 日高市市民清掃デーの作業
+date: '2023-05-28'
+all_day: true
+category: 清掃活動
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/5月28日-日高市市民清掃デーの作業報告'
+source:
+  type: omc-blog
+  crawler: cal-omc-blog-fetch
+  fetched: '2026-06-22'
+  posts:
+  - kind: announce
+    url: https://okumusashimtb.wixsite.com/omcweb/post/5月28日-日高市市民清掃デーのお知らせ
+    title: 5月28日 日高市市民清掃デーのお知らせ
+    published: '2023-05-13'
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/5月28日-日高市市民清掃デーの作業報告
+    title: 5月28日 日高市市民清掃デーの作業報告
+    published: '2023-05-29'
