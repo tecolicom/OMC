@@ -165,6 +165,31 @@ def test_build_events_all_other_uses_report_summary():
     assert events[0]["summary"] == "新規地域の活動"  # report 優先
 
 
+def test_extract_event_date_kanji_md():
+    assert omc_parse.extract_event_date("12月21日（日）の活動報告", _dt.date(2025, 12, 23)) == _dt.date(2025, 12, 21)
+    assert omc_parse.extract_event_date("7月20日-里山整備活動のご案内", _dt.date(2024, 7, 10)) == _dt.date(2024, 7, 20)
+
+
+def test_extract_event_date_fullwidth_kanji():
+    # 全角「２月１６日」(NFKC で半角化して抽出)
+    assert omc_parse.extract_event_date("桜並木の整備（２月１６日）", _dt.date(2017, 2, 1)) == _dt.date(2017, 2, 16)
+
+
+def test_extract_event_date_hyphen():
+    assert omc_parse.extract_event_date("9-15-里山整備活動のお知らせ", _dt.date(2024, 9, 10)) == _dt.date(2024, 9, 15)
+    assert omc_parse.extract_event_date("8-4（日）名栗じてんしゃ広場定期作業のお知らせ", _dt.date(2024, 8, 1)) == _dt.date(2024, 8, 4)
+
+
+def test_extract_event_date_prefers_kanji_over_other_digits():
+    # 「第12回」等の数字に引っ張られず、月日を取る
+    assert omc_parse.extract_event_date("第12回総会 11月3日 開催報告", _dt.date(2023, 11, 5)) == _dt.date(2023, 11, 3)
+
+
+def test_extract_event_date_kanji_year_correction():
+    # 12 月のイベントを 1 月に報告 → 前年
+    assert omc_parse.extract_event_date("12月28日 年末作業の報告", _dt.date(2027, 1, 5)) == _dt.date(2026, 12, 28)
+
+
 def test_extract_post_meta_recent():
     html = open(os.path.join(os.path.dirname(__file__), "fixtures", "post-recent.html"),
                 encoding="utf-8").read()

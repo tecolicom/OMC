@@ -5,6 +5,7 @@ import datetime
 import hashlib
 import json
 import re
+import unicodedata
 import xml.etree.ElementTree as ET
 
 
@@ -64,11 +65,13 @@ def parse_rss(xml: str) -> list[dict]:
     return items
 
 
-_MD_RE = re.compile(r"(\d{1,2})\s*[/／]\s*(\d{1,2})")
+_MDJ_RE = re.compile(r"(\d{1,2})\s*月\s*(\d{1,2})\s*日")          # 12月21日
+_MD_RE = re.compile(r"(?<!\d)(\d{1,2})\s*[/／-]\s*(\d{1,2})(?!\d)")  # 5/31, 5-31, 9-15
 
 
 def extract_event_date(title: str, pub_date: datetime.date) -> datetime.date | None:
-    m = _MD_RE.search(title)
+    t = unicodedata.normalize("NFKC", title)
+    m = _MDJ_RE.search(t) or _MD_RE.search(t)
     if not m:
         return None
     month, day = int(m.group(1)), int(m.group(2))
