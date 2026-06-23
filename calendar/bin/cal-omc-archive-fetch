@@ -1,0 +1,103 @@
+#!/usr/bin/env python3
+"""cal-omc-archive-fetch — Wix ブログ全履歴 (sitemap) → canonical イベント YAML.
+
+sitemap で全記事 URL を列挙し、各記事ページの JSON-LD から headline/datePublished を取り、
+イベント日が抽出できたものを events/ に出力する。抽出不能はレビュー一覧へ。
+"""
+from __future__ import annotations
+
+import argparse
+import datetime
+import hashlib
+import os
+import sys
+import time
+import urllib.parse
+import urllib.request
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import omc_parse  # noqa: E402
+import yaml  # noqa: E402
+
+SITEMAP_URL = "https://okumusashimtb.wixsite.com/omcweb/blog-posts-sitemap.xml"
+
+
+def _fetch(url: str) -> str:
+    sp = urllib.parse.urlsplit(url)
+    u2 = urllib.parse.urlunsplit(
+        (sp.scheme, sp.netloc, urllib.parse.quote(sp.path), sp.query, sp.fragment))
+    req = urllib.request.Request(u2, headers={"User-Agent": "Mozilla/5.0"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return r.read().decode("utf-8", "replace")
+
+
+def _load_cached(url: str, cache_dir: str) -> str:
+    key = hashlib.sha1(url.encode("utf-8")).hexdigest()
+    path = os.path.join(cache_dir, f"{key}.html")
+    if os.path.exists(path):
+        with open(path, encoding="utf-8") as f:
+            return f.read()
+    html = _fetch(url)
+    os.makedirs(cache_dir, exist_ok=True)
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(html)
+    time.sleep(0.3)
+    return html
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--sitemap-file", default=None)
+    ap.add_argument("--cache-dir", default="sources/blog")
+    ap.add_argument("--out-dir", default="events")
+    ap.add_argument("--review-file", default="events-review-needed.txt")
+    ap.add_argument("--fetched", default=None)
+    ap.add_argument("--limit", type=int, default=None)
+    args = ap.parse_args()
+
+    fetched = (datetime.date.fromisoformat(args.fetched)
+               if args.fetched else datetime.date.today())
+
+    if args.sitemap_file:
+        with open(args.sitemap_file, encoding="utf-8") as f:
+            sitemap_xml = f.read()
+    else:
+        sitemap_xml = _fetch(SITEMAP_URL)
+    urls = omc_parse.parse_sitemap(sitemap_xml)
+    if args.limit:
+        urls = urls[: args.limit]
+
+    items = []
+    review = []
+    for url in urls:
+        html = _load_cached(url, args.cache_dir)
+        meta = omc_parse.extract_post_meta(html)
+        if meta is None:
+            review.append((url, "", "no-jsonld"))
+            continue
+        if omc_parse.extract_event_date(meta["title"], meta["pub_date"]) is None:
+            review.append((url, meta["title"], "no-date"))
+            continue
+        items.append({"title": meta["title"], "link": url, "guid": url,
+                      "pub_date": meta["pub_date"]})
+
+    events = omc_parse.build_events(items)
+    for ev in events:
+        path = os.path.join(args.out_dir, omc_parse.event_filename(ev))
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        with open(path, "w", encoding="utf-8") as f:
+            yaml.safe_dump(omc_parse.event_to_yaml_dict(ev, fetched), f,
+                           allow_unicode=True, sort_keys=False)
+
+    if review:
+        os.makedirs(os.path.dirname(os.path.abspath(args.review_file)), exist_ok=True)
+        with open(args.review_file, "w", encoding="utf-8") as f:
+            for url, title, reason in review:
+                f.write(f"{url}\t{title}\t{reason}\n")
+
+    print(f"posts={len(urls)} events={len(events)} skipped={len(review)}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
