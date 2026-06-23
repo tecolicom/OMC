@@ -70,7 +70,11 @@ def main() -> int:
     items = []
     review = []
     for url in urls:
-        html = _load_cached(url, args.cache_dir)
+        try:
+            html = _load_cached(url, args.cache_dir)
+        except Exception as e:
+            review.append((url, "", f"fetch-error:{type(e).__name__}"))
+            continue
         meta = omc_parse.extract_post_meta(html)
         if meta is None:
             review.append((url, "", "no-jsonld"))
