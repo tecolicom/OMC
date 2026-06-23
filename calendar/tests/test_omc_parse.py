@@ -165,6 +165,20 @@ def test_build_events_all_other_uses_report_summary():
     assert events[0]["summary"] == "新規地域の活動"  # report 優先
 
 
+def test_classify_activity_archive_vocab():
+    assert omc_parse.classify_activity("7月20日-里山道整備活動のご案内") == "里山整備"
+    assert omc_parse.classify_activity("鳩山道普請の報告") == "里山整備"
+    assert omc_parse.classify_activity("6月2日じてんしゃ広場定期作業のお知らせ") == "定期作業"
+    assert omc_parse.classify_activity("12月14日-土-の里山整備活動＆ライドの報告") == "里山整備"
+    assert omc_parse.classify_activity("新春ライドのお知らせ") == "ライド"
+
+
+def test_clean_summary_archive():
+    assert omc_parse.clean_summary("7月20日-里山整備活動のご案内") == "里山整備活動"
+    assert omc_parse.clean_summary("桜並木の整備（２月１６日）") == "桜並木の整備"
+    assert omc_parse.clean_summary("12月21日（日）の活動報告") == "活動"
+
+
 def test_extract_event_date_kanji_md():
     assert omc_parse.extract_event_date("12月21日（日）の活動報告", _dt.date(2025, 12, 23)) == _dt.date(2025, 12, 21)
     assert omc_parse.extract_event_date("7月20日-里山整備活動のご案内", _dt.date(2024, 7, 10)) == _dt.date(2024, 7, 20)

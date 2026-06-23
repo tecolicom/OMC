@@ -98,9 +98,10 @@ def post_kind(title: str) -> str:
 _ACTIVITY_RULES = [
     ("総会", ["総会"]),
     ("自転車教室", ["自転車教室"]),
-    ("里山整備", ["里山"]),
-    ("定期作業", ["名栗定期作業", "定期作業"]),
+    ("里山整備", ["里山", "里山道整備", "道普請"]),
+    ("定期作業", ["名栗定期作業", "定期作業", "じてんしゃ広場", "自転車広場"]),
     ("清掃活動", ["清掃", "ごみゼロ", "ごみゼロの日"]),
+    ("ライド", ["ライド"]),
 ]
 
 
@@ -111,17 +112,23 @@ def classify_activity(title: str) -> str:
     return "その他"
 
 
-_LEADING_DATE_RE = re.compile(r"^\s*[【\[]?\s*\d{1,2}\s*[/／]\s*\d{1,2}\s*(?:\([^)]*\))?\s*の?")
-_TRAILING_RE = re.compile(
-    r"(?:のお知らせ|のご報告|の報告|を開催しました|を開催します|報告)\s*[】\]]?\s*$"
+_LEADING_DATE_RE = re.compile(
+    r"^\s*[【\[]?\s*(?:\d{1,2}\s*月\s*\d{1,2}\s*日|\d{1,2}\s*[/／-]\s*\d{1,2})"
+    r"\s*(?:[（(][^）)]*[）)])?\s*[-－]?\s*の?"
 )
+_TRAILING_RE = re.compile(
+    r"(?:のお知らせ|のご案内|のご報告|の報告|を開催しました|を開催します|報告)\s*[】\]]?\s*$"
+)
+_TRAILING_PAREN_RE = re.compile(r"[（(]\s*\d{1,2}\s*月\s*\d{1,2}\s*日\s*[）)]\s*$")
 
 
 def clean_summary(title: str) -> str:
-    s = _LEADING_DATE_RE.sub("", title)
+    s = unicodedata.normalize("NFKC", title)
+    s = _LEADING_DATE_RE.sub("", s)
+    s = _TRAILING_PAREN_RE.sub("", s)
     s = _TRAILING_RE.sub("", s)
-    s = s.strip(" 　【】[]")
-    return s if s else title.strip()
+    s = s.strip(" 　【】[]-－")
+    return s if s else unicodedata.normalize("NFKC", title).strip()
 
 
 def _uid_for(date: datetime.date) -> str:
