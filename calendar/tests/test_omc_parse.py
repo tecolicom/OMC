@@ -288,3 +288,26 @@ def test_event_to_yaml_dict_and_filename():
     assert d["source"]["fetched"] == "2026-06-22"
     assert len(d["source"]["posts"]) == 2
     assert omc_parse.event_filename(e) == "2026/06-07_%s.yaml" % e["uid"]
+
+
+def test_extract_event_date_rejects_hyphen_ranges():
+    # 月範囲・人数・回数の「N-M」は日付にしない
+    assert omc_parse.extract_event_date("10-12月の活動計画", _dt.date(2023, 10, 1)) is None
+    assert omc_parse.extract_event_date("参加者5-6名募集", _dt.date(2023, 5, 1)) is None
+    assert omc_parse.extract_event_date("第3-4回の様子", _dt.date(2023, 3, 1)) is None
+
+
+def test_extract_event_date_hyphen_still_valid_before_kanji_place():
+    # 「5-31日高市…」「9-15里山…」は引き続き日付として成立する
+    assert omc_parse.extract_event_date("5-31日高市ごみゼロの日活動報告", _dt.date(2026, 6, 3)) == _dt.date(2026, 5, 31)
+    assert omc_parse.extract_event_date("9-15里山整備活動", _dt.date(2024, 9, 10)) == _dt.date(2024, 9, 15)
+
+
+def test_event_to_yaml_dict_crawler_param():
+    items = [{"title": "5/31日高市ごみゼロの日活動報告", "link": "https://x/r",
+              "guid": "r", "pub_date": _dt.date(2026, 6, 3)}]
+    ev = omc_parse.build_events(items)[0]
+    d_default = omc_parse.event_to_yaml_dict(ev, _dt.date(2026, 6, 22))
+    assert d_default["source"]["crawler"] == "cal-omc-blog-fetch"
+    d_arch = omc_parse.event_to_yaml_dict(ev, _dt.date(2026, 6, 22), crawler="cal-omc-archive-fetch")
+    assert d_arch["source"]["crawler"] == "cal-omc-archive-fetch"

@@ -70,12 +70,13 @@ def parse_rss(xml: str) -> list[dict]:
 
 
 _MDJ_RE = re.compile(r"(\d{1,2})\s*月\s*(\d{1,2})\s*日")          # 12月21日
-_MD_RE = re.compile(r"(?<!\d)(\d{1,2})\s*[/／-]\s*(\d{1,2})(?!\d)")  # 5/31, 5-31, 9-15
+_MD_SLASH_RE = re.compile(r"(?<!\d)(\d{1,2})\s*[/／]\s*(\d{1,2})(?!\d)")           # 5/31
+_MD_HYPHEN_RE = re.compile(r"(?<!\d)(\d{1,2})\s*-\s*(\d{1,2})(?![\d月年回名人時])")  # 5-31（月範囲等を除外）
 
 
 def extract_event_date(title: str, pub_date: datetime.date) -> datetime.date | None:
     t = unicodedata.normalize("NFKC", title)
-    m = _MDJ_RE.search(t) or _MD_RE.search(t)
+    m = _MDJ_RE.search(t) or _MD_SLASH_RE.search(t) or _MD_HYPHEN_RE.search(t)
     if not m:
         return None
     month, day = int(m.group(1)), int(m.group(2))
@@ -187,7 +188,8 @@ def _report_or_first_url(event: dict) -> str:
     return event["sources"][0]["url"]
 
 
-def event_to_yaml_dict(event: dict, fetched: datetime.date) -> dict:
+def event_to_yaml_dict(event: dict, fetched: datetime.date,
+                       crawler: str = "cal-omc-blog-fetch") -> dict:
     posts = [
         {"kind": s["kind"], "url": s["url"], "title": s["title"],
          "published": s["published"].isoformat()}
@@ -201,7 +203,7 @@ def event_to_yaml_dict(event: dict, fetched: datetime.date) -> dict:
         "description": "出典: " + _report_or_first_url(event),
         "source": {
             "type": "omc-blog",
-            "crawler": "cal-omc-blog-fetch",
+            "crawler": crawler,
             "fetched": fetched.isoformat(),
             "posts": posts,
         },

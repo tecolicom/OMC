@@ -90,7 +90,7 @@ def main() -> int:
         path = os.path.join(args.out_dir, omc_parse.event_filename(ev))
         os.makedirs(os.path.dirname(path), exist_ok=True)
         with open(path, "w", encoding="utf-8") as f:
-            yaml.safe_dump(omc_parse.event_to_yaml_dict(ev, fetched), f,
+            yaml.safe_dump(omc_parse.event_to_yaml_dict(ev, fetched, crawler="cal-omc-archive-fetch"), f,
                            allow_unicode=True, sort_keys=False)
 
     if review:
