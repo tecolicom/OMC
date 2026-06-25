@@ -343,3 +343,26 @@ def test_extract_post_images():
 def test_extract_post_images_empty():
     res = omc_parse.extract_post_images("<html><body>no images</body></html>")
     assert res == {"images": [], "cover": None}
+
+
+import yaml as _yaml  # ファイル先頭にあれば不要
+
+def test_slugify_post_url():
+    assert omc_parse.slugify_post_url(
+        "https://okumusashimtb.wixsite.com/omcweb/post/2019/07/23/8月4日名栗の整備") \
+        == "2019_07_23_8月4日名栗の整備"
+    # 全角括弧やスラッシュ混じり
+    assert "/" not in omc_parse.slugify_post_url(
+        "https://okumusashimtb.wixsite.com/omcweb/post/5-31日高市/ごみゼロ")
+
+
+def test_dump_archive_yaml_block_body():
+    rec = {"url": "https://x/post/a", "title": "t", "published": "2024-01-01",
+           "body": "1行目\n2行目\n", "images": ["https://static.wixstatic.com/media/x.jpg"]}
+    s = omc_parse.dump_archive_yaml(rec)
+    assert "body: |" in s                       # ブロックスカラー
+    assert "  1行目" in s and "  2行目" in s
+    back = _yaml.safe_load(s)
+    assert back["title"] == "t"
+    assert back["body"].splitlines()[:2] == ["1行目", "2行目"]
+    assert back["images"] == ["https://static.wixstatic.com/media/x.jpg"]

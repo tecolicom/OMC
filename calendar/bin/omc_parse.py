@@ -7,7 +7,18 @@ import html as _html
 import json
 import re
 import unicodedata
+import urllib.parse
 import xml.etree.ElementTree as ET
+
+import yaml
+
+# 複数行 str は YAML ブロックスカラー(|)で出力（アーカイブ可読性）。単一行は既定どおり。
+def _block_str_representer(dumper, data):
+    if "\n" in data:
+        return dumper.represent_scalar("tag:yaml.org,2002:str", data, style="|")
+    return dumper.represent_scalar("tag:yaml.org,2002:str", data)
+
+yaml.add_representer(str, _block_str_representer, Dumper=yaml.SafeDumper)
 
 
 def _parse_pubdate(s: str) -> datetime.date:
@@ -258,6 +269,22 @@ def event_to_yaml_dict(event: dict, fetched: datetime.date,
             "posts": posts,
         },
     }
+
+
+_UNSAFE_FN_RE = re.compile(r'[<>:"\\|?*\x00-\x1f]')
+
+
+def slugify_post_url(url: str) -> str:
+    path = urllib.parse.urlsplit(url).path
+    after = path.split("/post/", 1)[1] if "/post/" in path else path
+    after = urllib.parse.unquote(after).strip("/")
+    after = after.replace("/", "_")
+    after = _UNSAFE_FN_RE.sub("", after)
+    return after
+
+
+def dump_archive_yaml(record: dict) -> str:
+    return yaml.safe_dump(record, allow_unicode=True, sort_keys=False)
 
 
 def event_filename(event: dict) -> str:
