@@ -20,6 +20,11 @@ Phase 1/2 で構築した canonical イベント (145 件、開催日キー、`s
   `sources/blog/<sha1>.html` にキャッシュしている。実際に要るのは JSON-LD の 3 項目のみ。
 - **canonical の現状**。`events/<year>/<MM-DD>_<uid>.yaml`、`source.posts[]` は各記事の
   `{kind, url, title, published}`（kind = report / announce / other）。`description` は報告URL 1本のみ。
+- **写真リンクが取れる**。本文写真は `https://static.wixstatic.com/media/<id>.<ext>/v1/fill/w_<W>…` 形式で
+  HTML 内にあり、`/v1/fill/...` を外した**元URL**が恒久参照。同一画像が複数サイズで出るので media id で
+  dedupe し、最大レンダリング幅でフィルタ（小さい UI アイコンを除外）。カバー画像は `og:image` /
+  JSON-LD `image`（動画埋め込み記事では動画サムネのことあり）。写真は主に**報告記事**に付き、
+  お知らせにはほとんど無い。画像抽出は JSON-LD ではなく HTML 全体から行う。
 - **Google Calendar アクセス確認済**（2026-06）。SA `myhanno-bot@city-tecoli.iam.gserviceaccount.com`
   に当カレンダーを共有済み、`accessRole: writer`。鍵 `~/.config/omc/sa.json`（myhanno 流用）。
   操作は `gws`（googleworkspace/cli、`gws calendar events list/get/import/update --params/--json`）。
@@ -33,6 +38,8 @@ Phase 1/2 で構築した canonical イベント (145 件、開催日キー、`s
 - 既存イベントを上書きする際は**既存の時刻情報を保存**する。
 - ブログと**矛盾しない既存イベントは上書きしてよい**、矛盾するものは残してレビュー。
 - キャッシュは**読みやすい YAML**で保存する。
+- 記事アーカイブ（本文・**写真リンク**・記事リンク）を**コミットして残す**（将来別ホスティングへ移行
+  するための保全）。写真リンクは canonical イベントにも入れる（本文は不要でもリンクは残す）。
 
 ## スコープ
 
@@ -44,12 +51,18 @@ Phase 1/2 で構築した canonical イベント (145 件、開催日キー、`s
 
 ## Phase 2.5: 本文取り込み + YAML キャッシュ
 
-### 1. `extract_post_meta` の拡張
-返り値を `{title, pub_date, body}` に拡張。`body` = JSON-LD `BlogPosting.description` を
-`html.unescape` + `unicodedata.normalize("NFKC", ...)` し、各行を rstrip、前後空行を除去した本文。
-`description` が無ければ `body=""`。headline/pub_date の既存仕様は不変（後方互換）。
+### 1. `extract_post_meta` の拡張 + 画像抽出
+- `extract_post_meta` の返り値を `{title, pub_date, body}` に拡張。`body` = JSON-LD
+  `BlogPosting.description` を `html.unescape` + `unicodedata.normalize("NFKC", ...)` し、各行を rstrip、
+  前後空行を除去した本文。`description` が無ければ `body=""`。headline/pub_date の既存仕様は不変。
+- 新関数 `extract_post_images(html) -> {"images": [url, ...], "cover": url|None}`:
+  - `images`: `https://static.wixstatic.com/media/<id>.<ext>` を全マッチし、media id で dedupe、
+    最大レンダリング幅（`/v1/.../w_<W>`）が**閾値 200 以上**のものの**元URL**（`/v1/fill/...` を除いた
+    `…/media/<id>.<ext>`）を出現順で返す。幅指定が無いものは保持。
+  - `cover`: `og:image`（無ければ JSON-LD `image.url`）。
+  - 画像は JSON-LD ではなく HTML 全体から抽出する（本文インライン画像のため）。
 
-### 2. YAML スリムキャッシュ
+### 2. YAML 記事アーカイブ（コミットして残す）
 - 1 記事 = 1 YAML ファイル `sources/blog/<slug>.yaml`:
   ```yaml
   url: https://okumusashimtb.wixsite.com/omcweb/post/2019/07/23/8月4日名栗…のお知らせ
@@ -59,35 +72,45 @@ Phase 1/2 で構築した canonical イベント (145 件、開催日キー、`s
     いつも名栗じてんしゃ広場の整備に参加して頂きありがとうございます。
     …
     日時   8月4日   9時より
+  images:
+    - https://static.wixstatic.com/media/c3395c_5e644f5d2d99428d86bb61c59d93f904.jpg
+  cover: https://static.wixstatic.com/media/c3395c_xxxx.jpg
   ```
 - `body` は YAML **ブロックスカラー (`|`)** で改行保持（読みやすさ）。実装は str 用 representer で
-  複数行は block style にする。
+  複数行は block style にする。`images`/`cover` は無ければ省略（または空）。
 - **ファイル名 = URL スラッグの安全化**: `/post/` 以下を取り、`/`→`_`、パス不可文字
-  (`<>:"\|?*` と制御文字) を除去/置換。URL から導出できるのでキャッシュ照合に使える（sha1 廃止）。
-- キャッシュ照合: 取得前に URL からスラッグ→ファイル名を計算し、存在すれば読む、無ければ fetch して
-  JSON-LD 抽出 → この YAML を書く（fetch 間 0.3 秒）。
+  (`<>:"\|?*` と制御文字) を除去/置換。URL から導出できるので照合に使える（sha1 廃止）。
+- **コミットして残す**: `.gitignore` を変更し `sources/blog/*.html` のみ無視、`sources/blog/*.yaml` は
+  **追跡**。359 記事すべて（日付不明でスキップした 107 件含む）の本文・写真・リンクが版管理に残り、
+  将来 Wix から離れても全記事の情報が手元に残る = 移行のための保全。
+- 照合: 取得前に URL からスラッグ→ファイル名を計算し、存在すれば読む、無ければ fetch して
+  JSON-LD + 画像を抽出 → この YAML を書く（fetch 間 0.3 秒）。
 
-### 3. 既存 HTML キャッシュの移行
-- 現存する 359 件の `sources/blog/*.html` から `extract_post_meta` で `{title,pub_date,body}` を抽出し、
-  上記 YAML に書き出す移行スクリプト（再 fetch しない）。
-- 移行後、巨大な `*.html` は削除（`sources/blog` は .gitignore 済みなのでコミット対象外）。
+### 3. 既存 HTML キャッシュからの移行
+- 現存する 359 件の `sources/blog/*.html` から `extract_post_meta` + `extract_post_images` で
+  `{title, pub_date, body, images, cover}` を抽出し、上記 YAML に書き出す移行スクリプト（再 fetch しない）。
+- 移行後、巨大な `*.html` は削除（`*.html` は引き続き .gitignore なのでコミットされない）。
 
-### 4. canonical への本文付与
+### 4. canonical への本文・写真付与
 - `build_events` が `source.posts[]` に **`body` を追加**（kind が report 以外＝announce / other のとき）。
   **report は body を持たせない**（リンクのみの方針）。
-- `event_to_yaml_dict` を本文対応に拡張するため、`build_events` が各 post に body を載せられるよう、
-  CLI が item に body を渡す（`{title, link, guid, pub_date, body}`）。
+- `source.posts[]` に **`images` も追加**（kind を問わず、その記事の写真元URLがあれば）。写真は主に
+  報告に付く。
+- `event_to_yaml_dict` を拡張し、`build_events` が各 post に body/images を載せられるよう、
+  CLI が item に渡す（`{title, link, guid, pub_date, body, images}`）。
 - 既存の `description: 出典: <url>` は当面維持（canonical の description は Phase 3 の投影では使わず、
   投影側が posts から組み立てる）。
 - 再生成: 移行済み YAML キャッシュから `cal-omc-archive-fetch` を再実行し、145 件を本文付きで更新。
 
 ### Phase 2.5 のテスト
-- `extract_post_meta`: JSON-LD description を本文として返す（fixture: 既存 post-recent/old に
-  description 入りブロックを使うか、新 fixture）。HTML 実体・全角の正規化、description 不在で body=""。
-- YAML キャッシュ: slug 生成（全角・パス区切りを含む URL → 安全なファイル名、URL から再現可能）、
-  body のブロックスカラー出力（読み戻して一致）。
-- canonical: announce/other に body が付き、report に付かないこと。Phase 1 golden は本文を持たない
-  RSS 経路なので**不変**であること（RSS 側の `extract_post_meta` 非経由を確認）。
+- `extract_post_meta`: JSON-LD description を本文として返す（fixture の post-recent/old）。HTML 実体・
+  全角の正規化、description 不在で body=""。
+- `extract_post_images`: media URL を元URL化・dedupe・幅閾値でアイコン除外、cover 取得（fixture HTML で
+  検証。本文写真を採用し UI アイコンを除外）。
+- YAML アーカイブ: slug 生成（全角・パス区切りを含む URL → 安全なファイル名、URL から再現可能）、
+  body のブロックスカラー出力（読み戻して一致）、images/cover の出力。
+- canonical: announce/other に body が付き report に付かないこと、images が posts に載ること。
+  Phase 1 golden は本文・画像を持たない RSS 経路なので**不変**（RSS 側は extract_post_meta/images 非経由）。
 
 ---
 
