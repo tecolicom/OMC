@@ -216,6 +216,8 @@ def build_events(items: list[dict]) -> list[dict]:
                 "url": it["link"],
                 "title": it["title"],
                 "published": it["pub_date"],
+                "body": it.get("body") or "",
+                "images": list(it.get("images") or []),
             },
         }
         groups.setdefault(date, []).append(rec)
@@ -251,11 +253,15 @@ def _report_or_first_url(event: dict) -> str:
 
 def event_to_yaml_dict(event: dict, fetched: datetime.date,
                        crawler: str = "cal-omc-blog-fetch") -> dict:
-    posts = [
-        {"kind": s["kind"], "url": s["url"], "title": s["title"],
-         "published": s["published"].isoformat()}
-        for s in event["sources"]
-    ]
+    posts = []
+    for s in event["sources"]:
+        p = {"kind": s["kind"], "url": s["url"], "title": s["title"],
+             "published": s["published"].isoformat()}
+        if s["kind"] != "report" and s.get("body"):
+            p["body"] = s["body"]
+        if s.get("images"):
+            p["images"] = list(s["images"])
+        posts.append(p)
     return {
         "summary": event["summary"],
         "date": event["date"].isoformat(),

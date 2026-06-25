@@ -366,3 +366,19 @@ def test_dump_archive_yaml_block_body():
     assert back["title"] == "t"
     assert back["body"].splitlines()[:2] == ["1行目", "2行目"]
     assert back["images"] == ["https://static.wixstatic.com/media/x.jpg"]
+
+
+def test_build_events_carries_body_and_images():
+    items = [
+        {"title": "5/17里山整備活動のお知らせ", "link": "https://x/a", "guid": "a",
+         "pub_date": _dt.date(2025, 5, 1), "body": "9時集合です", "images": []},
+        {"title": "5/17里山整備活動の報告", "link": "https://x/r", "guid": "r",
+         "pub_date": _dt.date(2025, 5, 20), "body": "実施しました", "images": ["https://static.wixstatic.com/media/p.jpg"]},
+    ]
+    ev = omc_parse.build_events(items)[0]
+    d = omc_parse.event_to_yaml_dict(ev, _dt.date(2026, 6, 22), crawler="cal-omc-archive-fetch")
+    posts = {p["kind"]: p for p in d["source"]["posts"]}
+    assert posts["announce"]["body"] == "9時集合です"   # お知らせは本文あり
+    assert "body" not in posts["report"]                 # 報告は本文なし
+    assert posts["report"]["images"] == ["https://static.wixstatic.com/media/p.jpg"]
+    assert "images" not in posts["announce"]             # 空 images は省略
