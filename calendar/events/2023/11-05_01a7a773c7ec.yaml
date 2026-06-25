@@ -5,14 +5,14 @@ category: その他
 description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/11月5日-日-鳩山活動報告。'
 source:
   type: omc-blog
-  crawler: cal-omc-blog-fetch
+  crawler: cal-omc-archive-fetch
   fetched: '2026-06-22'
   posts:
-  - kind: report
-    url: https://okumusashimtb.wixsite.com/omcweb/post/11月5日-日-鳩山活動報告。
-    title: 11月5日(日)鳩山活動報告。
-    published: '2023-11-07'
   - kind: other
     url: https://okumusashimtb.wixsite.com/omcweb/post/１１月５日（日）鳩山作業告知
     title: １１月５日（日）鳩山作業告知
     published: '2023-10-28'
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/11月5日-日-鳩山活動報告。
+    title: 11月5日(日)鳩山活動報告。
+    published: '2023-11-07'

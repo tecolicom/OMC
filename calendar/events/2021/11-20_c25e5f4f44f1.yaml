@@ -5,14 +5,14 @@ category: 里山整備
 description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/11月20日活動報告'
 source:
   type: omc-blog
-  crawler: cal-omc-blog-fetch
+  crawler: cal-omc-archive-fetch
   fetched: '2026-06-22'
   posts:
-  - kind: other
-    url: https://okumusashimtb.wixsite.com/omcweb/post/11月20日（土）里山整備作業
-    title: 11月20日（土）里山整備作業
-    published: '2021-11-15'
   - kind: report
     url: https://okumusashimtb.wixsite.com/omcweb/post/11月20日活動報告
     title: 11月20日活動報告
     published: '2021-11-22'
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/11月20日（土）里山整備作業
+    title: 11月20日（土）里山整備作業
+    published: '2021-11-15'

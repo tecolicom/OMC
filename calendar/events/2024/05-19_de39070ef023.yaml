@@ -5,14 +5,14 @@ category: 里山整備
 description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/5-19-里山道清掃活動の報告'
 source:
   type: omc-blog
-  crawler: cal-omc-blog-fetch
+  crawler: cal-omc-archive-fetch
   fetched: '2026-06-22'
   posts:
-  - kind: report
-    url: https://okumusashimtb.wixsite.com/omcweb/post/5-19-里山道清掃活動の報告
-    title: 5/19 里山道清掃活動の報告
-    published: '2024-05-21'
   - kind: other
     url: https://okumusashimtb.wixsite.com/omcweb/post/【5月19日-里山清掃活動のお誘い】
     title: 【5月19日 里山清掃活動のお誘い】
     published: '2024-05-09'
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/5-19-里山道清掃活動の報告
+    title: 5/19 里山道清掃活動の報告
+    published: '2024-05-21'

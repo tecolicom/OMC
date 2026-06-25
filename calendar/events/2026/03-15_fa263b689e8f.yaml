@@ -5,14 +5,14 @@ category: その他
 description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/3-15-日-の新規地域の活動報告'
 source:
   type: omc-blog
-  crawler: cal-omc-blog-fetch
+  crawler: cal-omc-archive-fetch
   fetched: '2026-06-22'
   posts:
-  - kind: report
-    url: https://okumusashimtb.wixsite.com/omcweb/post/3-15-日-の新規地域の活動報告
-    title: 3/15(日)の新規地域の活動報告
-    published: '2026-03-20'
   - kind: announce
     url: https://okumusashimtb.wixsite.com/omcweb/post/3-15-日-新規活動地域の初回活動のお知らせ
     title: 3/15(日) 新規活動地域の初回活動のお知らせ
     published: '2026-03-06'
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/3-15-日-の新規地域の活動報告
+    title: 3/15(日)の新規地域の活動報告
+    published: '2026-03-20'

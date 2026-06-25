@@ -5,14 +5,14 @@ category: 自転車教室
 description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/4-19子ども自転車教室を開催しました'
 source:
   type: omc-blog
-  crawler: cal-omc-blog-fetch
+  crawler: cal-omc-archive-fetch
   fetched: '2026-06-22'
   posts:
-  - kind: report
-    url: https://okumusashimtb.wixsite.com/omcweb/post/4-19子ども自転車教室を開催しました
-    title: 4/19子ども自転車教室を開催しました
-    published: '2026-04-27'
   - kind: announce
     url: https://okumusashimtb.wixsite.com/omcweb/post/4-19子ども自転車教室を開催します
     title: 4/19子ども自転車教室を開催します
     published: '2026-04-13'
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/4-19子ども自転車教室を開催しました
+    title: 4/19子ども自転車教室を開催しました
+    published: '2026-04-27'

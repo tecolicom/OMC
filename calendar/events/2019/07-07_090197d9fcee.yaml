@@ -5,7 +5,7 @@ category: その他
 description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/2019/06/18/7月7日名栗自然体験会の件'
 source:
   type: omc-blog
-  crawler: cal-omc-blog-fetch
+  crawler: cal-omc-archive-fetch
   fetched: '2026-06-22'
   posts:
   - kind: other

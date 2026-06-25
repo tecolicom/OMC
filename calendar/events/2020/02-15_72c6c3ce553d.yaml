@@ -5,7 +5,7 @@ category: 里山整備
 description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/【２月１５日（土）里山清掃のお知らせ（体験会＆交流会）】'
 source:
   type: omc-blog
-  crawler: cal-omc-blog-fetch
+  crawler: cal-omc-archive-fetch
   fetched: '2026-06-22'
   posts:
   - kind: announce

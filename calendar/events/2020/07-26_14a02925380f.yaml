@@ -5,7 +5,7 @@ category: 里山整備
 description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/【７-２６-日-里山整備活動のお知らせ】'
 source:
   type: omc-blog
-  crawler: cal-omc-blog-fetch
+  crawler: cal-omc-archive-fetch
   fetched: '2026-06-22'
   posts:
   - kind: announce

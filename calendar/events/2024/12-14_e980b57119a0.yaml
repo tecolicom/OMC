@@ -5,14 +5,14 @@ category: 里山整備
 description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/12月14日-土-の里山整備活動＆ライドの報告'
 source:
   type: omc-blog
-  crawler: cal-omc-blog-fetch
+  crawler: cal-omc-archive-fetch
   fetched: '2026-06-22'
   posts:
-  - kind: report
-    url: https://okumusashimtb.wixsite.com/omcweb/post/12月14日-土-の里山整備活動＆ライドの報告
-    title: 12月14日(土)の里山整備活動＆ライドの報告
-    published: '2024-12-19'
   - kind: other
     url: https://okumusashimtb.wixsite.com/omcweb/post/12月14日-土-の里山整備活動＆ライドのお誘い
     title: 12月14日(土)の里山整備活動＆ライドのお誘い
     published: '2024-12-08'
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/12月14日-土-の里山整備活動＆ライドの報告
+    title: 12月14日(土)の里山整備活動＆ライドの報告
+    published: '2024-12-19'

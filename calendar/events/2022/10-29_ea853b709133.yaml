@@ -5,7 +5,7 @@ category: その他
 description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/10月29日-土-鳩山での活動のお知らせ。'
 source:
   type: omc-blog
-  crawler: cal-omc-blog-fetch
+  crawler: cal-omc-archive-fetch
   fetched: '2026-06-22'
   posts:
   - kind: announce

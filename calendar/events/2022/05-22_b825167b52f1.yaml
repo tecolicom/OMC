@@ -5,7 +5,7 @@ category: 清掃活動
 description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/5月22日-飯能市民清掃デーの活動報告'
 source:
   type: omc-blog
-  crawler: cal-omc-blog-fetch
+  crawler: cal-omc-archive-fetch
   fetched: '2026-06-22'
   posts:
   - kind: report

@@ -5,14 +5,14 @@ category: 定期作業
 description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/10-6名栗じてんしゃ広場定期作業の報告'
 source:
   type: omc-blog
-  crawler: cal-omc-blog-fetch
+  crawler: cal-omc-archive-fetch
   fetched: '2026-06-22'
   posts:
-  - kind: report
-    url: https://okumusashimtb.wixsite.com/omcweb/post/10-6名栗じてんしゃ広場定期作業の報告
-    title: 10/6名栗じてんしゃ広場定期作業の報告
-    published: '2024-10-07'
   - kind: announce
     url: https://okumusashimtb.wixsite.com/omcweb/post/10-6-名栗定期作業のお知らせ
     title: 10/6 名栗定期作業のお知らせ
     published: '2024-09-15'
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/10-6名栗じてんしゃ広場定期作業の報告
+    title: 10/6名栗じてんしゃ広場定期作業の報告
+    published: '2024-10-07'

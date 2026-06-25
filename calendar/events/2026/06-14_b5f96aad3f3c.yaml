@@ -5,7 +5,7 @@ category: 総会
 description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/6-14第13回総会の報告'
 source:
   type: omc-blog
-  crawler: cal-omc-blog-fetch
+  crawler: cal-omc-archive-fetch
   fetched: '2026-06-22'
   posts:
   - kind: announce

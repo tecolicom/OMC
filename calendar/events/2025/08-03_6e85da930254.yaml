@@ -5,18 +5,18 @@ category: 定期作業
 description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/8-3名栗定期作業の報告'
 source:
   type: omc-blog
-  crawler: cal-omc-blog-fetch
+  crawler: cal-omc-archive-fetch
   fetched: '2026-06-22'
   posts:
   - kind: announce
-    url: https://okumusashimtb.wixsite.com/omcweb/post/8-3活動中止のお知らせ
-    title: 8/3活動中止のお知らせ
-    published: '2025-08-02'
+    url: https://okumusashimtb.wixsite.com/omcweb/post/8-3-名栗定期作業のお知らせ
+    title: 8/3 名栗定期作業のお知らせ
+    published: '2025-07-18'
   - kind: report
     url: https://okumusashimtb.wixsite.com/omcweb/post/8-3名栗定期作業の報告
     title: 8/3名栗定期作業の報告
     published: '2025-08-07'
   - kind: announce
-    url: https://okumusashimtb.wixsite.com/omcweb/post/8-3-名栗定期作業のお知らせ
-    title: 8/3 名栗定期作業のお知らせ
-    published: '2025-07-18'
+    url: https://okumusashimtb.wixsite.com/omcweb/post/8-3活動中止のお知らせ
+    title: 8/3活動中止のお知らせ
+    published: '2025-08-02'

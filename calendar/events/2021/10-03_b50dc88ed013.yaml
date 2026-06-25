@@ -5,7 +5,7 @@ category: 定期作業
 description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/10月3日名栗じてんしゃ広場活動報告'
 source:
   type: omc-blog
-  crawler: cal-omc-blog-fetch
+  crawler: cal-omc-archive-fetch
   fetched: '2026-06-22'
   posts:
   - kind: other

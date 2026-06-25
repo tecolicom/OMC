@@ -2,17 +2,17 @@ summary: 名栗じてんしゃ広場定期整備
 date: '2020-06-07'
 all_day: true
 category: 定期作業
-description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/6月7日名栗じてんしゃ広場定期整備'
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/6月7日名栗じてんしゃ広場定期整備のお知らせ'
 source:
   type: omc-blog
-  crawler: cal-omc-blog-fetch
+  crawler: cal-omc-archive-fetch
   fetched: '2026-06-22'
   posts:
-  - kind: other
-    url: https://okumusashimtb.wixsite.com/omcweb/post/6月7日名栗じてんしゃ広場定期整備
-    title: 6月7日名栗じてんしゃ広場定期整備
-    published: '2020-06-08'
   - kind: announce
     url: https://okumusashimtb.wixsite.com/omcweb/post/6月7日名栗じてんしゃ広場定期整備のお知らせ
     title: 6月7日名栗じてんしゃ広場定期整備のお知らせ
     published: '2020-05-29'
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/6月7日名栗じてんしゃ広場定期整備
+    title: 6月7日名栗じてんしゃ広場定期整備
+    published: '2020-06-08'

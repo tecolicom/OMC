@@ -2,17 +2,17 @@ summary: 名栗じてんしゃ広場整備作業
 date: '2022-08-20'
 all_day: true
 category: 定期作業
-description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/8月20日（土）名栗じてんしゃ広場整備作業'
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/8月20日奥武蔵マウンテンバイク友の会の活動予定'
 source:
   type: omc-blog
-  crawler: cal-omc-blog-fetch
+  crawler: cal-omc-archive-fetch
   fetched: '2026-06-22'
   posts:
-  - kind: other
-    url: https://okumusashimtb.wixsite.com/omcweb/post/8月20日（土）名栗じてんしゃ広場整備作業
-    title: 8月20日名栗じてんしゃ広場整備作業
-    published: '2022-08-21'
   - kind: other
     url: https://okumusashimtb.wixsite.com/omcweb/post/8月20日奥武蔵マウンテンバイク友の会の活動予定
     title: 8月20日奥武蔵マウンテンバイク友の会の活動予定
     published: '2022-08-10'
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/8月20日（土）名栗じてんしゃ広場整備作業
+    title: 8月20日名栗じてんしゃ広場整備作業
+    published: '2022-08-21'

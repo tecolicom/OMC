@@ -5,9 +5,13 @@ category: 里山整備
 description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/11-30飯能市里山清掃活動の報告'
 source:
   type: omc-blog
-  crawler: cal-omc-blog-fetch
+  crawler: cal-omc-archive-fetch
   fetched: '2026-06-22'
   posts:
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/11-30飯能市里山清掃活動の報告
+    title: 11/30飯能市里山清掃活動の報告
+    published: '2025-12-04'
   - kind: announce
     url: https://okumusashimtb.wixsite.com/omcweb/post/11-30飯能市里山清掃活動
     title: 11/30飯能市里山清掃活動のお知らせ
@@ -16,7 +20,3 @@ source:
     url: https://okumusashimtb.wixsite.com/omcweb/post/11-30飯能市里山清掃活動のお知らせ
     title: 11/30飯能市里山清掃活動のお知らせ
     published: '2025-11-27'
-  - kind: report
-    url: https://okumusashimtb.wixsite.com/omcweb/post/11-30飯能市里山清掃活動の報告
-    title: 11/30飯能市里山清掃活動の報告
-    published: '2025-12-04'
