@@ -327,3 +327,19 @@ def test_extract_post_meta_body_empty_when_no_description():
     h = ('<script type="application/ld+json">'
          '{"@type":"BlogPosting","headline":"x","datePublished":"2020-01-01T00:00:00Z"}</script>')
     assert omc_parse.extract_post_meta(h)["body"] == ""
+
+
+def test_extract_post_images():
+    h = open(os.path.join(os.path.dirname(__file__), "fixtures", "post-images.html"),
+             encoding="utf-8").read()
+    res = omc_parse.extract_post_images(h)
+    assert res["images"] == [
+        "https://static.wixstatic.com/media/c3395c_photoA.jpg",
+        "https://static.wixstatic.com/media/c3395c_photoB.png",
+    ]
+    assert res["cover"] == "https://static.wixstatic.com/media/c3395c_cover.jpg/v1/fill/w_640/cover.jpg"
+
+
+def test_extract_post_images_empty():
+    res = omc_parse.extract_post_images("<html><body>no images</body></html>")
+    assert res == {"images": [], "cover": None}

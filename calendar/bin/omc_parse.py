@@ -52,6 +52,49 @@ def extract_post_meta(html: str) -> dict | None:
     return None
 
 
+_WIX_IMG_RE = re.compile(
+    r'https://static\.wixstatic\.com/media/([A-Za-z0-9_~%.-]+\.(?:jpg|jpeg|png|gif|webp))'
+    r'(?:/v1/[^"\'\s)]*?w_(\d+))?'
+)
+_OG_IMAGE_RE = re.compile(r'<meta property="og:image" content="([^"]+)"')
+
+
+def extract_post_images(html: str) -> dict:
+    # cover: og:image 優先、無ければ JSON-LD image.url
+    cover = None
+    m = _OG_IMAGE_RE.search(html)
+    if m:
+        cover = m.group(1)
+    else:
+        for block in re.findall(r'<script type="application/ld\+json">(.*?)</script>', html, re.S):
+            try:
+                data = json.loads(block)
+            except ValueError:
+                continue
+            for item in (data if isinstance(data, list) else [data]):
+                if isinstance(item, dict) and item.get("@type") in ("BlogPosting", "Article", "NewsArticle"):
+                    img = item.get("image")
+                    if isinstance(img, dict) and img.get("url"):
+                        cover = img["url"]
+    cover_id = None
+    if cover:
+        cm = re.search(r'/media/([A-Za-z0-9_~%.-]+\.(?:jpg|jpeg|png|gif|webp))', cover)
+        cover_id = cm.group(1) if cm else None
+    # images: media id ごとの最大幅、200以上、cover と同一 id は除外
+    maxw: dict[str, int] = {}
+    order: list[str] = []
+    for mid, w in _WIX_IMG_RE.findall(html):
+        if mid not in maxw:
+            order.append(mid)
+        maxw[mid] = max(maxw.get(mid, 0), int(w) if w else 0)
+    images = [
+        f"https://static.wixstatic.com/media/{mid}"
+        for mid in order
+        if maxw[mid] >= 200 and mid != cover_id
+    ]
+    return {"images": images, "cover": cover}
+
+
 def parse_sitemap(xml: str) -> list[str]:
     root = ET.fromstring(xml)
     locs = []
