@@ -20,6 +20,12 @@ def _item_text(item, tag: str) -> str:
     return (el.text or "").strip() if el is not None else ""
 
 
+def _clean_body(text: str) -> str:
+    t = unicodedata.normalize("NFKC", _html.unescape(text))
+    lines = [ln.rstrip() for ln in t.split("\n")]
+    return "\n".join(lines).strip("\n")
+
+
 def extract_post_meta(html: str) -> dict | None:
     for block in re.findall(r'<script type="application/ld\+json">(.*?)</script>', html, re.S):
         try:
@@ -41,7 +47,8 @@ def extract_post_meta(html: str) -> dict | None:
                     pub = datetime.date.fromisoformat(str(published)[:10])
                 except ValueError:
                     continue
-                return {"title": headline, "pub_date": pub}
+                body = _clean_body(item.get("description") or "")
+                return {"title": headline, "pub_date": pub, "body": body}
     return None
 
 

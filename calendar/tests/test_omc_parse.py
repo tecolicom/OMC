@@ -311,3 +311,19 @@ def test_event_to_yaml_dict_crawler_param():
     assert d_default["source"]["crawler"] == "cal-omc-blog-fetch"
     d_arch = omc_parse.event_to_yaml_dict(ev, _dt.date(2026, 6, 22), crawler="cal-omc-archive-fetch")
     assert d_arch["source"]["crawler"] == "cal-omc-archive-fetch"
+
+
+def test_extract_post_meta_includes_body():
+    h = open(os.path.join(os.path.dirname(__file__), "fixtures", "post-recent.html"),
+             encoding="utf-8").read()
+    meta = omc_parse.extract_post_meta(h)
+    assert meta["title"] == "5/31日高市ごみゼロの日活動報告"
+    assert meta["pub_date"] == _dt.date(2026, 6, 3)
+    assert meta["body"].startswith("5/31は日高市ごみゼロの日。")
+    assert "参加者は6名" in meta["body"]
+
+
+def test_extract_post_meta_body_empty_when_no_description():
+    h = ('<script type="application/ld+json">'
+         '{"@type":"BlogPosting","headline":"x","datePublished":"2020-01-01T00:00:00Z"}</script>')
+    assert omc_parse.extract_post_meta(h)["body"] == ""
