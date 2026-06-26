@@ -8,11 +8,21 @@ source:
   crawler: cal-omc-archive-fetch
   fetched: '2026-06-22'
   posts:
-  - kind: announce
-    url: https://okumusashimtb.wixsite.com/omcweb/post/10-6-名栗定期作業のお知らせ
-    title: 10/6 名栗定期作業のお知らせ
-    published: '2024-09-15'
   - kind: report
     url: https://okumusashimtb.wixsite.com/omcweb/post/10-6名栗じてんしゃ広場定期作業の報告
     title: 10/6名栗じてんしゃ広場定期作業の報告
     published: '2024-10-07'
+    images:
+    - https://static.wixstatic.com/media/c3395c_c91b3ff28d674a66b6fd6f232fa9e968~mv2.png
+    - https://static.wixstatic.com/media/c3395c_8d20661802014104801b4cd2851ab5c9~mv2.png
+    - https://static.wixstatic.com/media/c3395c_f8278353d68540d9952932224d9d6721~mv2.png
+    - https://static.wixstatic.com/media/c3395c_dc81f0e1ae354c19a7ba0ace6209b6e4~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_27f099bbaac74d159948bc866c42fee4~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_dffd0ffe3b244dd699b2a61a324fc45c~mv2.png
+    - https://static.wixstatic.com/media/c3395c_438e6a43b379498590e7e116b49e1f25~mv2.png
+    - https://static.wixstatic.com/media/c3395c_49caf28662024843b0ca81805d7b4196~mv2.jpg
+  - kind: announce
+    url: https://okumusashimtb.wixsite.com/omcweb/post/10-6-名栗定期作業のお知らせ
+    title: 10/6 名栗定期作業のお知らせ
+    published: '2024-09-15'
+    body: 10月6日(日)は名栗じてんしゃ広場の定期作業日です。草刈りと路面補修を行う予定です。同広場に午前9時にお集まりください。11時頃まで作業を行います。なお、前日17時の気象庁発表による埼玉県南部の天気予報で、当日6時〜12時の降水確率が50%以上の場合は中止といたしますのでご了承ください。

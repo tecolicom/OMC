@@ -8,11 +8,19 @@ source:
   crawler: cal-omc-archive-fetch
   fetched: '2026-06-22'
   posts:
-  - kind: announce
-    url: https://okumusashimtb.wixsite.com/omcweb/post/10-27日高市清掃作業のお知らせ
-    title: 10/27日高市清掃作業のお知らせ
-    published: '2024-10-12'
   - kind: report
     url: https://okumusashimtb.wixsite.com/omcweb/post/10-27日高市ごみゼロの日作業報告
     title: 10/27日高市ごみゼロの日作業報告
     published: '2024-10-28'
+    images:
+    - https://static.wixstatic.com/media/c3395c_880de5f65691493eb7e8bcc94c90dc6f~mv2.png
+    - https://static.wixstatic.com/media/c3395c_1559e564e1ec4948bfad3ceee040f125~mv2.png
+    - https://static.wixstatic.com/media/c3395c_49682cf217fc4cc78940fe6e38b39ea2~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_725b9349e5404498946300b010774edc~mv2.png
+    - https://static.wixstatic.com/media/c3395c_eb5012fc2e2940518f4c7ba42b9f1f99~mv2.png
+  - kind: announce
+    url: https://okumusashimtb.wixsite.com/omcweb/post/10-27日高市清掃作業のお知らせ
+    title: 10/27日高市清掃作業のお知らせ
+    published: '2024-10-12'
+    body: 10月27日(日)は日高市ごみゼロの日に伴い、地元自治体と協働で道路の清掃と草刈りを行います。集合時間が普段の活動より早いですが、ご協力よろしくお願いします。集合日時:10月27日(日)午前7時45分集合場所:セブンイレブン日高高麗本郷店(https://goo.gl/maps/5ht4sMVpYWLzYZjZ7)作業場所まではMTBで移動します。手鋸や枝切りバサミをお持ちの方はご持参ください。お車でお越しの方は近隣のコインパーキングに駐車してください。なお、前日午後5時の気象庁発表による埼玉県南部の天気予報で、当日6時~12時の降水確率が50%以上の場合は作業を中止といたします。以下、年内いっぱいの活動予定を記載します。各活動の詳細につきましては、日にちが近づき次第告知します。11月10日(日)鳩山刈り払い作業11月24日(日)作業&ライド12月1日(日)
+      名栗じてんしゃ広場定期整備ご参加お待ちしています!

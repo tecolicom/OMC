@@ -1,0 +1,46 @@
+#!/usr/bin/env python3
+"""migrate-html-cache — 既存 sources/blog/*.html から YAML アーカイブを生成（一回限り）。
+
+再 fetch しない。各 HTML から JSON-LD 本文 + 画像を抽出し <slug>.yaml を書く。
+URL は HTML 内の canonical/og:url から復元する。
+"""
+from __future__ import annotations
+import glob, os, re, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import omc_parse
+
+
+def _post_url(html: str) -> str | None:
+    m = re.search(r'<meta property="og:url" content="([^"]+)"', html) \
+        or re.search(r'<link rel="canonical" href="([^"]+)"', html)
+    return m.group(1) if m else None
+
+
+def main() -> int:
+    cache_dir = sys.argv[1] if len(sys.argv) > 1 else "sources/blog"
+    htmls = glob.glob(os.path.join(cache_dir, "*.html"))
+    written = skipped = 0
+    for hp in htmls:
+        html = open(hp, encoding="utf-8", errors="replace").read()
+        url = _post_url(html)
+        meta = omc_parse.extract_post_meta(html)
+        if not url or meta is None:
+            skipped += 1
+            continue
+        imgs = omc_parse.extract_post_images(html)
+        rec = {"url": url, "title": meta["title"],
+               "published": meta["pub_date"].isoformat(), "body": meta["body"]}
+        if imgs["images"]:
+            rec["images"] = imgs["images"]
+        if imgs["cover"]:
+            rec["cover"] = imgs["cover"]
+        out = os.path.join(cache_dir, omc_parse.slugify_post_url(url) + ".yaml")
+        with open(out, "w", encoding="utf-8") as f:
+            f.write(omc_parse.dump_archive_yaml(rec))
+        written += 1
+    print(f"html={len(htmls)} written={written} skipped={skipped}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

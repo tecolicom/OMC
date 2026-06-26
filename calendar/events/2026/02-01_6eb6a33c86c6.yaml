@@ -8,11 +8,16 @@ source:
   crawler: cal-omc-archive-fetch
   fetched: '2026-06-22'
   posts:
-  - kind: report
-    url: https://okumusashimtb.wixsite.com/omcweb/post/2-1名栗定期作業の報告
-    title: 2/1名栗定期作業の報告
-    published: '2026-02-05'
   - kind: announce
     url: https://okumusashimtb.wixsite.com/omcweb/post/2-1名栗定期作業のお知らせ
     title: 2/1名栗定期作業のお知らせ
     published: '2026-01-27'
+    body: 2月1日(日)は名栗じてんしゃ広場の定期整備を行います。告知が遅れ、申し訳ありませんでした。荒れた路面の補修を主に行います。同広場に午前9時にお集まりください。11時頃まで作業を行う予定です。なお、前日17時の気象庁発表による埼玉県南部の天気予報で、当日6時〜12時の降水確率が50%以上の場合は中止といたしますのでご了承ください。
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/2-1名栗定期作業の報告
+    title: 2/1名栗定期作業の報告
+    published: '2026-02-05'
+    images:
+    - https://static.wixstatic.com/media/c3395c_ad1ca2661b76462b9865a07356bdf74f~mv2.png
+    - https://static.wixstatic.com/media/c3395c_8a2a51df2e304c0499a5ef8ecb7af03f~mv2.png
+    - https://static.wixstatic.com/media/c3395c_018c388fcddc457a81a9963230dfee3f~mv2.jpg

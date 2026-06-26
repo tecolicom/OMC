@@ -8,11 +8,20 @@ source:
   crawler: cal-omc-archive-fetch
   fetched: '2026-06-22'
   posts:
-  - kind: announce
-    url: https://okumusashimtb.wixsite.com/omcweb/post/5-18飯能市里山清掃活動のお知らせ
-    title: 5/18飯能市里山清掃活動のお知らせ
-    published: '2025-05-08'
   - kind: report
     url: https://okumusashimtb.wixsite.com/omcweb/post/5-18飯能市里山清掃活動の報告
     title: 5/18飯能市里山清掃活動の報告
     published: '2025-05-18'
+    images:
+    - https://static.wixstatic.com/media/c3395c_2cefaf7c35f4402990c58e9cba58fa47~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_be76882541ad4b6880a39a30a132d224~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_d4173dbd80774337a83777ed84ed20a5~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_e1823c9a25a84520851d0d0ba638ea4e~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_9304668f9640432fb8bb3eafd52a18fb~mv2.jpg
+  - kind: announce
+    url: https://okumusashimtb.wixsite.com/omcweb/post/5-18飯能市里山清掃活動のお知らせ
+    title: 5/18飯能市里山清掃活動のお知らせ
+    published: '2025-05-08'
+    body: 5月18日(日)は飯能市の市民清掃デーです。地元自治会の皆様の里山清掃作業に奥武蔵マウンテンバイク友の会もご一緒させていただきます。我々マウンテンバイカーが日々楽しませていただいているトレイルの入り口にお住いの皆さんとの協働作業です。是非ご一緒ください。
+      ■阿須自治会の皆さんは作業開始時間が早いため、阿須自治会の作業へご参加いただける方は7:30にあいわ広場にご集合ください。主な作業は草刈りの予定です。草刈り鎌をお持ちの方はご持参ください。近隣にお住いで、早起きが得意な方は是非7:30にお集まりいただけたらと思います。■岩渕自治会の作業へご参加いただける方は8:30にあいわ広場にご集合ください。主な作業は水切りの清掃などの予定です。スコップをお持ちの方はご持参ください。現地までお運びいたします。活動場所が複数になるため、より多くのご協力をお待ちしております。【集合場所は共通です】■集合場所:あいわ広場(お車の駐車が可能です)■集合日時:5月18日(日)
+      7:30 または 8:30作業場所まではMTBで移動します。●各自で水分補給やおやつの準備をお願いします。●前日17時の気象庁発表によ

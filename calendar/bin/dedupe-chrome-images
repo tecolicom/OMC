@@ -1,0 +1,54 @@
+#!/usr/bin/env python3
+"""dedupe-chrome-images — アーカイブ YAML の images から chrome 画像を除去（再実行可能）。
+
+各記事ページに共通で出る「最近の投稿」サムネ等（多数の記事に現れる media id）は記事固有の
+写真ではないので除く。アーカイブ YAML 群を読み、media id の出現記事数を数え、全体の 10% 超の
+記事に出る id を全アーカイブの images から除去して書き戻す。HTML に依存しないので HTML 削除後も
+動く。
+"""
+from __future__ import annotations
+import glob, os, re, sys, collections
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import omc_parse
+import yaml
+
+
+def _media_id(url: str) -> str | None:
+    m = re.search(r'/media/([^/]+)', url)
+    return m.group(1) if m else None
+
+
+def main() -> int:
+    cache_dir = sys.argv[1] if len(sys.argv) > 1 else "sources/blog"
+    files = glob.glob(os.path.join(cache_dir, "*.yaml"))
+    records = {}
+    freq = collections.Counter()
+    for f in files:
+        rec = yaml.safe_load(open(f, encoding="utf-8"))
+        records[f] = rec
+        for u in (rec.get("images") or []):
+            mid = _media_id(u)
+            if mid:
+                freq[mid] += 1
+    threshold = max(3, len(files) // 10)  # 10% 超の記事に出る id は chrome
+    chrome = {mid for mid, c in freq.items() if c > threshold}
+    changed = 0
+    for f, rec in records.items():
+        imgs = rec.get("images") or []
+        kept = [u for u in imgs if _media_id(u) not in chrome]
+        if len(kept) != len(imgs):
+            if kept:
+                rec["images"] = kept
+            else:
+                rec.pop("images", None)
+            with open(f, "w", encoding="utf-8") as fh:
+                fh.write(omc_parse.dump_archive_yaml(rec))
+            changed += 1
+    print(f"archives={len(files)} threshold>{threshold} chrome_ids={len(chrome)} changed={changed}")
+    for mid in sorted(chrome):
+        print("  removed:", mid[:50], f"({freq[mid]} 記事)")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

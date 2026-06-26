@@ -1,18 +1,20 @@
-summary: 名栗定期作業中止
+summary: 名栗じてんしゃ広場定期作業
 date: '2024-08-04'
 all_day: true
 category: 定期作業
-description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/8-4-名栗定期作業中止のお知らせ'
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/8-4（日）名栗じてんしゃ広場定期作業のお知らせ'
 source:
   type: omc-blog
   crawler: cal-omc-archive-fetch
   fetched: '2026-06-22'
   posts:
   - kind: announce
-    url: https://okumusashimtb.wixsite.com/omcweb/post/8-4-名栗定期作業中止のお知らせ
-    title: 8/4 名栗定期作業中止のお知らせ
-    published: '2024-08-03'
-  - kind: announce
     url: https://okumusashimtb.wixsite.com/omcweb/post/8-4（日）名栗じてんしゃ広場定期作業のお知らせ
     title: 8/4（日）名栗じてんしゃ広場定期作業のお知らせ
     published: '2024-07-22'
+    body: 8月4日(日)は名栗じてんしゃ広場の定期整備を行います。草刈りをメインに行いつつ、荒れた路面を補修します。同広場に午前9時にお集まりください。11時頃まで作業を行う予定です。なお、前日17時の気象庁発表による埼玉県南部の天気予報で、当日6時〜12時の降水確率が50%以上およびまたは予想最高気温が35°以上の場合は中止といたしますのでご了承ください。
+  - kind: announce
+    url: https://okumusashimtb.wixsite.com/omcweb/post/8-4-名栗定期作業中止のお知らせ
+    title: 8/4 名栗定期作業中止のお知らせ
+    published: '2024-08-03'
+    body: 8/4に控えていました名栗じてんしゃ広場の定期作業ですが、35度の高温予報が出ましたので中止といたします。まだまだ酷暑が続きますので、会員の皆さまにおかれましてはお体にご自愛ください。

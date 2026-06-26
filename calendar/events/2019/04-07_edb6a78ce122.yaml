@@ -8,11 +8,31 @@ source:
   crawler: cal-omc-archive-fetch
   fetched: '2026-06-22'
   posts:
-  - kind: other
-    url: https://okumusashimtb.wixsite.com/omcweb/post/2019/03/26/4月7日名栗じてんしゃ広場定例整備
-    title: 4月7日名栗じてんしゃ広場定例整備
-    published: '2019-03-26'
   - kind: report
     url: https://okumusashimtb.wixsite.com/omcweb/post/2019/04/08/4月7日定例整備報告
     title: 4月7日定例整備報告
     published: '2019-04-07'
+    images:
+    - https://static.wixstatic.com/media/c3395c_53f0b227b0004e66bf79da3a5a346cd9~mv2_d_4032_3024_s_4_2.jpg
+    - https://static.wixstatic.com/media/c3395c_93ff44fadbb34c279b4a658125349c48~mv2_d_4032_3024_s_4_2.jpg
+    - https://static.wixstatic.com/media/c3395c_b5c55aa121f64c67a9c1daed8454a737~mv2_d_4032_3024_s_4_2.jpg
+    - https://static.wixstatic.com/media/c3395c_ae5e37b7f6854c06aed81cc0511f7f64~mv2_d_4032_3024_s_4_2.jpg
+    - https://static.wixstatic.com/media/c3395c_727967b5503e46f4b020eb43d9ca1f6c~mv2_d_4032_3024_s_4_2.jpg
+    - https://static.wixstatic.com/media/c3395c_e742d63a41c04f22b01b0ff605fdb4af~mv2_d_4032_3024_s_4_2.jpg
+    - https://static.wixstatic.com/media/c3395c_7f1eea5d8e124afdad18b46f8fc10098~mv2_d_4032_3024_s_4_2.jpg
+    - https://static.wixstatic.com/media/c3395c_5e162fad951b4d0684e90b3cf9372bd4~mv2_d_4032_3024_s_4_2.jpg
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/2019/03/26/4月7日名栗じてんしゃ広場定例整備
+    title: 4月7日名栗じてんしゃ広場定例整備
+    published: '2019-03-26'
+    body: |2-
+       こちら翔んで埼玉でも各地で桜の便りが聞こえる今日この頃、会員の皆さんいかがお過ごしでしょうか。
+      偶数月第1日曜日は名栗じてんしゃ広場の定例整備です。
+      翌週にじてんしゃ広場にてキッズスクールを開催しますので、子供達に安全に乗って貰える様整備したいと思います。
+      いつもの様に2時間整備して後はライド楽しみたいと思います。
+      会員の皆さんのお力添え宜しくお願いします。
+
+      日時      4月7日(日曜日)9時より
+      場所      名栗じてんしゃ広場
+
+      土曜日の午後5時の予報で降水確率50%以上の場合は中止とさせて頂きます。

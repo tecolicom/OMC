@@ -1,5 +1,5 @@
-# クロール入力キャッシュ (再取得可能・大きい)
-/calendar/sources/
+# 生HTMLキャッシュのみ無視 (巨大・再取得可能)。YAML記事アーカイブは追跡してコミットする。
+/calendar/sources/blog/*.html
 
 # Service Account 鍵など機密
 *.sa.json

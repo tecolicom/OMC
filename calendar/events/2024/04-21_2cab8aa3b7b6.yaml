@@ -2,17 +2,28 @@ summary: 子ども自転車教室
 date: '2024-04-21'
 all_day: true
 category: 自転車教室
-description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/4-21（日）子ども自転車教室のお知らせ'
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/4-21子ども自転車教室'
 source:
   type: omc-blog
   crawler: cal-omc-archive-fetch
   fetched: '2026-06-22'
   posts:
-  - kind: announce
-    url: https://okumusashimtb.wixsite.com/omcweb/post/4-21（日）子ども自転車教室のお知らせ
-    title: 4/21（日）子ども自転車教室のお知らせ
-    published: '2024-03-14'
   - kind: other
     url: https://okumusashimtb.wixsite.com/omcweb/post/4-21子ども自転車教室
     title: 4/21子ども自転車教室
     published: '2024-04-22'
+    body: 4月21日(日)は春らしい穏やかな気温のもと、名栗じてんしゃ広場で子ども自転車教室を行いました。集まった5歳から11歳までのキッズたちを、年少組と年長組の2班に分けました。年少組は、凸凹の土路面の楽しい走り方をレクチャー。最後にはパンプトラックをぐるりと周回できるようになり、笑顔とともに上達が見られました。経験者ばかりの年長組は、コーナー出口でコースアウトしてしまう子が見受けられたので、ライン取りと目線に焦点を当てたコーナリング方法を学びました。コーナーをスムーズに曲がれるようになったので、その後に続くコブでも速度を保てるようになりました。ジャンプレーンに移動してからは、コブでタイヤを浮き上がらせずに加速させる方法や、踏切りのやりかたを学びました。進入速度や走り方を彼らなりに考えて調整し、体だけでなく頭も使った良いアクティビティになったことでしょう。休憩中には川遊びや木登りも楽しみ、自然とたくさん触れ合う子どもたちの姿が見られました。次回の子ども教室は秋頃開催予定ですのでお楽しみに!
+      また、次回の里山整備活動は5月19日(日)を予定しています。詳細は後日ブログに投稿いたします。
+    images:
+    - https://static.wixstatic.com/media/c3395c_4f697f4ef21144da8c42956f6b840e77~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_7ffe46379f9342598dcfbeb427177be9~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_03e846f85e2445ee8c38e7d42654d412~mv2.png
+    - https://static.wixstatic.com/media/c3395c_d93b30d68d9e425f9a6730b36024e149~mv2.png
+    - https://static.wixstatic.com/media/c3395c_506acf99c1e148068a53baa19174f8d3~mv2.png
+    - https://static.wixstatic.com/media/c3395c_ca7b5ef7904d4b63a489f80ddcf302a5~mv2.png
+    - https://static.wixstatic.com/media/c3395c_b1b3e548bf8a40d5933ca76586077280~mv2.png
+  - kind: announce
+    url: https://okumusashimtb.wixsite.com/omcweb/post/4-21（日）子ども自転車教室のお知らせ
+    title: 4/21（日）子ども自転車教室のお知らせ
+    published: '2024-03-14'
+    body: 4月21日(日)は、子どもじてんしゃ教室を開催いたします。詳しくはこちらをご覧ください。申し込みはこちらです。4月開催のイベントが多く、飯能市広報の掲載スペースが足りなかったため、こちらで通常より早めのお知らせとなりました。皆さまのご参加、お待ちしています。なお、前日17時の気象庁発表による埼玉県南部の天気予報で、当日6時~12時の降水確率が50%以上だった場合は、中止といたします。晴天を祈りましょう!4/7(日)は子ども自転車教室に向けた定期整備作業になります。こちらのご参加もお待ちしています。

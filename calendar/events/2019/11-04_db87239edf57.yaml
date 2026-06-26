@@ -8,11 +8,33 @@ source:
   crawler: cal-omc-archive-fetch
   fetched: '2026-06-22'
   posts:
-  - kind: report
-    url: https://okumusashimtb.wixsite.com/omcweb/post/2019/11/05/11月4日名栗じてんしゃ広場整備報告
-    title: 11月4日名栗じてんしゃ広場整備報告
-    published: '2019-11-04'
   - kind: other
     url: https://okumusashimtb.wixsite.com/omcweb/post/2019/10/28/11月4日、10日じてんしゃ広場整備について
     title: 11月4日と10日のじてんしゃ広場整備について
     published: '2019-10-28'
+    body: |-
+      このたびの集中豪雨で被害にあわれた方々こころからお見舞い申し上げます。
+      今回の大雨により、名栗じてんしゃ広場でも川の氾濫により、パンプ自体には被害が無かったのですが、浸水によりゴミや土砂が公園内に入りこんでいます。
+      11月17日に名栗じてんしゃ広場にてじてんしゃ教室をとり行う予定でいます。
+      当日こども達が楽しめる様にイレギュラーではありますが、11月4日 と10日に整備を行いたいと思います。
+      4日に完了する様でしたら10日は行いません。
+      会員の皆さんのお力添えよろしくお願い申し上げます。
+
+      日時         11月4日     9時より
+      場所  名栗じてんしゃ広場
+
+      尚前日の気象庁17時の予報で降水確率が50%以上の時は中止とさせて頂きます。
+    images:
+    - https://static.wixstatic.com/media/c3395c_372b381837294952ae2a9f2e36a6a1ed~mv2_d_4032_3024_s_4_2.jpg
+    - https://static.wixstatic.com/media/c3395c_dfb05633e4a64b3eb344164713e0282b~mv2_d_4032_3024_s_4_2.jpg
+    - https://static.wixstatic.com/media/c3395c_0fadd76c183b4ad986968ca0a32365d3~mv2_d_4032_3024_s_4_2.jpg
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/2019/11/05/11月4日名栗じてんしゃ広場整備報告
+    title: 11月4日名栗じてんしゃ広場整備報告
+    published: '2019-11-04'
+    images:
+    - https://static.wixstatic.com/media/c3395c_c5709557468e4bb0bcf689262301af07~mv2_d_4032_3024_s_4_2.jpeg
+    - https://static.wixstatic.com/media/c3395c_2e0fe32a4d484e2a940aaa64c29371ca~mv2_d_4032_3024_s_4_2.jpeg
+    - https://static.wixstatic.com/media/c3395c_c0ed3084d8ff4ff18ad6317198d76030~mv2_d_4032_3024_s_4_2.jpeg
+    - https://static.wixstatic.com/media/c3395c_2e7a931502fd461f9eaf2c5061bbf717~mv2_d_4032_3024_s_4_2.jpeg
+    - https://static.wixstatic.com/media/c3395c_6269430551464324b0138ba63a3fcc3d~mv2_d_4032_3024_s_4_2.jpeg

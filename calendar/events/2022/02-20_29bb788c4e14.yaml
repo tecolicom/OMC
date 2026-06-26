@@ -2,17 +2,20 @@ summary: 里山整備活動
 date: '2022-02-20'
 all_day: true
 category: 里山整備
-description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/2月20日整備活動中止のお知らせ'
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/2月20日（日）里山整備活動のご案内'
 source:
   type: omc-blog
   crawler: cal-omc-archive-fetch
   fetched: '2026-06-22'
   posts:
-  - kind: announce
-    url: https://okumusashimtb.wixsite.com/omcweb/post/2月20日整備活動中止のお知らせ
-    title: 2月20日整備活動中止のお知らせ
-    published: '2022-02-10'
   - kind: other
     url: https://okumusashimtb.wixsite.com/omcweb/post/2月20日（日）里山整備活動のご案内
     title: 2月20日（日）里山整備活動のご案内
     published: '2022-02-08'
+    body: 2月20日(日)は、これまでに1度しか作業を行えていないエリアで清掃·整備活動を行います。皆さんのご参加をお待ちしています。集合日時:2月20日(日曜)午前8時30分集合場所:カワズベース(https://g.page/cawazbase?share)カワズベースには、ランチを利用される方のみ、上の集合場所または第二駐車場(https://goo.gl/maps/rQmHTP4yytBF8JsR8
+      )にお車を駐車できます。ランチを利用されない方は、巾着田の駐車場(https://goo.gl/maps/rXSUjB5wUtjPeC736 )など、近隣のコインパーキングをご利用ください。作業場所まではMTBで移動します。手鋸や枝切りバサミをお持ちの方はご持参ください。【注意事項】●ソーシャルディスタンス、手指の消毒などお気をつけください。●各自で水分補給やおやつの準備をお願いします。●前日午後5時の気象庁発表による埼玉県南部の天気予報で、降水確率が50%以上だった場合は作業を中止といたします。●まん延防止等重点措置または緊急事態宣言が発出された際は作業を中止といたします。
+  - kind: announce
+    url: https://okumusashimtb.wixsite.com/omcweb/post/2月20日整備活動中止のお知らせ
+    title: 2月20日整備活動中止のお知らせ
+    published: '2022-02-10'
+    body: 先日告知した2月20日(日)の里山整備活動ですが、埼玉県での『まん延防止等重点措置』が3月6日まで延長されたことを受けまして、中止といたします。次回の活動は3月13日(日)を予定しています。

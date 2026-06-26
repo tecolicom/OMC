@@ -8,11 +8,19 @@ source:
   crawler: cal-omc-archive-fetch
   fetched: '2026-06-22'
   posts:
-  - kind: announce
-    url: https://okumusashimtb.wixsite.com/omcweb/post/5-26日高市清掃作業のお知らせ
-    title: 5/26日高市清掃作業のお知らせ ＊集合時間変更
-    published: '2024-05-13'
   - kind: report
     url: https://okumusashimtb.wixsite.com/omcweb/post/5-26日高市ごみゼロの日清掃作業の報告
     title: 5/26日高市ごみゼロの日清掃作業の報告
     published: '2024-05-29'
+    images:
+    - https://static.wixstatic.com/media/c3395c_1c5797ff78b1470e9710a288540b3b8f~mv2.png
+    - https://static.wixstatic.com/media/c3395c_d983918ad96a4012ab2a98614a7e8d6a~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_926f1c8678604ce89695de4c1fd22f46~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_f5832713abf943d2888b63ab0dfcb5fd~mv2.png
+    - https://static.wixstatic.com/media/c3395c_84f7576fbb0f4142996d45442c76c44a~mv2.png
+    - https://static.wixstatic.com/media/c3395c_ffa8d33e1f484c55ae7ed88b3f8ef52c~mv2.jpg
+  - kind: announce
+    url: https://okumusashimtb.wixsite.com/omcweb/post/5-26日高市清掃作業のお知らせ
+    title: 5/26日高市清掃作業のお知らせ ＊集合時間変更
+    published: '2024-05-13'
+    body: '*集合時間を午前7時45分に変更しました。ご注意ください。5月26日(日)は日高市ごみゼロの日に伴い、地元自治体と協働で道路の清掃と草刈りを行います。集合時間が普段の活動より早く、19日の飯能市清掃活動から作業が連続しますが、ご協力よろしくお願いします。集合日時:5月26日(日)午前7時45分集合場所:セブンイレブン日高高麗本郷店(https://goo.gl/maps/5ht4sMVpYWLzYZjZ7)作業場所まではMTBで移動します。手鋸や枝切りバサミをお持ちの方はご持参ください。お車でお越しの方は近隣のコインパーキングに駐車してください。なお、前日午後5時の気象庁発表による埼玉県南部の天気予報で、当日6時〜12時の降水確率が50%以上の場合は作業を中止といたします。'

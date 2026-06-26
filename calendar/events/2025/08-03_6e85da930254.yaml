@@ -9,14 +9,22 @@ source:
   fetched: '2026-06-22'
   posts:
   - kind: announce
-    url: https://okumusashimtb.wixsite.com/omcweb/post/8-3-名栗定期作業のお知らせ
-    title: 8/3 名栗定期作業のお知らせ
-    published: '2025-07-18'
+    url: https://okumusashimtb.wixsite.com/omcweb/post/8-3活動中止のお知らせ
+    title: 8/3活動中止のお知らせ
+    published: '2025-08-02'
+    body: 明日の名栗じてんしゃ広場の定期作業ですが、35度以上の気温が予測されますので中止といたします。
   - kind: report
     url: https://okumusashimtb.wixsite.com/omcweb/post/8-3名栗定期作業の報告
     title: 8/3名栗定期作業の報告
     published: '2025-08-07'
+    images:
+    - https://static.wixstatic.com/media/c3395c_86d391189790407f8f934f0fb55d4672~mv2.png
+    - https://static.wixstatic.com/media/c3395c_8dc4209ac60d49eab3d4ff3a7bedb7e6~mv2.png
+    - https://static.wixstatic.com/media/c3395c_cd7d0df901fb4fee9428fff4be13a143~mv2.png
+    - https://static.wixstatic.com/media/c3395c_30c5d3cdf816447db79932e27b5ff7a6~mv2.png
+    - https://static.wixstatic.com/media/c3395c_ec396458881043f5931a2e7ea8bf2475~mv2.jpg
   - kind: announce
-    url: https://okumusashimtb.wixsite.com/omcweb/post/8-3活動中止のお知らせ
-    title: 8/3活動中止のお知らせ
-    published: '2025-08-02'
+    url: https://okumusashimtb.wixsite.com/omcweb/post/8-3-名栗定期作業のお知らせ
+    title: 8/3 名栗定期作業のお知らせ
+    published: '2025-07-18'
+    body: 8月3日(日)は名栗じてんしゃ広場の定期整備を行います。草刈りをメインに行いつつ、荒れた路面を補修します。同広場に午前9時にお集まりください。11時頃まで作業を行う予定です。なお、前日17時の気象庁発表による埼玉県南部の天気予報で、当日6時〜12時の降水確率が50%以上およびまたは予想最高気温が35°以上の場合は中止といたしますのでご了承ください。

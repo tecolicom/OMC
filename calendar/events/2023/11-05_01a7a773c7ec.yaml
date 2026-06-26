@@ -8,11 +8,18 @@ source:
   crawler: cal-omc-archive-fetch
   fetched: '2026-06-22'
   posts:
-  - kind: other
-    url: https://okumusashimtb.wixsite.com/omcweb/post/１１月５日（日）鳩山作業告知
-    title: １１月５日（日）鳩山作業告知
-    published: '2023-10-28'
   - kind: report
     url: https://okumusashimtb.wixsite.com/omcweb/post/11月5日-日-鳩山活動報告。
     title: 11月5日(日)鳩山活動報告。
     published: '2023-11-07'
+    images:
+    - https://static.wixstatic.com/media/c3395c_d7306ce0bca941d2aadcd1d4f47d8b5b~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_6c07d80426d44317b9b1c6514f7d70a1~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_97b0ee75b2a84952986e2e741d776716~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_5d63b07a2bab4de9b4f0d355c4a6ad3c~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_8969329571ee4534871773d0ec073b42~mv2.jpg
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/１１月５日（日）鳩山作業告知
+    title: １１月５日（日）鳩山作業告知
+    published: '2023-10-28'
+    body: ~鳩山活動の告知。11月5日(日)鳩山町熊井にて谷津田の休耕田の刈払いおよびトレイルの清掃と刈払いを行います。作業時間は9時~11時位。刈払い機は休耕田の作業がメインです。使われる方は後任の教習所で講習を受けた方に限ります。トレイル作業の方は、鎌や手鋸があると良いです。会の方でも用意するので、お持ちでない方は当日お声がけください。当日現地で車止められるところが少ないので、8時に坂戸市北浅羽桜堤公園の駐車場に集合。道具は2台ほどにまとめて運ぶ予定です。参加者はそこからMTBで移動になります。会員の皆様のご協力よろしくお願いします。~

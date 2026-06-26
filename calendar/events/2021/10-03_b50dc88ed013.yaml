@@ -8,15 +8,27 @@ source:
   crawler: cal-omc-archive-fetch
   fetched: '2026-06-22'
   posts:
-  - kind: other
-    url: https://okumusashimtb.wixsite.com/omcweb/post/10-3-日-の名栗じてんしゃ広場の定期整備作業にご参加くださる皆様へ
-    title: 10/3(日)の名栗じてんしゃ広場の定期整備作業にご参加くださる皆様へ
-    published: '2021-10-01'
   - kind: report
     url: https://okumusashimtb.wixsite.com/omcweb/post/10月3日名栗じてんしゃ広場活動報告
     title: 10月3日名栗じてんしゃ広場活動報告
     published: '2021-10-04'
+    images:
+    - https://static.wixstatic.com/media/c3395c_d094c61507e847dabcc7c5b9b9dcf933~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_790a869b8b9444c990c5ccf9343a1eb1~mv2.png
+    - https://static.wixstatic.com/media/c3395c_7b48e48f5ae54106ac1b4522f6839a74~mv2.png
+    - https://static.wixstatic.com/media/c3395c_47ec8a3559014245a2915134a58066b4~mv2.png
+    - https://static.wixstatic.com/media/c3395c_f3ebaa136fd7442ca843e7e862e7462f~mv2.jpg
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/10-3-日-の名栗じてんしゃ広場の定期整備作業にご参加くださる皆様へ
+    title: 10/3(日)の名栗じてんしゃ広場の定期整備作業にご参加くださる皆様へ
+    published: '2021-10-01'
+    body: |-
+      10/3(日)の名栗じてんしゃ広場の定期整備作業にお車でお越しの方は名栗庁舎前の駐車場をご利用ください。
+
+      緊急事態宣言は解除とはなりましたが、段階的な緩和措置といたしまして名栗じてんしゃ広場の駐車場の開放は10/6(水)からになります。みなさまのご参加よろしくお願いします。
   - kind: other
     url: https://okumusashimtb.wixsite.com/omcweb/post/10月3日名栗じてんしゃ広場定期整備
     title: 10月3日名栗じてんしゃ広場定期整備
     published: '2021-09-20'
+    body: ここ1ヶ月の天候不順でライドもままならず、緊急事態宣言も重なり、ライダーの皆さんはヤキモキした日々だったのではないしでしょうか。10月3日は名栗じてんしゃ広場の定期となっております。緊急事態宣言もあける予定ですので、久々にライダー仲間で顔を合わせ、整備にライドにおしゃべりに楽しめればと思います。元気に育った雑草や雨で痛んだパンプの面の整備に今回ももりだくさんな整備となりそうです。会員の皆さんのお力添えよろしくお願い申し上げます。   日時
+      10月3日 9時より   場所 名栗じてんしゃ広場尚、前日土曜日、午後5時の気象庁の埼玉県南部の天気予報で、降水確率が50%以上だった場合は中止とさせて頂きますのでよろしくお願い申し上げます。

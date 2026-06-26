@@ -8,11 +8,22 @@ source:
   crawler: cal-omc-archive-fetch
   fetched: '2026-06-22'
   posts:
-  - kind: announce
-    url: https://okumusashimtb.wixsite.com/omcweb/post/12-21忘年ライドのお知らせ
-    title: 12/21忘年ライドのお知らせ
-    published: '2025-12-09'
   - kind: report
     url: https://okumusashimtb.wixsite.com/omcweb/post/12月21日（日）の活動報告
     title: 12月21日（日）の活動報告
     published: '2025-12-23'
+    images:
+    - https://static.wixstatic.com/media/c3395c_dfd85647d33143b888a304b5ed145431~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_d74211fd33d340f2bce87df8d6d76127~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_da8b3dbd35874cafb56cf1cbb3913624~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_1725ffd2a7094a40983802d89363fa61~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_fab055a9ddd64754bfd8b36c7ef66b39~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_60470d234a0e4054adffc33f48c99921~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_d700d58adf654035b46256cf0ae914d8~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_9f2801abedf5432086ec7c2b4b6efe20~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_1390b575599c4ca2a2b93b86f7644dc8~mv2.jpg
+  - kind: announce
+    url: https://okumusashimtb.wixsite.com/omcweb/post/12-21忘年ライドのお知らせ
+    title: 12/21忘年ライドのお知らせ
+    published: '2025-12-09'
+    body: 2025年最後の活動は、飯能市道路美化活動団体として整備を行っている里山道で、忘年ライドを行います。落枝等を片付けながら里山道をツーリングします。みなさまのご参加をお待ちしております。■集合日時:12月21日(日)8:30■集合場所:あいわ広場(お車の駐車が可能です)【注意事項】●各自で水分補給やおやつの準備をお願いします。●前日17時の気象庁発表による埼玉県南部の天気予報で、当日6時~12時の降水確率が50%以上の場合は活動を中止といたします。

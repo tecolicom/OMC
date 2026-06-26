@@ -8,11 +8,17 @@ source:
   crawler: cal-omc-archive-fetch
   fetched: '2026-06-22'
   posts:
-  - kind: other
-    url: https://okumusashimtb.wixsite.com/omcweb/post/12月4日名栗じてんしゃ広場定期整備
-    title: 12月4日名栗じてんしゃ広場定期整備
-    published: '2022-11-22'
   - kind: report
     url: https://okumusashimtb.wixsite.com/omcweb/post/12月4日-名栗定期作業報告
     title: 12月4日（日）名栗定期作業報告
     published: '2022-12-08'
+    images:
+    - https://static.wixstatic.com/media/c3395c_da7e670e318341809a0afcabd1eaf566~mv2.png
+    - https://static.wixstatic.com/media/c3395c_5d6d7ceaa45f4284a6bb165962d2c550~mv2.png
+    - https://static.wixstatic.com/media/c3395c_97791e2b274049c3b7ef24ead8a02984~mv2.png
+    - https://static.wixstatic.com/media/c3395c_cf1cdee465f1420e95374bf4f2272976~mv2.png
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/12月4日名栗じてんしゃ広場定期整備
+    title: 12月4日名栗じてんしゃ広場定期整備
+    published: '2022-11-22'
+    body: 今年一年名栗じてんしゃ広場の定期整備ありがとうございます。12月4日は今年最後のじてんしゃ広場定期整備となります。今年のライドの思いで話しなどしながら、路面の整備ゆっくりやれたらと思います。会員の皆さんのお力添えよろしくお願い申し上げます。場所   名栗じてんしゃ広場時間   9時集合尚前日、17時気象庁埼玉南部の降水確率が50%以上の場合は中止とさせて頂きます。よろしくお願い申し上げます。

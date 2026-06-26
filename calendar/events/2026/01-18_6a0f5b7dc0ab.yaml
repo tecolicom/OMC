@@ -1,18 +1,26 @@
-summary: 日高市清掃作業
+summary: 日高市道路清掃
 date: '2026-01-18'
 all_day: true
 category: 清掃活動
-description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/1-18日高市清掃作業のお知らせ'
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/1-18日高市道路清掃'
 source:
   type: omc-blog
   crawler: cal-omc-archive-fetch
   fetched: '2026-06-22'
   posts:
-  - kind: announce
-    url: https://okumusashimtb.wixsite.com/omcweb/post/1-18日高市清掃作業のお知らせ
-    title: 1/18日高市清掃作業のお知らせ
-    published: '2026-01-04'
   - kind: other
     url: https://okumusashimtb.wixsite.com/omcweb/post/1-18日高市道路清掃
     title: 1/18日高市道路清掃
     published: '2026-01-20'
+    body: 1月18日は日高市の清掃作業日でした。集まったのは8名。2班に分かれ、道路美化団体として登録する市道を約2kmにわたり作業しました。主に道路上に堆積した枝葉を集めては、ブロワー4台で掃き出す作業を繰り返し、さらには大型ブロワー持参の地域住民の協力もあり、わずか1時間で本来の道幅が復活。MTBはもちろん、歩行者も自動車も安全に通行できるようになりました。作業後はグループライドへ。初めて活動に来られる方もいたため、良い交流となりました。参加された皆さん、お疲れ様でした。次回の活動は2/1の名栗じてんしゃ広場定期作業になります。こちらもご参加お待ちしています。
+    images:
+    - https://static.wixstatic.com/media/c3395c_dc898742c95c4fc2a128bd056b944584~mv2.png
+    - https://static.wixstatic.com/media/c3395c_c36999f7869e4685be1a050ad9ea8b67~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_dafd4f0f208b4f5f9f1fce09ea5163f3~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_595e836c2336466e9815421b904f136f~mv2.png
+    - https://static.wixstatic.com/media/c3395c_2058fcc8416a4b5182d33e60ef0cf150~mv2.png
+  - kind: announce
+    url: https://okumusashimtb.wixsite.com/omcweb/post/1-18日高市清掃作業のお知らせ
+    title: 1/18日高市清掃作業のお知らせ
+    published: '2026-01-04'
+    body: 1月18日(日)は日高市の里山道で清掃と草刈りを行います。午前8時30分にセブンイレブン日高高麗本郷店にお集まりください。作業場所まではMTBで移動します。手鋸や枝切りバサミをお持ちの方はご持参ください。なお、前日午後5時の気象庁発表による埼玉県南部の天気予報で、降水確率が50%以上の場合は中止といたしますのでご了承ください。
