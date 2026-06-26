@@ -8,7 +8,6 @@ from __future__ import annotations
 
 import argparse
 import datetime
-import hashlib
 import os
 import sys
 import time
@@ -31,18 +30,31 @@ def _fetch(url: str) -> str:
         return r.read().decode("utf-8", "replace")
 
 
-def _load_cached(url: str, cache_dir: str) -> str:
-    key = hashlib.sha1(url.encode("utf-8")).hexdigest()
-    path = os.path.join(cache_dir, f"{key}.html")
+def _load_record(url: str, cache_dir: str) -> dict | None:
+    path = os.path.join(cache_dir, omc_parse.slugify_post_url(url) + ".yaml")
     if os.path.exists(path):
         with open(path, encoding="utf-8") as f:
-            return f.read()
+            return yaml.safe_load(f)
     html = _fetch(url)
+    meta = omc_parse.extract_post_meta(html)
+    if meta is None:
+        return None
+    imgs = omc_parse.extract_post_images(html)
+    record = {
+        "url": url,
+        "title": meta["title"],
+        "published": meta["pub_date"].isoformat(),
+        "body": meta["body"],
+    }
+    if imgs["images"]:
+        record["images"] = imgs["images"]
+    if imgs["cover"]:
+        record["cover"] = imgs["cover"]
     os.makedirs(cache_dir, exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
-        f.write(html)
+        f.write(omc_parse.dump_archive_yaml(record))
     time.sleep(0.3)
-    return html
+    return record
 
 
 def main() -> int:
@@ -71,19 +83,24 @@ def main() -> int:
     review = []
     for url in urls:
         try:
-            html = _load_cached(url, args.cache_dir)
+            record = _load_record(url, args.cache_dir)
         except Exception as e:
             review.append((url, "", f"fetch-error:{type(e).__name__}"))
             continue
-        meta = omc_parse.extract_post_meta(html)
-        if meta is None:
+        if record is None:
             review.append((url, "", "no-jsonld"))
             continue
-        if omc_parse.extract_event_date(meta["title"], meta["pub_date"]) is None:
-            review.append((url, meta["title"], "no-date"))
+        try:
+            pub = datetime.date.fromisoformat(str(record["published"])[:10])
+        except (ValueError, KeyError, TypeError):
+            review.append((url, record.get("title", ""), "bad-date"))
             continue
-        items.append({"title": meta["title"], "link": url, "guid": url,
-                      "pub_date": meta["pub_date"]})
+        title = record.get("title", "")
+        if omc_parse.extract_event_date(title, pub) is None:
+            review.append((url, title, "no-date"))
+            continue
+        items.append({"title": title, "link": url, "guid": url, "pub_date": pub,
+                      "body": record.get("body", ""), "images": record.get("images", [])})
 
     events = omc_parse.build_events(items)
     for ev in events:
