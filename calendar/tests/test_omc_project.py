@@ -31,3 +31,22 @@ def test_build_description_report_only_no_body():
     d = omc_project.build_description(posts)
     assert "本文は出さない" not in d
     assert d.strip().startswith("📝 報告:")
+
+
+import datetime as _dt
+
+def test_build_event_body_allday():
+    event = {
+        "summary": "里山整備活動", "date": "2025-05-17", "uid": "abc123def456",
+        "source": {"posts": [
+            {"kind": "report", "url": "https://x/r", "title": "報告", "published": "2025-05-20"},
+            {"kind": "announce", "url": "https://x/a", "title": "お知らせ", "published": "2025-05-08", "body": "9時集合"},
+        ]},
+    }
+    b = omc_project.build_event_body(event)
+    assert b["summary"] == "里山整備活動"
+    assert b["start"] == {"date": "2025-05-17"}
+    assert b["end"] == {"date": "2025-05-18"}     # 終日 end は翌日(排他)
+    assert b["iCalUID"] == "omc-abc123def456@okumusashi-mtb"
+    assert "9時集合" in b["description"]
+    assert "📣 お知らせ: https://x/a" in b["description"]
