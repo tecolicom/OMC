@@ -58,7 +58,12 @@ Phase 1/2 で構築した canonical イベント (145 件、開催日キー、`s
 - 新関数 `extract_post_images(html) -> {"images": [url, ...], "cover": url|None}`:
   - `images`: `https://static.wixstatic.com/media/<id>.<ext>` を全マッチし、media id で dedupe、
     最大レンダリング幅（`/v1/.../w_<W>`）が**閾値 200 以上**のものの**元URL**（`/v1/fill/...` を除いた
-    `…/media/<id>.<ext>`）を出現順で返す。幅指定が無いものは保持。
+    `…/media/<id>.<ext>`）を出現順で返す。一度もサイズ付き（`w_<W>` 付き）で現れない素URLのみの
+    画像は**除外**（ノイズ回避。本データの本文写真は必ずサイズ付きで現れる）。
+  - **chrome 画像の除去**: 各ページ共通で現れる「最近の投稿」サムネ等（多数記事に出現する media id）は
+    記事固有の写真ではない。`bin/dedupe-chrome-images` が出現記事数（>全体の10%）で chrome を判定し、
+    一度判定した id を `sources/blog/chrome-ids.txt` に永続保存して以後は頻度が低くても常に除去する
+    （単発 fetch での再混入対策）。cover も既知 chrome なら除去。
   - `cover`: `og:image`（無ければ JSON-LD `image.url`）。
   - 画像は JSON-LD ではなく HTML 全体から抽出する（本文インライン画像のため）。
 

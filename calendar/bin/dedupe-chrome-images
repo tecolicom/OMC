@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
-"""dedupe-chrome-images — アーカイブ YAML の images から chrome 画像を除去（再実行可能）。
+"""dedupe-chrome-images — アーカイブ YAML の images/cover から chrome 画像を除去（再実行可能）。
 
 各記事ページに共通で出る「最近の投稿」サムネ等（多数の記事に現れる media id）は記事固有の
 写真ではないので除く。アーカイブ YAML 群を読み、media id の出現記事数を数え、全体の 10% 超の
-記事に出る id を全アーカイブの images から除去して書き戻す。HTML に依存しないので HTML 削除後も
-動く。
+記事に出る id を「chrome」と判定する。一度 chrome と判定した id は `<cache-dir>/chrome-ids.txt`
+に永続保存し、以後は頻度が低くても（単発 fetch で再混入しても）常に除去する。HTML に依存しない
+ので HTML 削除後も動く。
+
+注: しきい値は本データ向けの調整値（記事ごとに固有写真／chrome は全記事共通という性質に基づく）。
+正当に高頻度な写真があるデータには合わない。
 """
 from __future__ import annotations
 import glob, os, re, sys, collections
@@ -21,6 +25,12 @@ def _media_id(url: str) -> str | None:
 def main() -> int:
     cache_dir = sys.argv[1] if len(sys.argv) > 1 else "sources/blog"
     files = glob.glob(os.path.join(cache_dir, "*.yaml"))
+    ids_path = os.path.join(cache_dir, "chrome-ids.txt")
+
+    known = set()
+    if os.path.exists(ids_path):
+        known = {ln.strip() for ln in open(ids_path, encoding="utf-8") if ln.strip()}
+
     records = {}
     freq = collections.Counter()
     for f in files:
@@ -31,22 +41,31 @@ def main() -> int:
             if mid:
                 freq[mid] += 1
     threshold = max(3, len(files) // 10)  # 10% 超の記事に出る id は chrome
-    chrome = {mid for mid, c in freq.items() if c > threshold}
+    chrome = set(known) | {mid for mid, c in freq.items() if c > threshold}
+
     changed = 0
     for f, rec in records.items():
-        imgs = rec.get("images") or []
-        kept = [u for u in imgs if _media_id(u) not in chrome]
-        if len(kept) != len(imgs):
-            if kept:
-                rec["images"] = kept
-            else:
-                rec.pop("images", None)
+        before = (list(rec.get("images") or []), rec.get("cover"))
+        imgs = [u for u in (rec.get("images") or []) if _media_id(u) not in chrome]
+        if imgs:
+            rec["images"] = imgs
+        else:
+            rec.pop("images", None)
+        if rec.get("cover") and _media_id(rec["cover"]) in chrome:
+            rec.pop("cover", None)
+        if (imgs, rec.get("cover")) != before:
             with open(f, "w", encoding="utf-8") as fh:
                 fh.write(omc_parse.dump_archive_yaml(rec))
             changed += 1
-    print(f"archives={len(files)} threshold>{threshold} chrome_ids={len(chrome)} changed={changed}")
+
+    if chrome:
+        with open(ids_path, "w", encoding="utf-8") as fh:
+            fh.write("\n".join(sorted(chrome)) + "\n")
+
+    print(f"archives={len(files)} threshold>{threshold} chrome_ids={len(chrome)} "
+          f"(known={len(known)}) changed={changed}")
     for mid in sorted(chrome):
-        print("  removed:", mid[:50], f"({freq[mid]} 記事)")
+        print("  chrome:", mid[:50])
     return 0
 
 
