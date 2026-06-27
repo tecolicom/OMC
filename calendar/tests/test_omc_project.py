@@ -50,3 +50,44 @@ def test_build_event_body_allday():
     assert b["iCalUID"] == "omc-abc123def456@okumusashi-mtb"
     assert "9時集合" in b["description"]
     assert "📣 お知らせ: https://x/a" in b["description"]
+
+
+def _ev(summary, uid=None):
+    e = {"summary": summary, "id": "eid_" + summary, "start": {"date": "2025-05-17"}}
+    if uid: e["iCalUID"] = uid
+    return e
+
+EVENT = {"summary": "里山整備活動", "date": "2025-05-17", "uid": "u1", "category": "里山整備",
+         "source": {"posts": [{"kind": "announce", "url": "https://x/a", "title": "お知らせ", "published": "2025-05-08", "body": "b"}]}}
+
+
+def test_decide_create_when_no_existing():
+    assert omc_project.decide_action(EVENT, [])["action"] == "create"
+
+
+def test_decide_update_ours():
+    ours = _ev("里山整備活動", uid="omc-u1@okumusashi-mtb")
+    r = omc_project.decide_action(EVENT, [ours])
+    assert r["action"] == "update_ours" and r["target"] is ours
+
+
+def test_decide_overwrite_single_manual_consistent():
+    manual = _ev("里山整備（自治会）")          # 同系統(里山) → 矛盾しない
+    r = omc_project.decide_action(EVENT, [manual])
+    assert r["action"] == "overwrite_manual" and r["target"] is manual
+
+
+def test_decide_skip_when_multiple_manual():
+    r = omc_project.decide_action(EVENT, [_ev("A"), _ev("B")])
+    assert r["action"] == "skip_review"
+
+
+def test_decide_skip_when_contradicts():
+    r = omc_project.decide_action(EVENT, [_ev("第10回総会")])   # category 別系統
+    assert r["action"] == "skip_review"
+
+
+def test_needs_update():
+    body = {"summary": "里山整備活動", "description": "X"}
+    assert omc_project.needs_update({"summary": "里山整備活動", "description": "X"}, body) is False
+    assert omc_project.needs_update({"summary": "別", "description": "X"}, body) is True
