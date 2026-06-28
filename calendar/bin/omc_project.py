@@ -76,9 +76,8 @@ def decide_action(event: dict, existing: list[dict]) -> dict:
     return {"action": "overwrite_manual", "target": m, "reason": "consistent manual event"}
 
 
-def needs_update(target: dict, body: dict) -> bool:
-    return (target.get("summary") or "") != body.get("summary") \
-        or (target.get("description") or "") != body.get("description")
+def needs_update(target: dict, body: dict, fields=("summary", "description")) -> bool:
+    return any((target.get(f) or "") != (body.get(f) or "") for f in fields)
 
 
 def parse_gws_json(text: str):

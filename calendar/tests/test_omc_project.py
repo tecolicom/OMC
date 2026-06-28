@@ -97,3 +97,15 @@ def test_parse_gws_json_skips_prefix():
     out = "Using keyring backend: keyring\n{\"items\": [{\"id\": \"x\"}]}\n"
     assert omc_project.parse_gws_json(out)["items"][0]["id"] == "x"
     assert omc_project.parse_gws_json("[]") == []
+
+
+def test_needs_update_fields_description_only():
+    target = {"summary": "会のタイトル", "description": "古い"}
+    body = {"summary": "我々のタイトル", "description": "古い"}
+    # description のみ比較 → summary が違っても False
+    assert omc_project.needs_update(target, body, fields=("description",)) is False
+    # description が違えば True
+    body2 = {"summary": "我々", "description": "新しい"}
+    assert omc_project.needs_update(target, body2, fields=("description",)) is True
+    # 既定(summary+description)は summary 差で True
+    assert omc_project.needs_update(target, body) is True

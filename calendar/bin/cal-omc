@@ -64,7 +64,8 @@ def plan_events(events: list[dict], fetch_existing) -> list[dict]:
         body = omc_project.build_event_body(ev)
         nu = True
         if decision["target"] is not None:
-            nu = omc_project.needs_update(decision["target"], body)
+            fields = ("description",) if decision["action"] == "overwrite_manual" else ("summary", "description")
+            nu = omc_project.needs_update(decision["target"], body, fields)
         plan.append({"event": ev, "action": decision["action"], "target": decision["target"],
                      "reason": decision["reason"], "body": body, "needs_update": nu})
     return plan
@@ -92,10 +93,11 @@ def _apply_one(cal_id: str, p: dict) -> str:
         if not p["needs_update"]:
             return "unchanged"
         target = p["target"]
-        patch = {"summary": body["summary"], "description": body["description"]}
-        if p["action"] == "update_ours":
-            patch["start"] = body["start"]; patch["end"] = body["end"]
-        # overwrite_manual: 既存の start/end (時刻) を保持 → summary/description のみ
+        if p["action"] == "overwrite_manual":
+            patch = {"description": body["description"]}   # 会のタイトル・時刻を保持、説明のみ追加
+        else:
+            patch = {"summary": body["summary"], "description": body["description"],
+                     "start": body["start"], "end": body["end"]}
         _gws("calendar", "events", "patch",
              params={"calendarId": cal_id, "eventId": target["id"]}, body=patch)
         return "updated"

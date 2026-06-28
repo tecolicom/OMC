@@ -33,3 +33,19 @@ def test_plan_events_decides_per_date():
     assert by_uid["u1"]["action"] == "update_ours"
     assert by_uid["u1"]["needs_update"] is False     # 同内容 → 更新不要
     assert by_uid["u2"]["action"] == "create"
+
+
+def test_plan_overwrite_manual_description_only():
+    cli = _load_cli()
+    events = [{"summary": "里山整備活動", "date": "2025-05-17", "uid": "u1", "category": "里山整備",
+               "source": {"posts": [{"kind": "announce", "url": "https://x/a", "title": "お知らせ",
+                                     "published": "2025-05-08", "body": "9時集合"}]}}]
+    # 同日に「会のタイトル(里山系で矛盾しない)」の手動イベントがあり、description は我々と同一
+    desc = cli.omc_project.build_description(events[0]["source"]["posts"])
+    def fetch_existing(date):
+        return [{"id": "m1", "summary": "里山整備(会)", "description": desc,
+                 "start": {"dateTime": "2025-05-17T08:00:00+09:00"}}]
+    plan = cli.plan_events(events, fetch_existing)
+    p = plan[0]
+    assert p["action"] == "overwrite_manual"
+    assert p["needs_update"] is False     # summary は違うが description 同一 → 更新不要
