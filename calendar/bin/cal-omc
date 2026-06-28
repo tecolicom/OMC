@@ -41,12 +41,18 @@ def _gws(*args: str, params: dict | None = None, body: dict | None = None) -> di
 
 
 def _make_fetch_existing(cal_id: str):
+    res = _gws("calendar", "events", "list", params={
+        "calendarId": cal_id, "singleEvents": False, "showDeleted": False, "maxResults": 2500})
+    items = res.get("items", []) if isinstance(res, dict) else []
+    by_date: dict[str, list] = {}
+    for e in items:
+        start = e.get("start") or {}
+        d = start.get("date") or (start.get("dateTime") or "")[:10]
+        if d:
+            by_date.setdefault(d, []).append(e)
+
     def fetch_existing(date: str):
-        # その日(終日含む)に重なるイベント。singleEvents=False で iCalUID を保持。
-        res = _gws("calendar", "events", "list", params={
-            "calendarId": cal_id, "singleEvents": False, "showDeleted": False,
-            "timeMin": date + "T00:00:00Z", "timeMax": date + "T23:59:59Z", "maxResults": 50})
-        return res.get("items", []) if isinstance(res, dict) else []
+        return by_date.get(date, [])
     return fetch_existing
 
 
@@ -70,7 +76,11 @@ def _load_events(events_dir: str, year: str | None, limit: int | None) -> list[d
         files = [f for f in files if os.sep + year + os.sep in f]
     if limit:
         files = files[:limit]
-    return [yaml.safe_load(open(f, encoding="utf-8")) for f in files]
+    out = []
+    for f in files:
+        with open(f, encoding="utf-8") as fh:
+            out.append(yaml.safe_load(fh))
+    return out
 
 
 def _apply_one(cal_id: str, p: dict) -> str:
@@ -83,7 +93,7 @@ def _apply_one(cal_id: str, p: dict) -> str:
             return "unchanged"
         target = p["target"]
         patch = {"summary": body["summary"], "description": body["description"]}
-        if p["action"] == "create" or p["action"] == "update_ours":
+        if p["action"] == "update_ours":
             patch["start"] = body["start"]; patch["end"] = body["end"]
         # overwrite_manual: 既存の start/end (時刻) を保持 → summary/description のみ
         _gws("calendar", "events", "patch",
