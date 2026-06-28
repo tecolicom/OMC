@@ -1,0 +1,33 @@
+{
+  "created": "2023-05-11T12:16:53.000Z",
+  "creator": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "description": "5月28日(日)は日高市の市民清掃デーです。道路美化団体として作業を担当する市道付近の自治体の清掃作業に、奥武蔵マウンテンバイク友の会も協力します。主な作業内容は草刈りと清掃です。草刈り鎌をお持ちの方はご持参ください。集合時間が早いですが、皆さまのご参加をお待ちしています。■集合日時:5月28日(日)午前6時45分■集合場所:セブンイレブン日高高麗本郷店(https://goo.gl/maps/iKPAM4oJZ3c1S3Q49)【注意事項】●お車でお越しの方は、上記の集合場所までお越しください。無料駐車場を用意しましたので、到着後にそちらへ案内いたします。作業場所まではMTBで移動します。●各自で水分補給やおやつの準備をお願いします。●前日午後5時の気象庁発表による埼玉県南部の天気予報で、降水確率が50%以上だった場合は作業を中止といたします。\n\n📣 お知らせ: https://okumusashimtb.wixsite.com/omcweb/post/5月28日-日高市市民清掃デーのお知らせ\n📝 報告: https://okumusashimtb.wixsite.com/omcweb/post/5月28日-日高市市民清掃デーの作業報告",
+  "end": {
+    "dateTime": "2023-05-28T09:00:00+09:00",
+    "timeZone": "Asia/Tokyo"
+  },
+  "etag": "\"3565235435667966\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=NnZoZTNndTBuanZwMDhqaWpucnZqZzc2MWsgb2t1bXVzYXNoaS5tdGJAbQ",
+  "iCalUID": "6vhe3gu0njvp08jijnrvjg761k@google.com",
+  "id": "6vhe3gu0njvp08jijnrvjg761k",
+  "kind": "calendar#event",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": true
+  },
+  "sequence": 2,
+  "start": {
+    "dateTime": "2023-05-28T06:45:00+09:00",
+    "timeZone": "Asia/Tokyo"
+  },
+  "status": "confirmed",
+  "summary": "日高市市民清掃デー",
+  "updated": "2026-06-28T03:35:17.833Z"
+}

@@ -1,0 +1,30 @@
+{
+  "created": "2026-06-28T03:31:30.000Z",
+  "creator": {
+    "email": "myhanno-bot@city-tecoli.iam.gserviceaccount.com"
+  },
+  "description": "明けましておめでとうございます!2020年最初の活動についてお知らせです。今回は鳩山地区で作業を行います。弊会とパートナーシップを持つ鳩山環境フォーラムさんからの依頼で、谷津の田んぼの刈払い作業を行います。どうぞご参加ください。【集合時間】 8:30【集合場所】北浅羽桜堤公園〒350-0266 埼玉県坂戸市大字北浅羽914https://goo.gl/maps/MAWnEfBpMRLSS7mB8北浅羽桜堤公園に集合し、ミーティング後、MTBで作業箇所に向かいます。気温が低いなかでの作業ですので体温調節しやすい服装をおすすめします。また各自で水分補給やおやつの準備をお願いします。前日午後5時の気象庁の埼玉県南部の天気予報で、降水確率が50%以上だった場合は中止いたします。\n\n🔗 その他: https://okumusashimtb.wixsite.com/omcweb/post/【1月19日-日-の作業について】\n📝 報告: https://okumusashimtb.wixsite.com/omcweb/post/1月19日活動報告",
+  "end": {
+    "date": "2020-01-20"
+  },
+  "etag": "\"3565234982618334\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=X2R0bW02YjlpNjBwMzBiOWc2NG1qMmVhMGR0bG5hcmJsZWRnbjZxMzk1bG1uOG9nIG9rdW11c2FzaGkubXRiQG0",
+  "iCalUID": "omc-2020-01-19@okumusashi-mtb",
+  "id": "_dtmm6b9i60p30b9g64mj2ea0dtlnarbledgn6q395lmn8og",
+  "kind": "calendar#event",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": false
+  },
+  "sequence": 0,
+  "start": {
+    "date": "2020-01-19"
+  },
+  "status": "confirmed",
+  "summary": "活動",
+  "updated": "2026-06-28T03:31:31.309Z"
+}

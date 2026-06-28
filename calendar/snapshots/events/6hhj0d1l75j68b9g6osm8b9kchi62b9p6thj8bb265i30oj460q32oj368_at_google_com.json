@@ -1,0 +1,33 @@
+{
+  "created": "2022-11-13T08:20:07.000Z",
+  "creator": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "description": "飯能市・道路整備活動団体として整備を行っている里山道の草刈りや水切り清掃、倒木の撤去などを行います。\n軍手などご持参の上、汚れても構わない服装でお集まりください。\n(持ち運び可能なノコギリ、スコップ等、ご自分で使用する道具があればお持ち込みください)\n作業日  / 2022年11月20日(日)\n集合時間 / 8時30分\n終了時間 / 11時頃\n集合場所 / あいわ広場駐車場(お車の駐車可能です)   あいわ広場に集合し、ミーティング後にMTBで作業箇所に向かいます。\n 各自で水分補給やおやつの準備をお願いします。  集合場所のあいわ広場にお車の駐車可能です。 作業個所まではMTBで移動します。\n  みなさまのご参加をお待ちしております。【注意事項】\n ●ソーシャルディスタンス、手指の消毒などお気を付けください。\n●各自で水分補給やおやつの準備をお願いします。\n●前日午後5時の気象庁発表による埼玉県南部の天気予報で、降水確率が50%以上だった場合は中止いたします。\n\n🔗 その他: https://okumusashimtb.wixsite.com/omcweb/post/11-20-日-里山整備活動のご案内\n📝 報告: https://okumusashimtb.wixsite.com/omcweb/post/11-20-里山整備活動の報告",
+  "end": {
+    "dateTime": "2022-11-20T11:00:00+09:00",
+    "timeZone": "Asia/Tokyo"
+  },
+  "etag": "\"3565235354714654\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=NmhoajBkMWw3NWo2OGI5ZzZvc204YjlrY2hpNjJiOXA2dGhqOGJiMjY1aTMwb2o0NjBxMzJvajM2OCBva3VtdXNhc2hpLm10YkBt",
+  "iCalUID": "6hhj0d1l75j68b9g6osm8b9kchi62b9p6thj8bb265i30oj460q32oj368@google.com",
+  "id": "6hhj0d1l75j68b9g6osm8b9kchi62b9p6thj8bb265i30oj460q32oj368",
+  "kind": "calendar#event",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": true
+  },
+  "sequence": 1,
+  "start": {
+    "dateTime": "2022-11-20T08:00:00+09:00",
+    "timeZone": "Asia/Tokyo"
+  },
+  "status": "confirmed",
+  "summary": "里山整備",
+  "updated": "2026-06-28T03:34:37.357Z"
+}

@@ -1,0 +1,33 @@
+{
+  "created": "2022-12-08T12:21:52.000Z",
+  "creator": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "description": "3月19日(日)は、翌週26日(日)の子どもじてんしゃ教室の開催を控え、臨時で整備作業を行います。名栗じてんしゃ広場に午前9時にお集まりください。11時頃まで作業を行う予定です。3月26日(日)は、子どもじてんしゃ教室を開催いたします。詳しくはこちらをご覧ください。申し込みはこちらです。皆さまのご参加、お待ちしています。なお、どちらも前日17時の気象庁発表による埼玉県南部の天気予報で、当日6時~12時の降水確率が50%以上だった場合は、中止といたします。\n\n📣 お知らせ: https://okumusashimtb.wixsite.com/omcweb/post/3月19日-名栗臨時作業と26日-子ども教室開催のお知らせ\n📝 報告: https://okumusashimtb.wixsite.com/omcweb/post/3月19日じてんしゃ広場整備作業報告",
+  "end": {
+    "dateTime": "2023-03-19T12:00:00+09:00",
+    "timeZone": "Asia/Tokyo"
+  },
+  "etag": "\"3565235385211358\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=Nzc4dWxhazRpN2hwcTdsNGtoZXQ5dTE4amUgb2t1bXVzYXNoaS5tdGJAbQ",
+  "iCalUID": "778ulak4i7hpq7l4khet9u18je@google.com",
+  "id": "778ulak4i7hpq7l4khet9u18je",
+  "kind": "calendar#event",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": true
+  },
+  "sequence": 1,
+  "start": {
+    "dateTime": "2023-03-19T09:00:00+09:00",
+    "timeZone": "Asia/Tokyo"
+  },
+  "status": "confirmed",
+  "summary": "名栗整備",
+  "updated": "2026-06-28T03:34:52.605Z"
+}

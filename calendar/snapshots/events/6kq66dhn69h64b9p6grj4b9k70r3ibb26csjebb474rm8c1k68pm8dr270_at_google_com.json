@@ -1,0 +1,33 @@
+{
+  "created": "2025-02-13T11:46:31.000Z",
+  "creator": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "description": "📝 報告: https://okumusashimtb.wixsite.com/omcweb/post/2月23日-日-の鳩山活動報告",
+  "end": {
+    "dateTime": "2025-02-23T12:00:00+09:00",
+    "timeZone": "Asia/Tokyo"
+  },
+  "etag": "\"3565227658322526\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=NmtxNjZkaG42OWg2NGI5cDZncmo0YjlrNzByM2liYjI2Y3NqZWJiNDc0cm04YzFrNjhwbThkcjI3MCBva3VtdXNhc2hpLm10YkBt",
+  "iCalUID": "6kq66dhn69h64b9p6grj4b9k70r3ibb26csjebb474rm8c1k68pm8dr270@google.com",
+  "id": "6kq66dhn69h64b9p6grj4b9k70r3ibb26csjebb474rm8c1k68pm8dr270",
+  "kind": "calendar#event",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": true
+  },
+  "sequence": 0,
+  "start": {
+    "dateTime": "2025-02-23T09:00:00+09:00",
+    "timeZone": "Asia/Tokyo"
+  },
+  "status": "confirmed",
+  "summary": "鳩山里山整備",
+  "updated": "2026-06-28T02:30:29.161Z"
+}

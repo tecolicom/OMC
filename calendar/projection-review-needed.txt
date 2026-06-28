@@ -1,0 +1,4 @@
+2023-01-15	里山整備活動	日高	summary contradicts category
+2023-08-19	里山整備活動		multiple manual events
+2023-09-17	里山整備活動	加治美杉台まちづくり推進委員会共同作業	summary contradicts category
+2024-09-15	里山整備活動	加治美杉台まちづくり推進委員会との協働	summary contradicts category

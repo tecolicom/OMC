@@ -1,0 +1,35 @@
+{
+  "created": "2024-04-11T12:18:51.000Z",
+  "creator": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "description": "5月19日は飯能市の市民清掃デーです。地元自治会の皆様の里山清掃作業に奥武蔵マウンテンバイク友の会もご一緒させていただきます。我々マウンテンバイカーが日々楽しませていただいているトレイルの入り口にお住いの皆さんとの協働作業になります。是非ご一緒ください!■阿須自治会の皆さんは作業開始時間が早いため、あいわ広場への集合時間を7:30とさせていただきます。主な作業内容は草刈りになる予定です。草刈り鎌をお持ちの方はご持参いただけたらと思います。近隣にお住いで、早起きが得意な方は是非7:30にお集まりいただけたらと思います。■岩渕自治会の作業へご参加いただける方は通常通り8:30にあいわ広場にご集合ください。こちらの主な作業は水切りの清掃などになります。お手持ちのスコップがありましたらご持参ください。現地まではトレーラーでお運びいたします。活動場所が複数になるため、より多くのご協力をお心からお待ちいたしております。【集合場所は共通です】■集合場所:あいわ広場(お車の駐車が可能です)■集合日時:5月19日(日曜日)7:30 または 8:30作業場所まではMTBで移動します。●各自で水分補給やおや\n\n📝 報告: https://okumusashimtb.wixsite.com/omcweb/post/5-19-里山道清掃活動の報告\n🔗 その他: https://okumusashimtb.wixsite.com/omcweb/post/【5月19日-里山清掃活動のお誘い】",
+  "end": {
+    "dateTime": "2024-05-19T10:30:00+09:00",
+    "timeZone": "Asia/Tokyo"
+  },
+  "etag": "\"3565235506405150\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=Y2NwM2FlMWw2aGkzNGJiNDZzbzYyYjlrY2dxM2NiOXA2ZGk2MmJiMzY5Z2phY2ozNzRwbTJjOWs2YyBva3VtdXNhc2hpLm10YkBt",
+  "iCalUID": "ccp3ae1l6hi34bb46so62b9kcgq3cb9p6di62bb369gjacj374pm2c9k6c@google.com",
+  "id": "ccp3ae1l6hi34bb46so62b9kcgq3cb9p6di62bb369gjacj374pm2c9k6c",
+  "kind": "calendar#event",
+  "location": "あいわ広場, 日本、〒357-0046 埼玉県飯能市阿須",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": true
+  },
+  "sequence": 1,
+  "start": {
+    "dateTime": "2024-05-19T07:30:00+09:00",
+    "timeZone": "Asia/Tokyo"
+  },
+  "status": "confirmed",
+  "summary": "飯能市民清掃デー",
+  "transparency": "transparent",
+  "updated": "2026-06-28T03:35:53.202Z"
+}

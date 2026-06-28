@@ -1,0 +1,33 @@
+{
+  "created": "2023-10-16T12:15:38.000Z",
+  "creator": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "description": "12月10日(日)はお待ちかね、子どもじてんしゃ教室を開催いたします。詳しくはこちらをご覧ください。申し込みはこちらです。飯能市の広報に「会費3000円」の表記がありますが、正しくは「無料」です。今まで通りですのでご安心ください。\n皆さまのご参加、お待ちしています。なお、どちらも前日17時の気象庁発表による埼玉県南部の天気予報で、当日6時~12時の降水確率が50%以上だった場合は、中止といたします。晴天を祈りましょう!\n\n📝 報告: https://okumusashimtb.wixsite.com/omcweb/post/12-10子ども自転車教室を開催しました\n📣 お知らせ: https://okumusashimtb.wixsite.com/omcweb/post/12-10（日）子どもじてんしゃ教室開催のお知らせ",
+  "end": {
+    "dateTime": "2023-12-10T12:00:00+09:00",
+    "timeZone": "Asia/Tokyo"
+  },
+  "etag": "\"3565235479267390\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=NmRwbnNxNW5qaHZtZ204ZDZiNHBjbWoyamIgb2t1bXVzYXNoaS5tdGJAbQ",
+  "iCalUID": "6dpnsq5njhvmgm8d6b4pcmj2jb@google.com",
+  "id": "6dpnsq5njhvmgm8d6b4pcmj2jb",
+  "kind": "calendar#event",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": true
+  },
+  "sequence": 0,
+  "start": {
+    "dateTime": "2023-12-10T09:00:00+09:00",
+    "timeZone": "Asia/Tokyo"
+  },
+  "status": "confirmed",
+  "summary": "子供じてんしゃ教室",
+  "updated": "2026-06-28T03:35:39.633Z"
+}

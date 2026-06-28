@@ -1,0 +1,33 @@
+{
+  "created": "2023-05-09T07:10:50.000Z",
+  "creator": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "description": "📝 報告: https://okumusashimtb.wixsite.com/omcweb/post/6-11-第10回-omc-総会の報告",
+  "end": {
+    "dateTime": "2023-06-11T11:00:00+09:00",
+    "timeZone": "Asia/Tokyo"
+  },
+  "etag": "\"3565235444480222\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=Y2dwNmNvcHA3NHAzOGJiNDZncDNlYjlrY2xpMzJiYjI2c3EzaWJiMjZzczM4ZTM1NmhoNmFkajZjNCBva3VtdXNhc2hpLm10YkBt",
+  "iCalUID": "cgp6copp74p38bb46gp3eb9kcli32bb26sq3ibb26ss38e356hh6adj6c4@google.com",
+  "id": "cgp6copp74p38bb46gp3eb9kcli32bb26sq3ibb26ss38e356hh6adj6c4",
+  "kind": "calendar#event",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": true
+  },
+  "sequence": 0,
+  "start": {
+    "dateTime": "2023-06-11T08:45:00+09:00",
+    "timeZone": "Asia/Tokyo"
+  },
+  "status": "confirmed",
+  "summary": "総会",
+  "updated": "2026-06-28T03:35:22.240Z"
+}

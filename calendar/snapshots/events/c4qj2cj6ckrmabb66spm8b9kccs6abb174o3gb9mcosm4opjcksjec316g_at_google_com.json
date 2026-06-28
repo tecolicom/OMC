@@ -1,0 +1,34 @@
+{
+  "created": "2024-04-11T12:19:53.000Z",
+  "creator": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "description": "*集合時間を午前7時45分に変更しました。ご注意ください。5月26日(日)は日高市ごみゼロの日に伴い、地元自治体と協働で道路の清掃と草刈りを行います。集合時間が普段の活動より早く、19日の飯能市清掃活動から作業が連続しますが、ご協力よろしくお願いします。集合日時:5月26日(日)午前7時45分集合場所:セブンイレブン日高高麗本郷店(https://goo.gl/maps/5ht4sMVpYWLzYZjZ7)作業場所まではMTBで移動します。手鋸や枝切りバサミをお持ちの方はご持参ください。お車でお越しの方は近隣のコインパーキングに駐車してください。なお、前日午後5時の気象庁発表による埼玉県南部の天気予報で、当日6時〜12時の降水確率が50%以上の場合は作業を中止といたします。\n\n📝 報告: https://okumusashimtb.wixsite.com/omcweb/post/5-26日高市ごみゼロの日清掃作業の報告\n📣 お知らせ: https://okumusashimtb.wixsite.com/omcweb/post/5-26日高市清掃作業のお知らせ",
+  "end": {
+    "dateTime": "2024-05-26T10:00:00+09:00",
+    "timeZone": "Asia/Tokyo"
+  },
+  "etag": "\"3565235510045566\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=YzRxajJjajZja3JtYWJiNjZzcG04YjlrY2NzNmFiYjE3NG8zZ2I5bWNvc200b3BqY2tzamVjMzE2ZyBva3VtdXNhc2hpLm10YkBt",
+  "iCalUID": "c4qj2cj6ckrmabb66spm8b9kccs6abb174o3gb9mcosm4opjcksjec316g@google.com",
+  "id": "c4qj2cj6ckrmabb66spm8b9kccs6abb174o3gb9mcosm4opjcksjec316g",
+  "kind": "calendar#event",
+  "location": "セブン-イレブン 日高高麗本郷店, 日本、〒350-1251 埼玉県日高市高麗本郷１９１−５",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": true
+  },
+  "sequence": 2,
+  "start": {
+    "dateTime": "2024-05-26T06:45:00+09:00",
+    "timeZone": "Asia/Tokyo"
+  },
+  "status": "confirmed",
+  "summary": "日高市民清掃デー",
+  "updated": "2026-06-28T03:35:55.022Z"
+}

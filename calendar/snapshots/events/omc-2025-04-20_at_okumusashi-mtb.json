@@ -1,0 +1,30 @@
+{
+  "created": "2026-06-28T02:30:34.000Z",
+  "creator": {
+    "email": "myhanno-bot@city-tecoli.iam.gserviceaccount.com"
+  },
+  "description": "4月20日は子ども自転車教室を開催します。コチラからご応募ください。一般的な質問はコチラをお読みください。教室の開催を前に、4月6日に自転車広場の定期作業を行いました。会員9名で、土が流出してしまったコースを改修。新たに土を入れ、路面を整えました。当日は良いコンディションで教室を行えるはずです。皆さんのご応募お待ちしています!\n\n4月20日は名栗で子ども自転車教室を開催しました。集まった子どもは10名。自転車の点検や入念な準備運動を行ったのち、年齢や経験に合わせて3つのグループに分けました。最年少グループは、自転車の走行に慣れるべく、公園全体を楽しくツーリング。でこぼこ道の上を走る面白さを体感できたのではないでしょうか?ある程度の経験があるグループは、実際にパンプトラックを走行。OMC会員からの指導を受け、よりスムーズに走れるようになったことでしょう。何度も子ども自転車教室に参加しているベテラングループは、パンプトラックでペダルを漕がずに加速するコツを伝授。後半は、一本橋やランプを組み合わせたコースの攻略を楽しみました。子ども同士でコース設定を工夫し、ゲーム感覚で楽しめたようです。次回の子ども自転車教室は11月中旬を予定しています。開催をお楽しみに!\n\n📣 お知らせ: https://okumusashimtb.wixsite.com/omcweb/post/4-20子ども自転車教室のお知らせ\n🔗 その他: https://okumusashimtb.wixsite.com/omcweb/post/4-20子ども自転車教室開催",
+  "end": {
+    "date": "2025-04-21"
+  },
+  "etag": "\"3565227669422622\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=X2R0bW02YjlpNjBwM2FiOWc2Z21qNGMyMGR0bG5hcmJsZWRnbjZxMzk1bG1uOG9nIG9rdW11c2FzaGkubXRiQG0",
+  "iCalUID": "omc-2025-04-20@okumusashi-mtb",
+  "id": "_dtmm6b9i60p3ab9g6gmj4c20dtlnarbledgn6q395lmn8og",
+  "kind": "calendar#event",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": false
+  },
+  "sequence": 0,
+  "start": {
+    "date": "2025-04-20"
+  },
+  "status": "confirmed",
+  "summary": "子ども自転車教室",
+  "updated": "2026-06-28T02:30:34.711Z"
+}

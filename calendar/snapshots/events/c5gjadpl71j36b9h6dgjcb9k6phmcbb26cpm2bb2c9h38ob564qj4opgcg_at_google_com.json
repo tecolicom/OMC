@@ -1,0 +1,32 @@
+{
+  "created": "2020-11-21T08:42:03.000Z",
+  "creator": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "end": {
+    "dateTime": "2020-11-30T20:30:00+09:00",
+    "timeZone": "Asia/Tokyo"
+  },
+  "etag": "\"3276605103456000\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=YzVnamFkcGw3MWozNmI5aDZkZ2pjYjlrNnBobWNiYjI2Y3BtMmJiMmM5aDM4b2I1NjRxajRvcGdjZyBva3VtdXNhc2hpLm10YkBt",
+  "iCalUID": "c5gjadpl71j36b9h6dgjcb9k6phmcbb26cpm2bb2c9h38ob564qj4opgcg@google.com",
+  "id": "c5gjadpl71j36b9h6dgjcb9k6phmcbb26cpm2bb2c9h38ob564qj4opgcg",
+  "kind": "calendar#event",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": true
+  },
+  "sequence": 0,
+  "start": {
+    "dateTime": "2020-11-30T19:30:00+09:00",
+    "timeZone": "Asia/Tokyo"
+  },
+  "status": "confirmed",
+  "summary": "中沢さん",
+  "updated": "2021-11-30T20:02:31.728Z"
+}

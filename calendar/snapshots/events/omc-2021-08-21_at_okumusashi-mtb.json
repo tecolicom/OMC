@@ -1,0 +1,30 @@
+{
+  "created": "2026-06-28T03:32:11.000Z",
+  "creator": {
+    "email": "myhanno-bot@city-tecoli.iam.gserviceaccount.com"
+  },
+  "description": "8/21(土)に予定していた里山整備活動ですが、埼玉県全域に緊急事態宣言が発令中であるため中止とさせていただきます。\n皆様におかれましてもコロナ対策万全にお過ごしいただき、宣言が解除された後にはまたご協力いただけたらと思います。よろしくお願いします。\n\n⚠️ 中止: https://okumusashimtb.wixsite.com/omcweb/post/8-21-土-里山整備作業中止のお知らせ",
+  "end": {
+    "date": "2021-08-22"
+  },
+  "etag": "\"3565235063435710\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=X2R0bW02YjlpNjBwMzJiOWc3MG1qNGNhMGR0bG5hcmJsZWRnbjZxMzk1bG1uOG9nIG9rdW11c2FzaGkubXRiQG0",
+  "iCalUID": "omc-2021-08-21@okumusashi-mtb",
+  "id": "_dtmm6b9i60p32b9g70mj4ca0dtlnarbledgn6q395lmn8og",
+  "kind": "calendar#event",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": false
+  },
+  "sequence": 0,
+  "start": {
+    "date": "2021-08-21"
+  },
+  "status": "confirmed",
+  "summary": "里山整備作業中止",
+  "updated": "2026-06-28T03:32:11.717Z"
+}

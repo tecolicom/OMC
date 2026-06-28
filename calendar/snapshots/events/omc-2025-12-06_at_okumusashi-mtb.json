@@ -1,0 +1,30 @@
+{
+  "created": "2026-06-28T02:31:01.000Z",
+  "creator": {
+    "email": "myhanno-bot@city-tecoli.iam.gserviceaccount.com"
+  },
+  "description": "📝 報告: https://okumusashimtb.wixsite.com/omcweb/post/12-6名栗定期作業の報告",
+  "end": {
+    "date": "2025-12-07"
+  },
+  "etag": "\"3565227723431998\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=X2R0bW02YjlpNjBwM2FiOWg2OG1qMGRpMGR0bG5hcmJsZWRnbjZxMzk1bG1uOG9nIG9rdW11c2FzaGkubXRiQG0",
+  "iCalUID": "omc-2025-12-06@okumusashi-mtb",
+  "id": "_dtmm6b9i60p3ab9h68mj0di0dtlnarbledgn6q395lmn8og",
+  "kind": "calendar#event",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": false
+  },
+  "sequence": 0,
+  "start": {
+    "date": "2025-12-06"
+  },
+  "status": "confirmed",
+  "summary": "名栗定期作業",
+  "updated": "2026-06-28T02:31:01.715Z"
+}

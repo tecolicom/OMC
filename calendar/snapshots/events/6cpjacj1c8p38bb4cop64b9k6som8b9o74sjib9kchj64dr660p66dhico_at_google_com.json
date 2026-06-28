@@ -1,0 +1,34 @@
+{
+  "created": "2024-04-11T12:20:37.000Z",
+  "creator": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "description": "6月2日(日)は名栗じてんしゃ広場の定期整備を行います。草刈りと路面の整備を予定しています。同広場に午前9時にお集まりください。11時頃まで作業を行う予定です。ご参加お待ちしています。なお、前日17時の気象庁発表による埼玉県南部の天気予報で、当日6時〜12時の降水確率が50%以上の場合は中止といたしますのでご了承ください。\n\n📝 報告: https://okumusashimtb.wixsite.com/omcweb/post/6-2名栗じてんしゃ広場定期作業の報告\n📣 お知らせ: https://okumusashimtb.wixsite.com/omcweb/post/6月2日じてんしゃ広場定期作業のお知らせ",
+  "end": {
+    "dateTime": "2024-06-02T12:00:00+09:00",
+    "timeZone": "Asia/Tokyo"
+  },
+  "etag": "\"3565235514028478\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=NmNwamFjajFjOHAzOGJiNGNvcDY0YjlrNnNvbThiOW83NHNqaWI5a2NoajY0ZHI2NjBwNjZkaGljbyBva3VtdXNhc2hpLm10YkBt",
+  "iCalUID": "6cpjacj1c8p38bb4cop64b9k6som8b9o74sjib9kchj64dr660p66dhico@google.com",
+  "id": "6cpjacj1c8p38bb4cop64b9k6som8b9o74sjib9kchj64dr660p66dhico",
+  "kind": "calendar#event",
+  "location": "名栗ふれあい公園, 日本、〒357-0111 埼玉県飯能市上名栗",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": true
+  },
+  "sequence": 0,
+  "start": {
+    "dateTime": "2024-06-02T09:00:00+09:00",
+    "timeZone": "Asia/Tokyo"
+  },
+  "status": "confirmed",
+  "summary": "名栗定期整備",
+  "updated": "2026-06-28T03:35:57.014Z"
+}

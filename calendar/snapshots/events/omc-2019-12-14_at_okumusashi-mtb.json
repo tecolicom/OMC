@@ -1,0 +1,30 @@
+{
+  "created": "2026-06-28T03:31:29.000Z",
+  "creator": {
+    "email": "myhanno-bot@city-tecoli.iam.gserviceaccount.com"
+  },
+  "description": "いつもの里山の整備、清掃を行います。\n令和元年最後の整備です。\n作業後に楽しくライドしましょう!\nみなさまふるってご参加お願いいたします。\n\n集合時間/集合場所\n\n令和元年12月14日(土)\n\n8時00分 飯能市役所駐車場\n\n8時30分 飯能市阿須運動公園駐車場\n\n阿須運動公園に集合し、ミーティング後、MTBで作業箇所に向かいます。\n\n気温が低いなかでの作業ですので体温調節しやすい服装をおすすめします。また各自で水分補給やおやつの準備をお願いします。\n\n前日午後5時の気象庁の埼玉県南部の天気予報で、降水確率が50%以上だった場合は中止いたします。\n\n皆様ご協力をお願いします_(._.)_\n\n📣 お知らせ: https://okumusashimtb.wixsite.com/omcweb/post/2019/12/07/12月14日-里山整備のお知らせ",
+  "end": {
+    "date": "2019-12-15"
+  },
+  "etag": "\"3565234979262078\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=X2R0bW02YjlpNjBvamliOWg2OG1qMmQyMGR0bG5hcmJsZWRnbjZxMzk1bG1uOG9nIG9rdW11c2FzaGkubXRiQG0",
+  "iCalUID": "omc-2019-12-14@okumusashi-mtb",
+  "id": "_dtmm6b9i60ojib9h68mj2d20dtlnarbledgn6q395lmn8og",
+  "kind": "calendar#event",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": false
+  },
+  "sequence": 0,
+  "start": {
+    "date": "2019-12-14"
+  },
+  "status": "confirmed",
+  "summary": "里山整備",
+  "updated": "2026-06-28T03:31:29.631Z"
+}

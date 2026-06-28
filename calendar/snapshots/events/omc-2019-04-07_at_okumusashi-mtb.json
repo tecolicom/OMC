@@ -1,0 +1,30 @@
+{
+  "created": "2026-06-28T03:31:07.000Z",
+  "creator": {
+    "email": "myhanno-bot@city-tecoli.iam.gserviceaccount.com"
+  },
+  "description": "こちら翔んで埼玉でも各地で桜の便りが聞こえる今日この頃、会員の皆さんいかがお過ごしでしょうか。\n偶数月第1日曜日は名栗じてんしゃ広場の定例整備です。\n翌週にじてんしゃ広場にてキッズスクールを開催しますので、子供達に安全に乗って貰える様整備したいと思います。\nいつもの様に2時間整備して後はライド楽しみたいと思います。\n会員の皆さんのお力添え宜しくお願いします。\n\n日時      4月7日(日曜日)9時より\n場所      名栗じてんしゃ広場\n\n土曜日の午後5時の予報で降水確率50%以上の場合は中止とさせて頂きます。\n\n📝 報告: https://okumusashimtb.wixsite.com/omcweb/post/2019/04/08/4月7日定例整備報告\n🔗 その他: https://okumusashimtb.wixsite.com/omcweb/post/2019/03/26/4月7日名栗じてんしゃ広場定例整備",
+  "end": {
+    "date": "2019-04-08"
+  },
+  "etag": "\"3565234935222654\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=X2R0bW02YjlpNjBvamliOWc2Z21qMGRxMGR0bG5hcmJsZWRnbjZxMzk1bG1uOG9nIG9rdW11c2FzaGkubXRiQG0",
+  "iCalUID": "omc-2019-04-07@okumusashi-mtb",
+  "id": "_dtmm6b9i60ojib9g6gmj0dq0dtlnarbledgn6q395lmn8og",
+  "kind": "calendar#event",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": false
+  },
+  "sequence": 0,
+  "start": {
+    "date": "2019-04-07"
+  },
+  "status": "confirmed",
+  "summary": "名栗じてんしゃ広場定例整備",
+  "updated": "2026-06-28T03:31:07.611Z"
+}

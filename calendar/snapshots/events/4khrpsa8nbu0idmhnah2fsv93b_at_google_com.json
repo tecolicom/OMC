@@ -1,0 +1,33 @@
+{
+  "created": "2024-09-05T11:49:40.000Z",
+  "creator": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "description": "10月6日(日)は名栗じてんしゃ広場の定期作業日です。草刈りと路面補修を行う予定です。同広場に午前9時にお集まりください。11時頃まで作業を行います。なお、前日17時の気象庁発表による埼玉県南部の天気予報で、当日6時〜12時の降水確率が50%以上の場合は中止といたしますのでご了承ください。\n\n📝 報告: https://okumusashimtb.wixsite.com/omcweb/post/10-6名栗じてんしゃ広場定期作業の報告\n📣 お知らせ: https://okumusashimtb.wixsite.com/omcweb/post/10-6-名栗定期作業のお知らせ",
+  "end": {
+    "dateTime": "2024-10-07T00:00:00+09:00",
+    "timeZone": "Asia/Tokyo"
+  },
+  "etag": "\"3565235528019294\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=NGtocnBzYThuYnUwaWRtaG5haDJmc3Y5M2Igb2t1bXVzYXNoaS5tdGJAbQ",
+  "iCalUID": "4khrpsa8nbu0idmhnah2fsv93b@google.com",
+  "id": "4khrpsa8nbu0idmhnah2fsv93b",
+  "kind": "calendar#event",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": true
+  },
+  "sequence": 0,
+  "start": {
+    "dateTime": "2024-10-06T21:00:00+09:00",
+    "timeZone": "Asia/Tokyo"
+  },
+  "status": "confirmed",
+  "summary": "名栗定期整備",
+  "updated": "2026-06-28T03:36:04.009Z"
+}

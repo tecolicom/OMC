@@ -1,0 +1,30 @@
+{
+  "created": "2026-06-28T03:32:23.000Z",
+  "creator": {
+    "email": "myhanno-bot@city-tecoli.iam.gserviceaccount.com"
+  },
+  "description": "1月15日は日高市で整備を行います。道路の清掃と水切りの造成を予定しています。新年最初となるこちらの活動、皆さんのご参加をお待ちしています。それでは、良いお年を!集合日時:1月15日(日)午前9時集合場所:セブンイレブン日高高麗本郷店(https://goo.gl/maps/5ht4sMVpYWLzYZjZ7)作業場所まではMTBで移動します。手鋸や枝切りバサミをお持ちの方はご持参ください。お車でお越しの方は近隣のコインパーキングに駐車してください。なお、前日午後5時の気象庁発表による埼玉県南部の天気予報で、降水確率が50%以上だった場合は作業を中止といたします。\n\n📣 お知らせ: https://okumusashimtb.wixsite.com/omcweb/post/1月15日（日）里山整備のお知らせ",
+  "end": {
+    "date": "2022-01-16"
+  },
+  "etag": "\"3565235087341438\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=X2R0bW02YjlpNjBwMzRiOWc2NG1qMmRhMGR0bG5hcmJsZWRnbjZxMzk1bG1uOG9nIG9rdW11c2FzaGkubXRiQG0",
+  "iCalUID": "omc-2022-01-15@okumusashi-mtb",
+  "id": "_dtmm6b9i60p34b9g64mj2da0dtlnarbledgn6q395lmn8og",
+  "kind": "calendar#event",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": false
+  },
+  "sequence": 0,
+  "start": {
+    "date": "2022-01-15"
+  },
+  "status": "confirmed",
+  "summary": "里山整備",
+  "updated": "2026-06-28T03:32:23.670Z"
+}

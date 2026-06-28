@@ -1,0 +1,33 @@
+{
+  "created": "2023-12-24T03:24:52.000Z",
+  "creator": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "description": "いつも活動を支えてくださりありがとうございます。2月の会の活動についてお知らせです。今月は17日の土曜日に、地元の要請に基づき鳩山地区の崩壊した山道の補修作業を行います。以下の場所に8時に集合してください。ここから現場にMTBで移動します。 https://www.google.com/maps/place/%E3%80%92350-0266+%E5%9F%BC%E7%8E%89%E7%9C%8C%E5%9D%82%E6%88%B8%E5%B8%82%E5%8C%97%E6%B5%85%E7%BE%BD%EF%BC%91%EF%BC%94%EF%BC%99+%E5%8C%97%E6%B5%85%E7%BE%BD%E6%A1%9C%E5%A0%A4%E5%85%AC%E5%9C%92/@35.9714934,139.3499913,15z/data=!4m6!3m5!1s0x60192a0c41f7f88b:0xaa6cb3a14bf74325!8m2!3d35.9717748!4d139.3541985!16s%2Fg%2F11cncwx4f2?hl=ja\n\n🔗 その他: https://okumusashimtb.wixsite.com/omcweb/post/2-17-土）鳩山地区でのトレイル整備について",
+  "end": {
+    "dateTime": "2024-02-17T11:00:00+09:00",
+    "timeZone": "Asia/Tokyo"
+  },
+  "etag": "\"3565235491192862\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=Y2tzNmNlOW42b29tNmJiMTY4cG00YjlrNzByamFiYjI2Z3JtYWI5cGNvcTY4ZHI0Y2RoNjJjOWhjOCBva3VtdXNhc2hpLm10YkBt",
+  "iCalUID": "cks6ce9n6oom6bb168pm4b9k70rjabb26grmab9pcoq68dr4cdh62c9hc8@google.com",
+  "id": "cks6ce9n6oom6bb168pm4b9k70rjabb26grmab9pcoq68dr4cdh62c9hc8",
+  "kind": "calendar#event",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": true
+  },
+  "sequence": 1,
+  "start": {
+    "dateTime": "2024-02-17T08:00:00+09:00",
+    "timeZone": "Asia/Tokyo"
+  },
+  "status": "confirmed",
+  "summary": "鳩山里山整備",
+  "updated": "2026-06-28T03:35:45.596Z"
+}

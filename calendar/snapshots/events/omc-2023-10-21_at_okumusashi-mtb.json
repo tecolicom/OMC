@@ -1,0 +1,30 @@
+{
+  "created": "2026-06-28T03:35:29.000Z",
+  "creator": {
+    "email": "myhanno-bot@city-tecoli.iam.gserviceaccount.com"
+  },
+  "description": "📝 報告: https://okumusashimtb.wixsite.com/omcweb/post/10月21日（日）鳩山活動報告",
+  "end": {
+    "date": "2023-10-22"
+  },
+  "etag": "\"3565235459705214\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=X2R0bW02YjlpNjBwMzZiOWg2MG1qNGNhMGR0bG5hcmJsZWRnbjZxMzk1bG1uOG9nIG9rdW11c2FzaGkubXRiQG0",
+  "iCalUID": "omc-2023-10-21@okumusashi-mtb",
+  "id": "_dtmm6b9i60p36b9h60mj4ca0dtlnarbledgn6q395lmn8og",
+  "kind": "calendar#event",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": false
+  },
+  "sequence": 0,
+  "start": {
+    "date": "2023-10-21"
+  },
+  "status": "confirmed",
+  "summary": "鳩山活動",
+  "updated": "2026-06-28T03:35:29.852Z"
+}

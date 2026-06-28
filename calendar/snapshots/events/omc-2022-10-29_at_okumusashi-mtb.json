@@ -1,0 +1,30 @@
+{
+  "created": "2026-06-28T03:34:33.000Z",
+  "creator": {
+    "email": "myhanno-bot@city-tecoli.iam.gserviceaccount.com"
+  },
+  "description": "10月29日(土)鳩山町熊井谷津田の休耕田の刈払い、熊井の森のトレイル清掃を行います。集合場所・時間は坂戸市北浅羽・桜堤公園駐車場に8時集合。道具は担当の世話人の車に預け、運びます。会員の皆様はご自身のBikeでの移動になります。現地に直接向かわれる方は9時集合です。その際駐車場等ありませんので、自動車で向かうのはご遠慮ください。なお、刈払いをされる方は認定教習機関での講習を受けた方に限定させていただきます。会員の皆様のご協力、よろしくお願いします。\n\n📣 お知らせ: https://okumusashimtb.wixsite.com/omcweb/post/10月29日-土-鳩山での活動のお知らせ。",
+  "end": {
+    "date": "2022-10-30"
+  },
+  "etag": "\"3565235348314430\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=X2R0bW02YjlpNjBwMzRiOWg2MG1qNGVhMGR0bG5hcmJsZWRnbjZxMzk1bG1uOG9nIG9rdW11c2FzaGkubXRiQG0",
+  "iCalUID": "omc-2022-10-29@okumusashi-mtb",
+  "id": "_dtmm6b9i60p34b9h60mj4ea0dtlnarbledgn6q395lmn8og",
+  "kind": "calendar#event",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": false
+  },
+  "sequence": 0,
+  "start": {
+    "date": "2022-10-29"
+  },
+  "status": "confirmed",
+  "summary": "鳩山での活動のお知らせ。",
+  "updated": "2026-06-28T03:34:34.157Z"
+}

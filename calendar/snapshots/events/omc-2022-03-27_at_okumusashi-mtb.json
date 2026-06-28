@@ -1,0 +1,30 @@
+{
+  "created": "2026-06-28T03:32:33.000Z",
+  "creator": {
+    "email": "myhanno-bot@city-tecoli.iam.gserviceaccount.com"
+  },
+  "description": "こんにちは。なかなかコロナも落ち着かず開催がままなりませんが、現在のところ開催の予定です。ふるってご参加ください。*万延防止措置が延長された場合は中止となります。日時:3月27日(日)9時〜11時30分\n場所:名栗ふれあい公園内じてんしゃ広場\n費用:無料\n定員:20人\n持ち物:自転車、動きやすい服装、ヘルメット\n\n※一般的な子ども用自転車で可。補助輪つきは不可。\n※貸し出し用ヘルメット準備あり(数量限定)。\n申し込み:下記フォームでお申し込みください。\nhttps://okumusashimtb.wixsite.com/omcweb/form-kidsschool\n\n📝 報告: https://okumusashimtb.wixsite.com/omcweb/post/３月２７日-子供じてんしゃ教室の報告について\n📣 お知らせ: https://okumusashimtb.wixsite.com/omcweb/post/【3月27日】子供じてんしゃ教室開催のお知らせ！！",
+  "end": {
+    "date": "2022-03-28"
+  },
+  "etag": "\"3565235106986590\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=X2R0bW02YjlpNjBwMzRiOWc2Y21qNGRxMGR0bG5hcmJsZWRnbjZxMzk1bG1uOG9nIG9rdW11c2FzaGkubXRiQG0",
+  "iCalUID": "omc-2022-03-27@okumusashi-mtb",
+  "id": "_dtmm6b9i60p34b9g6cmj4dq0dtlnarbledgn6q395lmn8og",
+  "kind": "calendar#event",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": false
+  },
+  "sequence": 0,
+  "start": {
+    "date": "2022-03-27"
+  },
+  "status": "confirmed",
+  "summary": "子供じてんしゃ教室の報告について",
+  "updated": "2026-06-28T03:32:33.493Z"
+}

@@ -1,0 +1,30 @@
+{
+  "created": "2026-06-28T03:32:41.000Z",
+  "creator": {
+    "email": "myhanno-bot@city-tecoli.iam.gserviceaccount.com"
+  },
+  "description": "6月5日(日)は、名栗じてんしゃ広場の定期活動日です。皆さん、ぜひご協力ください。なお、作業のご連絡が遅れましたこと、お詫びいたします。当日は、午前9時から作業を開始いたします。【注意事項】\n●ソーシャルディスタンス、手指の消毒などお気をつけください。\n●野外での活動ですが、近距離での会話の際にはマスクの着用をお願いします。\n●各自で水分補給やおやつの準備をお願いします。\n●前日午後5時の気象庁発表による埼玉県南部の天気予報で、降水確率が50%以上だった場合は作業を中止といたします。\n\n📝 報告: https://okumusashimtb.wixsite.com/omcweb/post/6月5日-名栗じてんしゃ広場の整備報告\n📣 お知らせ: https://okumusashimtb.wixsite.com/omcweb/post/6月5日（日）名栗じてんしゃ広場の活動のお知らせ",
+  "end": {
+    "date": "2022-06-06"
+  },
+  "etag": "\"3565235123457022\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=X2R0bW02YjlpNjBwMzRiOWc2b21qMGRhMGR0bG5hcmJsZWRnbjZxMzk1bG1uOG9nIG9rdW11c2FzaGkubXRiQG0",
+  "iCalUID": "omc-2022-06-05@okumusashi-mtb",
+  "id": "_dtmm6b9i60p34b9g6omj0da0dtlnarbledgn6q395lmn8og",
+  "kind": "calendar#event",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": false
+  },
+  "sequence": 0,
+  "start": {
+    "date": "2022-06-05"
+  },
+  "status": "confirmed",
+  "summary": "名栗じてんしゃ広場の整備",
+  "updated": "2026-06-28T03:32:41.728Z"
+}

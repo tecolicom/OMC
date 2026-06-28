@@ -1,0 +1,30 @@
+{
+  "created": "2026-06-28T03:32:16.000Z",
+  "creator": {
+    "email": "myhanno-bot@city-tecoli.iam.gserviceaccount.com"
+  },
+  "description": "鳩山町熊井にて熊井自治会・はとやま環境フォーラムと合同で谷津田の刈払いを行います。当日集合場所は坂戸市北浅羽桜堤公園駐車場8:15集合。(お車の方はこちらにお願いします。)道具は数台にまとめて運びます。場所を知ってらっしゃる方で自身のMTBで行かれるのでしたら現地9時集合になります。降水確率50%以上で中止とさせていただきます。刈払い機の方は谷津田の刈払いを中心に手伝っていただきます。刈払機は、取扱作業者安全衛生教育を受講済で、刈払機をご用意いただける方のみ使用可とさせていただきます。その他の方は熊井のトレイルの掃除・簡単な刈り払い・倒木の撤去を行いますので、手鋸・剪定ばさみ等をお持ちください。当日は御協力よろしくお願いいたします。\n\n📝 報告: https://okumusashimtb.wixsite.com/omcweb/post/11月20日活動報告\n🔗 その他: https://okumusashimtb.wixsite.com/omcweb/post/11月20日（土）里山整備作業",
+  "end": {
+    "date": "2021-11-21"
+  },
+  "etag": "\"3565235074261118\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=X2R0bW02YjlpNjBwMzJiOWg2NG1qNGMyMGR0bG5hcmJsZWRnbjZxMzk1bG1uOG9nIG9rdW11c2FzaGkubXRiQG0",
+  "iCalUID": "omc-2021-11-20@okumusashi-mtb",
+  "id": "_dtmm6b9i60p32b9h64mj4c20dtlnarbledgn6q395lmn8og",
+  "kind": "calendar#event",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": false
+  },
+  "sequence": 0,
+  "start": {
+    "date": "2021-11-20"
+  },
+  "status": "confirmed",
+  "summary": "里山整備作業",
+  "updated": "2026-06-28T03:32:17.130Z"
+}

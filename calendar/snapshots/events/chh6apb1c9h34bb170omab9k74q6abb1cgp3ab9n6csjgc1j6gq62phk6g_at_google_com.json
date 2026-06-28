@@ -1,0 +1,32 @@
+{
+  "created": "2024-04-11T12:26:42.000Z",
+  "creator": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "end": {
+    "dateTime": "2024-06-16T11:00:00+09:00",
+    "timeZone": "Asia/Tokyo"
+  },
+  "etag": "\"3425676804842000\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=Y2hoNmFwYjFjOWgzNGJiMTcwb21hYjlrNzRxNmFiYjFjZ3AzYWI5bjZjc2pnYzFqNmdxNjJwaGs2ZyBva3VtdXNhc2hpLm10YkBt",
+  "iCalUID": "chh6apb1c9h34bb170omab9k74q6abb1cgp3ab9n6csjgc1j6gq62phk6g@google.com",
+  "id": "chh6apb1c9h34bb170omab9k74q6abb1cgp3ab9n6csjgc1j6gq62phk6g",
+  "kind": "calendar#event",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": true
+  },
+  "sequence": 0,
+  "start": {
+    "dateTime": "2024-06-16T09:00:00+09:00",
+    "timeZone": "Asia/Tokyo"
+  },
+  "status": "confirmed",
+  "summary": "第11会総会",
+  "updated": "2024-04-11T12:26:42.421Z"
+}

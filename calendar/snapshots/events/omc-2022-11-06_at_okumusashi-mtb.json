@@ -1,0 +1,30 @@
+{
+  "created": "2026-06-28T03:34:35.000Z",
+  "creator": {
+    "email": "myhanno-bot@city-tecoli.iam.gserviceaccount.com"
+  },
+  "description": "📝 報告: https://okumusashimtb.wixsite.com/omcweb/post/11-6-子どもじてんしゃ教室の報告",
+  "end": {
+    "date": "2022-11-07"
+  },
+  "etag": "\"3565235351380702\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=X2R0bW02YjlpNjBwMzRiOWg2NG1qMGRpMGR0bG5hcmJsZWRnbjZxMzk1bG1uOG9nIG9rdW11c2FzaGkubXRiQG0",
+  "iCalUID": "omc-2022-11-06@okumusashi-mtb",
+  "id": "_dtmm6b9i60p34b9h64mj0di0dtlnarbledgn6q395lmn8og",
+  "kind": "calendar#event",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": false
+  },
+  "sequence": 0,
+  "start": {
+    "date": "2022-11-06"
+  },
+  "status": "confirmed",
+  "summary": "子どもじてんしゃ教室",
+  "updated": "2026-06-28T03:34:35.690Z"
+}

@@ -1,0 +1,34 @@
+{
+  "created": "2022-12-08T12:23:17.000Z",
+  "creator": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "description": "4月2日は名栗じてんしゃ広場の定期整備を行います。名栗じてんしゃ広場に午前9時にお集まりください。11時頃まで作業を行う予定です。翌日19日の臨時整備、翌週26日の子ども自転車教室と、活動が3週連続となりますが、ご都合よろしければご参加ください。なお、前日17時の気象庁発表による埼玉県南部の天気予報で、当日6時〜12時の降水確率が50%以上だった場合は中止といたしますのでご了承ください。\n\n📣 お知らせ: https://okumusashimtb.wixsite.com/omcweb/post/4月2日-日-名栗定期整備のお知らせ\n📝 報告: https://okumusashimtb.wixsite.com/omcweb/post/4月2日じてんしゃ広場定期整備の報告",
+  "end": {
+    "dateTime": "2023-04-02T11:00:00+09:00",
+    "timeZone": "Asia/Tokyo"
+  },
+  "etag": "\"3565235422160030\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=MWdjdGpuYjVqbzFibWJwZDcwbGJydnM0cnMgb2t1bXVzYXNoaS5tdGJAbQ",
+  "iCalUID": "1gctjnb5jo1bmbpd70lbrvs4rs@google.com",
+  "id": "1gctjnb5jo1bmbpd70lbrvs4rs",
+  "kind": "calendar#event",
+  "location": "名栗ふれあい広場",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": true
+  },
+  "sequence": 0,
+  "start": {
+    "dateTime": "2023-04-02T09:00:00+09:00",
+    "timeZone": "Asia/Tokyo"
+  },
+  "status": "confirmed",
+  "summary": "名栗定期整備",
+  "updated": "2026-06-28T03:35:11.080Z"
+}

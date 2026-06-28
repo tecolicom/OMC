@@ -1,0 +1,30 @@
+{
+  "created": "2026-06-28T03:31:39.000Z",
+  "creator": {
+    "email": "myhanno-bot@city-tecoli.iam.gserviceaccount.com"
+  },
+  "description": "4月19日名栗じてんしゃ広場で開催予定でした、子どもじてんしゃ教室ですが、県並びに飯能市において、イベントや施設の休止をしています。現在の状況なども鑑み、大変残念ではありますが、今回の子どもじてんしゃ教室は中止とさせて頂きます。折角楽しみにして頂いてた所誠に申し訳ございません。秋に子どもじてんしゃ教室を予定しております。是非次回にご参加していただけますようよろしくお願いします。\n\n🔗 その他: https://okumusashimtb.wixsite.com/omcweb/post/4月19日子どもじてんしゃ教室中止の件",
+  "end": {
+    "date": "2020-04-20"
+  },
+  "etag": "\"3565234999373182\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=X2R0bW02YjlpNjBwMzBiOWc2Z21qMmVhMGR0bG5hcmJsZWRnbjZxMzk1bG1uOG9nIG9rdW11c2FzaGkubXRiQG0",
+  "iCalUID": "omc-2020-04-19@okumusashi-mtb",
+  "id": "_dtmm6b9i60p30b9g6gmj2ea0dtlnarbledgn6q395lmn8og",
+  "kind": "calendar#event",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": false
+  },
+  "sequence": 0,
+  "start": {
+    "date": "2020-04-19"
+  },
+  "status": "confirmed",
+  "summary": "子どもじてんしゃ教室中止の件",
+  "updated": "2026-06-28T03:31:39.686Z"
+}

@@ -1,0 +1,30 @@
+{
+  "created": "2026-06-28T03:31:36.000Z",
+  "creator": {
+    "email": "myhanno-bot@city-tecoli.iam.gserviceaccount.com"
+  },
+  "description": "いつもの里山にて清掃を行います。今回の活動は2月の活動の続きで、消火用として設置されて経年劣化によって役目を終えたポリタンクの回収を行います。軍手などご持参の上、汚れても構わない服装でお集まりください。集合時間/集合場所令和2年3月15日(日)8時00分 飯能市役所駐車場8時30分 飯能市阿須運動公園駐車場阿須運動公園に集合し、ミーティング後、MTBで作業箇所に向かいます。各自で水分補給やおやつの準備をお願いします。前日午後5時の気象庁の埼玉県南部の天気予報で、降水確率が50%以上だった場合は中止いたします。皆様ご協力をお願いします_(._.)_\n\n📣 お知らせ: https://okumusashimtb.wixsite.com/omcweb/post/【３月１５日（日）里山清掃のお知らせ】",
+  "end": {
+    "date": "2020-03-16"
+  },
+  "etag": "\"3565234993162046\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=X2R0bW02YjlpNjBwMzBiOWc2Y21qMmRhMGR0bG5hcmJsZWRnbjZxMzk1bG1uOG9nIG9rdW11c2FzaGkubXRiQG0",
+  "iCalUID": "omc-2020-03-15@okumusashi-mtb",
+  "id": "_dtmm6b9i60p30b9g6cmj2da0dtlnarbledgn6q395lmn8og",
+  "kind": "calendar#event",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": false
+  },
+  "sequence": 0,
+  "start": {
+    "date": "2020-03-15"
+  },
+  "status": "confirmed",
+  "summary": "里山清掃",
+  "updated": "2026-06-28T03:31:36.581Z"
+}

@@ -1,0 +1,32 @@
+{
+  "created": "2023-07-18T07:39:16.000Z",
+  "creator": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "end": {
+    "dateTime": "2023-08-19T19:00:00+09:00",
+    "timeZone": "Asia/Tokyo"
+  },
+  "etag": "\"3379331913744000\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=YzhzamdlMzU2aGkzZ2JiMTZjbzM2YjlrNjFqMzBiOXA3NWhqY2JiNWNwajNnY3BvNjFnajBlMzU2NCBva3VtdXNhc2hpLm10YkBt",
+  "iCalUID": "c8sjge356hi3gbb16co36b9k61j30b9p75hjcbb5cpj3gcpo61gj0e3564@google.com",
+  "id": "c8sjge356hi3gbb16co36b9k61j30b9p75hjcbb5cpj3gcpo61gj0e3564",
+  "kind": "calendar#event",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": true
+  },
+  "sequence": 0,
+  "start": {
+    "dateTime": "2023-08-19T18:00:00+09:00",
+    "timeZone": "Asia/Tokyo"
+  },
+  "status": "confirmed",
+  "summary": "OMC暑気払い",
+  "updated": "2023-07-18T07:39:16.872Z"
+}

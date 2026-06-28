@@ -1,0 +1,32 @@
+{
+  "created": "2023-06-19T11:38:11.000Z",
+  "creator": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "end": {
+    "dateTime": "2023-08-19T11:00:00+09:00",
+    "timeZone": "Asia/Tokyo"
+  },
+  "etag": "\"3374349382826000\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=NmdwajRvcGc2OHM2YWI5bGNvb2plYjlrNnBoamNiYjI2cGk2OGI5aDYxZ21hY2hnNjBybWFkajFjOCBva3VtdXNhc2hpLm10YkBt",
+  "iCalUID": "6gpj4opg68s6ab9lcoojeb9k6phjcbb26pi68b9h61gmachg60rmadj1c8@google.com",
+  "id": "6gpj4opg68s6ab9lcoojeb9k6phjcbb26pi68b9h61gmachg60rmadj1c8",
+  "kind": "calendar#event",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": true
+  },
+  "sequence": 0,
+  "start": {
+    "dateTime": "2023-08-19T09:00:00+09:00",
+    "timeZone": "Asia/Tokyo"
+  },
+  "status": "confirmed",
+  "summary": "名栗整備",
+  "updated": "2023-06-19T11:38:11.413Z"
+}

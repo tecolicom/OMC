@@ -1,0 +1,30 @@
+{
+  "created": "2026-06-28T03:31:27.000Z",
+  "creator": {
+    "email": "myhanno-bot@city-tecoli.iam.gserviceaccount.com"
+  },
+  "description": "先日、名栗じてんしゃ教室が無事に執り行われました。\n11月4日の整備とじてんしゃ教室当日に参加していただいた会員の皆さん、ご協力ありがとうございました。\nさて、12月1日は名栗じてんしゃ広場の定期整備を行います。\n寒くなり、草刈りの必要はありませんので、路面の整備を行う予定です。\n台風の影響で痛んだ箇所も多いため、会員の皆さんにはお力添えをお願い申し上げます。\n\n 日時     12月1日 9時より\n 場所     名栗じてんしゃ広場\n\n尚、気象庁による埼玉県南部の降水確率が前日土曜日17時の時点で50%以上の場合は、作業を中止といたします。\n\n🔗 その他: https://okumusashimtb.wixsite.com/omcweb/post/2019/11/22/【12月1日-名栗じてんしゃ広場の定期整備について】\n📝 報告: https://okumusashimtb.wixsite.com/omcweb/post/2019/12/02/12月1日名栗じてんしゃ広場整備報告",
+  "end": {
+    "date": "2019-12-02"
+  },
+  "etag": "\"3565234975816606\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=X2R0bW02YjlpNjBvamliOWg2OG1qMGNhMGR0bG5hcmJsZWRnbjZxMzk1bG1uOG9nIG9rdW11c2FzaGkubXRiQG0",
+  "iCalUID": "omc-2019-12-01@okumusashi-mtb",
+  "id": "_dtmm6b9i60ojib9h68mj0ca0dtlnarbledgn6q395lmn8og",
+  "kind": "calendar#event",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": false
+  },
+  "sequence": 0,
+  "start": {
+    "date": "2019-12-01"
+  },
+  "status": "confirmed",
+  "summary": "名栗じてんしゃ広場整備",
+  "updated": "2026-06-28T03:31:27.908Z"
+}

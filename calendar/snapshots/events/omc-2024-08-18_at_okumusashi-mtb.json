@@ -1,0 +1,30 @@
+{
+  "created": "2026-06-28T03:36:01.000Z",
+  "creator": {
+    "email": "myhanno-bot@city-tecoli.iam.gserviceaccount.com"
+  },
+  "description": "8月18日(日)は名栗じてんしゃ広場の定期整備を臨時で行います。前回8月4日に予定していた作業は高温予報により中止となりました。今回も草刈りをメインに行う予定です。同広場に午前9時にお集まりください。11時頃まで作業を行う予定です。なお、前日17時の気象庁発表による埼玉県南部の天気予報で、当日6時〜12時の降水確率が50%以上およびまたは予想最高気温が35°以上の場合は中止といたしますのでご了承ください。\n\n📣 お知らせ: https://okumusashimtb.wixsite.com/omcweb/post/8-18名栗じてんしゃ広場定期作業のお知らせ\n📝 報告: https://okumusashimtb.wixsite.com/omcweb/post/8-18名栗じてんしゃ広場定期作業の報告",
+  "end": {
+    "date": "2024-08-19"
+  },
+  "etag": "\"3565235524146686\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=X2R0bW02YjlpNjBwMzhiOWc3MG1qMmUyMGR0bG5hcmJsZWRnbjZxMzk1bG1uOG9nIG9rdW11c2FzaGkubXRiQG0",
+  "iCalUID": "omc-2024-08-18@okumusashi-mtb",
+  "id": "_dtmm6b9i60p38b9g70mj2e20dtlnarbledgn6q395lmn8og",
+  "kind": "calendar#event",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": false
+  },
+  "sequence": 0,
+  "start": {
+    "date": "2024-08-18"
+  },
+  "status": "confirmed",
+  "summary": "名栗じてんしゃ広場定期作業",
+  "updated": "2026-06-28T03:36:02.073Z"
+}

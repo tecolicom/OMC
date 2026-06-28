@@ -1,0 +1,30 @@
+{
+  "created": "2026-06-28T03:32:03.000Z",
+  "creator": {
+    "email": "myhanno-bot@city-tecoli.iam.gserviceaccount.com"
+  },
+  "description": "5/16は飯能市市民清掃デーです。地元自治会の皆さんの里山整備作業に奥武蔵マウンテンバイク友の会もご一緒させていただきます。\n多くの皆さんのご参加をお待ちしています。\n\n主な作業内容は水切りの清掃になります。スコップをお持ちの方は集合場所にご持参ください。現地にお運びします。\n飯能市民の方はご自宅付近の清掃活動を優先に行ってください。\nその後お時間ありましたら作業個所に直接向かってください。ご連絡いただけましたら場所をご説明いたします。集合場所 あいわ広場集合時間 9:00\n集合場所のあいわ広場にお車の駐車可能です。\n作業個所まではMTBで移動します。\n\n【注意事項】●ソーシャルディスタンス、手指の消毒などお気を付けください。●各自で水分補給やおやつの準備をお願いします。●前日午後5時の気象庁発表による埼玉県南部の天気予報で、降水確率が50%以上だった場合は中止いたします。\n\n📝 報告: https://okumusashimtb.wixsite.com/omcweb/post/5-16-里山整備のご報告\n🔗 その他: https://okumusashimtb.wixsite.com/omcweb/post/5-16-日-里山整備活動のご案内",
+  "end": {
+    "date": "2021-05-17"
+  },
+  "etag": "\"3565235048398014\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=X2R0bW02YjlpNjBwMzJiOWc2a21qMmRpMGR0bG5hcmJsZWRnbjZxMzk1bG1uOG9nIG9rdW11c2FzaGkubXRiQG0",
+  "iCalUID": "omc-2021-05-16@okumusashi-mtb",
+  "id": "_dtmm6b9i60p32b9g6kmj2di0dtlnarbledgn6q395lmn8og",
+  "kind": "calendar#event",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": false
+  },
+  "sequence": 0,
+  "start": {
+    "date": "2021-05-16"
+  },
+  "status": "confirmed",
+  "summary": "里山整備",
+  "updated": "2026-06-28T03:32:04.199Z"
+}

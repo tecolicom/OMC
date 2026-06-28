@@ -1,0 +1,32 @@
+{
+  "created": "2024-09-05T11:43:28.000Z",
+  "creator": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "end": {
+    "dateTime": "2024-09-15T23:15:00+09:00",
+    "timeZone": "Asia/Tokyo"
+  },
+  "etag": "\"3451073487148000\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=NGg4cWM2MGZtanIybDg3YTE4Y3UyYWJhamUgb2t1bXVzYXNoaS5tdGJAbQ",
+  "iCalUID": "4h8qc60fmjr2l87a18cu2abaje@google.com",
+  "id": "4h8qc60fmjr2l87a18cu2abaje",
+  "kind": "calendar#event",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": true
+  },
+  "sequence": 2,
+  "start": {
+    "dateTime": "2024-09-15T20:45:00+09:00",
+    "timeZone": "Asia/Tokyo"
+  },
+  "status": "confirmed",
+  "summary": "加治美杉台まちづくり推進委員会との協働",
+  "updated": "2024-09-05T11:45:43.574Z"
+}

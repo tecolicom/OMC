@@ -1,0 +1,30 @@
+{
+  "created": "2026-06-28T03:31:58.000Z",
+  "creator": {
+    "email": "myhanno-bot@city-tecoli.iam.gserviceaccount.com"
+  },
+  "description": "📝 報告: https://okumusashimtb.wixsite.com/omcweb/post/【12-月13日-交流活動報告】",
+  "end": {
+    "date": "2020-12-14"
+  },
+  "etag": "\"3565235038448382\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=X2R0bW02YjlpNjBwMzBiOWg2OG1qMmNxMGR0bG5hcmJsZWRnbjZxMzk1bG1uOG9nIG9rdW11c2FzaGkubXRiQG0",
+  "iCalUID": "omc-2020-12-13@okumusashi-mtb",
+  "id": "_dtmm6b9i60p30b9h68mj2cq0dtlnarbledgn6q395lmn8og",
+  "kind": "calendar#event",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": false
+  },
+  "sequence": 0,
+  "start": {
+    "date": "2020-12-13"
+  },
+  "status": "confirmed",
+  "summary": "交流活動",
+  "updated": "2026-06-28T03:31:59.224Z"
+}

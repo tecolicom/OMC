@@ -1,0 +1,30 @@
+{
+  "created": "2026-06-28T02:30:56.000Z",
+  "creator": {
+    "email": "myhanno-bot@city-tecoli.iam.gserviceaccount.com"
+  },
+  "description": "飯能市広報でお伝えしましたが、11月16日(日)に名栗ふれあい公園じてんしゃ広場で子ども自転車教室を開催します。詳しくは以下のフライヤー、そして質問集をご覧ください。応募フォームはこちらです。ご参加お待ちしています。\n\n📣 お知らせ: https://okumusashimtb.wixsite.com/omcweb/post/11-16-子ども自転車教室を開催します\n📝 報告: https://okumusashimtb.wixsite.com/omcweb/post/11-16-子ども自転車教室を実施しました",
+  "end": {
+    "date": "2025-11-17"
+  },
+  "etag": "\"3565227713429950\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=X2R0bW02YjlpNjBwM2FiOWg2NG1qMmRpMGR0bG5hcmJsZWRnbjZxMzk1bG1uOG9nIG9rdW11c2FzaGkubXRiQG0",
+  "iCalUID": "omc-2025-11-16@okumusashi-mtb",
+  "id": "_dtmm6b9i60p3ab9h64mj2di0dtlnarbledgn6q395lmn8og",
+  "kind": "calendar#event",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": false
+  },
+  "sequence": 0,
+  "start": {
+    "date": "2025-11-16"
+  },
+  "status": "confirmed",
+  "summary": "子ども自転車教室を実施しました",
+  "updated": "2026-06-28T02:30:56.714Z"
+}
