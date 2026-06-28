@@ -79,3 +79,11 @@ def decide_action(event: dict, existing: list[dict]) -> dict:
 def needs_update(target: dict, body: dict) -> bool:
     return (target.get("summary") or "") != body.get("summary") \
         or (target.get("description") or "") != body.get("description")
+
+
+def parse_gws_json(text: str):
+    s = text.lstrip()
+    for i, ch in enumerate(s):
+        if ch in "{[":
+            return json.loads(s[i:])
+    raise ValueError("no JSON found in gws output")

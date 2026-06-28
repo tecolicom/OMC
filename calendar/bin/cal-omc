@@ -1,0 +1,158 @@
+#!/usr/bin/env python3
+"""cal-omc — canonical イベントを Google Calendar へ投影 (既定 dry-run, --apply で書込)。
+
+cal-myhanno に倣い gws + Service Account で iCalUID upsert。突合判定は omc_project。
+"""
+from __future__ import annotations
+
+import argparse
+import glob
+import json
+import os
+import subprocess
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import omc_project
+import yaml
+
+DEFAULT_CAL = "okumusashi.mtb@gmail.com"
+DEFAULT_SA = os.path.expanduser("~/.config/omc/sa.json")
+
+
+def _ensure_creds() -> None:
+    if not os.environ.get("GOOGLE_APPLICATION_CREDENTIALS"):
+        if os.path.exists(DEFAULT_SA):
+            os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = DEFAULT_SA
+        else:
+            sys.exit(f"error: GOOGLE_APPLICATION_CREDENTIALS 未設定かつ {DEFAULT_SA} が無い")
+
+
+def _gws(*args: str, params: dict | None = None, body: dict | None = None) -> dict:
+    cmd = ["gws", *args, "--format", "json"]
+    if params is not None:
+        cmd += ["--params", json.dumps(params, ensure_ascii=False)]
+    if body is not None:
+        cmd += ["--json", json.dumps(body, ensure_ascii=False)]
+    proc = subprocess.run(cmd, capture_output=True, text=True)
+    if proc.returncode != 0:
+        sys.exit(f"gws failed: {proc.stderr.strip()}")
+    return omc_project.parse_gws_json(proc.stdout)
+
+
+def _make_fetch_existing(cal_id: str):
+    def fetch_existing(date: str):
+        # その日(終日含む)に重なるイベント。singleEvents=False で iCalUID を保持。
+        res = _gws("calendar", "events", "list", params={
+            "calendarId": cal_id, "singleEvents": False, "showDeleted": False,
+            "timeMin": date + "T00:00:00Z", "timeMax": date + "T23:59:59Z", "maxResults": 50})
+        return res.get("items", []) if isinstance(res, dict) else []
+    return fetch_existing
+
+
+def plan_events(events: list[dict], fetch_existing) -> list[dict]:
+    plan = []
+    for ev in events:
+        existing = fetch_existing(ev["date"])
+        decision = omc_project.decide_action(ev, existing)
+        body = omc_project.build_event_body(ev)
+        nu = True
+        if decision["target"] is not None:
+            nu = omc_project.needs_update(decision["target"], body)
+        plan.append({"event": ev, "action": decision["action"], "target": decision["target"],
+                     "reason": decision["reason"], "body": body, "needs_update": nu})
+    return plan
+
+
+def _load_events(events_dir: str, year: str | None, limit: int | None) -> list[dict]:
+    files = sorted(glob.glob(os.path.join(events_dir, "*", "*.yaml")))
+    if year:
+        files = [f for f in files if os.sep + year + os.sep in f]
+    if limit:
+        files = files[:limit]
+    return [yaml.safe_load(open(f, encoding="utf-8")) for f in files]
+
+
+def _apply_one(cal_id: str, p: dict) -> str:
+    body = dict(p["body"])
+    if p["action"] == "create":
+        _gws("calendar", "events", "import", params={"calendarId": cal_id}, body=body)
+        return "created"
+    if p["action"] in ("update_ours", "overwrite_manual"):
+        if not p["needs_update"]:
+            return "unchanged"
+        target = p["target"]
+        patch = {"summary": body["summary"], "description": body["description"]}
+        if p["action"] == "create" or p["action"] == "update_ours":
+            patch["start"] = body["start"]; patch["end"] = body["end"]
+        # overwrite_manual: 既存の start/end (時刻) を保持 → summary/description のみ
+        _gws("calendar", "events", "patch",
+             params={"calendarId": cal_id, "eventId": target["id"]}, body=patch)
+        return "updated"
+    return "skipped"
+
+
+def _snapshot(cal_id: str, snap_dir: str) -> int:
+    res = _gws("calendar", "events", "list", params={
+        "calendarId": cal_id, "singleEvents": False, "showDeleted": False, "maxResults": 2500})
+    items = res.get("items", []) if isinstance(res, dict) else []
+    os.makedirs(os.path.join(snap_dir, "events"), exist_ok=True)
+    for e in items:
+        uid = e.get("iCalUID") or e.get("id", "")
+        safe = uid.replace("@", "_at_").replace(".", "_").replace("/", "_")
+        with open(os.path.join(snap_dir, "events", safe + ".json"), "w", encoding="utf-8") as f:
+            json.dump(e, f, ensure_ascii=False, indent=2)
+    return len(items)
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--events-dir", default="events")
+    ap.add_argument("--year", default=None)
+    ap.add_argument("--limit", type=int, default=None)
+    ap.add_argument("--apply", action="store_true")
+    ap.add_argument("--review-file", default="projection-review-needed.txt")
+    ap.add_argument("--snapshot-dir", default="snapshots")
+    ap.add_argument("--cal-id", default=DEFAULT_CAL)
+    args = ap.parse_args()
+
+    _ensure_creds()
+    events = _load_events(args.events_dir, args.year, args.limit)
+    plan = plan_events(events, _make_fetch_existing(args.cal_id))
+
+    counts = {"create": 0, "update": 0, "unchanged": 0, "skip_review": 0}
+    review = []
+    for p in plan:
+        ev = p["event"]
+        if p["action"] == "skip_review":
+            counts["skip_review"] += 1
+            review.append((ev["date"], ev["summary"],
+                           (p["target"] or {}).get("summary", ""), p["reason"]))
+            print(f"SKIP  {ev['date']} {ev['summary']!r} ({p['reason']})")
+            continue
+        if p["action"] == "create":
+            counts["create"] += 1; verb = "CREATE"
+        elif not p["needs_update"]:
+            counts["unchanged"] += 1; verb = "UNCHANGED"
+        else:
+            counts["update"] += 1; verb = "UPDATE" + ("(manual)" if p["action"] == "overwrite_manual" else "")
+        print(f"{verb:16} {ev['date']} {ev['summary']}")
+        if args.apply and (p["action"] == "create" or p["needs_update"]):
+            _apply_one(args.cal_id, p)
+
+    if review:
+        with open(args.review_file, "w", encoding="utf-8") as f:
+            for d, s, es, r in review:
+                f.write(f"{d}\t{s}\t{es}\t{r}\n")
+
+    mode = "APPLY" if args.apply else "DRY-RUN"
+    print(f"[{mode}] create={counts['create']} update={counts['update']} "
+          f"unchanged={counts['unchanged']} skip_review={counts['skip_review']}")
+    if args.apply:
+        n = _snapshot(args.cal_id, args.snapshot_dir)
+        print(f"snapshot: {n} events -> {args.snapshot_dir}/events/")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -91,3 +91,9 @@ def test_needs_update():
     body = {"summary": "里山整備活動", "description": "X"}
     assert omc_project.needs_update({"summary": "里山整備活動", "description": "X"}, body) is False
     assert omc_project.needs_update({"summary": "別", "description": "X"}, body) is True
+
+
+def test_parse_gws_json_skips_prefix():
+    out = "Using keyring backend: keyring\n{\"items\": [{\"id\": \"x\"}]}\n"
+    assert omc_project.parse_gws_json(out)["items"][0]["id"] == "x"
+    assert omc_project.parse_gws_json("[]") == []
