@@ -102,22 +102,23 @@
 | `cal-omc` | 活動記録を **Google カレンダーへ反映**（既定は確認のみ＝書き込まない。`--apply` で実反映） |
 | `omc_parse.py` / `omc_project.py` | 上記が使う内部処理（直接は実行しない） |
 
-### よく使う手順
+### よく使う手順（`make` で実行）
+
+リポジトリ直下で `make` を使います。`make help` で一覧が出ます。
 
 ```bash
-cd calendar
+make help              # できる操作の一覧を表示
 
-# 1) ブログから活動記録を更新（全記事）
-python3 bin/cal-omc-archive-fetch --fetched $(date +%F)
-python3 bin/dedupe-chrome-images sources/blog
+make update            # ブログから活動記録を更新（全記事＋写真の整理）
+make calendar          # カレンダー反映の「確認」だけ（書き込まない）
+make calendar-apply    # カレンダーへ実際に反映する
+make test              # 動作テスト
+make push              # 変更を GitHub に送る（コミットは別途）
 
-# 2) Google カレンダーへ反映（まず確認だけ→問題なければ --apply）
-python3 bin/cal-omc --events-dir events            # 確認のみ（dry-run）
-python3 bin/cal-omc --events-dir events --apply    # 実際に反映
-
-# 3) 動作テスト
-python3 -m pytest tests/ -q
+# 年を絞る例：  make calendar-apply YEAR=2025
 ```
+
+通常は **`make update` →  `make calendar`（確認）→  `make calendar-apply`** の順です。
 
 - Google カレンダーへの書き込みには、サービスアカウントの鍵（`~/.config/omc/sa.json`）と、
   カレンダーをそのアカウントに「予定の変更」権限で共有しておくことが必要です。
