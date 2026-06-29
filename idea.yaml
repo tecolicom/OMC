@@ -1,5 +1,9 @@
-# 暦体「奥武蔵マウンテンバイク友の会」の正規メタ。
-# city-tecoli/src/data/global-ideas.yaml の ideas[] へこの内容を転記する (Phase 4)。
+# 暦体「奥武蔵マウンテンバイク友の会」の正規メタ (OMC 側のローカル記録)。
+# city-tecoli では `idea:global:okumusashi-mtb` を「Blobs のみの動的エンティティ」として
+# 管理 UI (EntityManage) で登録する設計 (city-tecoli の
+# docs/superpowers/specs/2026-06-22-calendar-ideas-source-design.md)。
+# → global-ideas.yaml (config seed) には入れない。ここの値 (name/url/ical_url) を
+#    管理 UI 登録時の参照に使う。areas:[hanno,hidaka,chichibu,ome] / categories:[スポーツ] 等は UI で設定。
 # id は idea:global:okumusashi-mtb、公開 URL は https://city.tecoli.com/ideas/okumusashi-mtb/
 slug: okumusashi-mtb
 name_ja: 奥武蔵マウンテンバイク友の会
