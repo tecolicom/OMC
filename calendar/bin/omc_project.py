@@ -26,8 +26,8 @@ def build_description(posts: list[dict], limit: int = 1000) -> str:
 
 
 def ical_uid_for(event: dict) -> str:
-    uid = event.get("uid") or event.get("date", "")
-    return f"omc-{uid}@okumusashi-mtb"
+    # canonical の開催日を一意キーにする (1日1イベント)。デプロイ済み UID と一致。
+    return f"omc-{event['date']}@okumusashi-mtb"
 
 
 def build_event_body(event: dict) -> dict:

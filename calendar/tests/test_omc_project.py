@@ -37,7 +37,7 @@ import datetime as _dt
 
 def test_build_event_body_allday():
     event = {
-        "summary": "里山整備活動", "date": "2025-05-17", "uid": "abc123def456",
+        "summary": "里山整備活動", "date": "2025-05-17",
         "source": {"posts": [
             {"kind": "report", "url": "https://x/r", "title": "報告", "published": "2025-05-20"},
             {"kind": "announce", "url": "https://x/a", "title": "お知らせ", "published": "2025-05-08", "body": "9時集合"},
@@ -47,7 +47,7 @@ def test_build_event_body_allday():
     assert b["summary"] == "里山整備活動"
     assert b["start"] == {"date": "2025-05-17"}
     assert b["end"] == {"date": "2025-05-18"}     # 終日 end は翌日(排他)
-    assert b["iCalUID"] == "omc-abc123def456@okumusashi-mtb"
+    assert b["iCalUID"] == "omc-2025-05-17@okumusashi-mtb"
     assert "9時集合" in b["description"]
     assert "📣 お知らせ: https://x/a" in b["description"]
 
@@ -57,7 +57,7 @@ def _ev(summary, uid=None):
     if uid: e["iCalUID"] = uid
     return e
 
-EVENT = {"summary": "里山整備活動", "date": "2025-05-17", "uid": "u1", "category": "里山整備",
+EVENT = {"summary": "里山整備活動", "date": "2025-05-17", "category": "里山整備",
          "source": {"posts": [{"kind": "announce", "url": "https://x/a", "title": "お知らせ", "published": "2025-05-08", "body": "b"}]}}
 
 
@@ -66,7 +66,7 @@ def test_decide_create_when_no_existing():
 
 
 def test_decide_update_ours():
-    ours = _ev("里山整備活動", uid="omc-u1@okumusashi-mtb")
+    ours = _ev("里山整備活動", uid="omc-2025-05-17@okumusashi-mtb")
     r = omc_project.decide_action(EVENT, [ours])
     assert r["action"] == "update_ours" and r["target"] is ours
 
@@ -109,3 +109,9 @@ def test_needs_update_fields_description_only():
     assert omc_project.needs_update(target, body2, fields=("description",)) is True
     # 既定(summary+description)は summary 差で True
     assert omc_project.needs_update(target, body) is True
+
+
+def test_ical_uid_is_date_based_without_uid_field():
+    ev = {"summary": "x", "date": "2017-02-16", "source": {"posts": []}}
+    assert omc_project.ical_uid_for(ev) == "omc-2017-02-16@okumusashi-mtb"
+    assert omc_project.build_event_body(ev)["iCalUID"] == "omc-2017-02-16@okumusashi-mtb"

@@ -25,7 +25,7 @@ def test_plan_events_decides_per_date():
     # u1 の日には我々イベントが既存、u2 の日には何も無い
     def fetch_existing(date):
         if date == "2025-05-17":
-            return [{"iCalUID": "omc-u1@okumusashi-mtb", "id": "e1",
+            return [{"iCalUID": "omc-2025-05-17@okumusashi-mtb", "id": "e1",
                      "summary": "里山整備活動", "description": "9時集合\n\n📣 お知らせ: https://x/a"}]
         return []
     plan = cli.plan_events(events, fetch_existing)

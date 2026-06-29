@@ -40,12 +40,30 @@ def _gws(*args: str, params: dict | None = None, body: dict | None = None) -> di
     return omc_project.parse_gws_json(proc.stdout)
 
 
+def _list_all_events(cal_id: str) -> list[dict]:
+    items: list[dict] = []
+    token = None
+    while True:
+        params = {"calendarId": cal_id, "singleEvents": False,
+                  "showDeleted": False, "maxResults": 2500}
+        if token:
+            params["pageToken"] = token
+        res = _gws("calendar", "events", "list", params=params)
+        if not isinstance(res, dict):
+            break
+        items.extend(res.get("items", []))
+        token = res.get("nextPageToken")
+        if not token:
+            break
+    return items
+
+
 def _make_fetch_existing(cal_id: str):
-    res = _gws("calendar", "events", "list", params={
-        "calendarId": cal_id, "singleEvents": False, "showDeleted": False, "maxResults": 2500})
-    items = res.get("items", []) if isinstance(res, dict) else []
+    items = _list_all_events(cal_id)
     by_date: dict[str, list] = {}
     for e in items:
+        if e.get("status") == "cancelled":
+            continue
         start = e.get("start") or {}
         d = start.get("date") or (start.get("dateTime") or "")[:10]
         if d:
@@ -105,9 +123,7 @@ def _apply_one(cal_id: str, p: dict) -> str:
 
 
 def _snapshot(cal_id: str, snap_dir: str) -> int:
-    res = _gws("calendar", "events", "list", params={
-        "calendarId": cal_id, "singleEvents": False, "showDeleted": False, "maxResults": 2500})
-    items = res.get("items", []) if isinstance(res, dict) else []
+    items = _list_all_events(cal_id)
     os.makedirs(os.path.join(snap_dir, "events"), exist_ok=True)
     for e in items:
         uid = e.get("iCalUID") or e.get("id", "")
