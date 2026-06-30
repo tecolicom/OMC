@@ -16,7 +16,7 @@ YEAR ?=
 YEAR_OPT := $(if $(YEAR),--year $(YEAR),)
 
 .DEFAULT_GOAL := help
-.PHONY: help update fetch dedupe calendar calendar-apply test push
+.PHONY: help update fetch dedupe calendar calendar-apply test push site-photos site-dev site-build
 
 help: ## できる操作の一覧を表示
 	@echo "OMC でできる操作:"
@@ -44,3 +44,12 @@ test: ## 動作テストを実行
 
 push: ## 変更を GitHub に送る(コミットは別途 git commit)
 	git push
+
+site-photos: ## サイト用に写真を取り込む(不足分のみ)
+	cd site && node scripts/fetch-photos.mjs
+
+site-dev: ## サイトをローカルで開発表示
+	cd site && npm run dev
+
+site-build: ## サイトをビルド
+	cd site && npm run build
