@@ -1,13 +1,31 @@
 ---
-import '../styles/global.css';
+import Base from '../layouts/Base.astro';
+import ActivityCard from '../components/ActivityCard.astro';
+import { Image } from 'astro:assets';
+import { getActivities } from '../data/activities';
+import { getPhoto } from '../lib/photos';
+const acts = getActivities('../calendar');
+const recent = [...acts].reverse().slice(0, 6);
+const hero = [...acts].reverse().flatMap((a) => a.photos).map(getPhoto).find(Boolean);
+const base = import.meta.env.BASE_URL;
 ---
-<html lang="ja">
-  <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width" />
-    <title>奥武蔵マウンテンバイク友の会</title></head>
-  <body>
-    <main class="mx-auto max-w-3xl px-4 py-12">
-      <h1 class="text-4xl font-bold text-[var(--color-wakaba)]">奥武蔵マウンテンバイク友の会</h1>
-      <p class="mt-4">準備中。</p>
-    </main>
-  </body>
-</html>
+<Base title="奥武蔵マウンテンバイク友の会" description="飯能・奥武蔵エリアで里山整備やトレイル整備、清掃、子ども自転車教室などを行うマウンテンバイク愛好家の会。">
+  <section class="relative">
+    {hero && <Image src={hero} alt="" widths={[800,1600]} sizes="100vw" class="w-full h-[60vh] object-cover" />}
+    <div class="absolute inset-0 bg-black/35 flex items-center">
+      <div class="mx-auto max-w-5xl px-4 text-white">
+        <h1 class="text-4xl sm:text-6xl font-bold drop-shadow">奥武蔵マウンテンバイク友の会</h1>
+        <p class="mt-3 text-lg drop-shadow">里山を整え、自転車で楽しむ。飯能・奥武蔵の有志の会です。</p>
+      </div>
+    </div>
+  </section>
+  <section class="mx-auto max-w-5xl px-4 py-12">
+    <div class="flex items-baseline justify-between mb-4">
+      <h2 class="text-2xl font-bold">最近の活動</h2>
+      <a href={`${base}activities/`} class="text-sm text-[var(--color-wakaba)]">すべて見る →</a>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {recent.map((a) => <ActivityCard activity={a} />)}
+    </div>
+  </section>
+</Base>

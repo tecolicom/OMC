@@ -1,0 +1,42 @@
+---
+import Base from '../../layouts/Base.astro';
+import ActivityCard from '../../components/ActivityCard.astro';
+import { getActivities } from '../../data/activities';
+const acts = [...getActivities('../calendar')].reverse();
+const cats = Array.from(new Set(acts.map((a) => a.category)));
+const years = Array.from(new Set(acts.map((a) => a.date.slice(0, 4))));
+---
+<Base title="活動アーカイブ | 奥武蔵MTB友の会">
+  <section class="mx-auto max-w-5xl px-4 py-10">
+    <h1 class="text-3xl font-bold mb-4">活動アーカイブ</h1>
+    <div class="flex flex-wrap gap-2 mb-6" id="filters">
+      <button data-cat="" class="cat-btn px-3 py-1 rounded-full border text-sm bg-[var(--color-wakaba)] text-white">すべて</button>
+      {cats.map((c) => <button data-cat={c} class="cat-btn px-3 py-1 rounded-full border text-sm">{c}</button>)}
+    </div>
+    {years.map((y) => (
+      <div class="mb-10 year-block" data-year={y}>
+        <h2 class="text-xl font-bold text-[var(--color-tsuchi)] mb-3">{y}年</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {acts.filter((a) => a.date.startsWith(y)).map((a) => (
+            <div class="act-item" data-cat={a.category}><ActivityCard activity={a} /></div>
+          ))}
+        </div>
+      </div>
+    ))}
+  </section>
+  <script is:inline>
+    const btns = document.querySelectorAll('.cat-btn');
+    btns.forEach((b) => b.addEventListener('click', () => {
+      const cat = b.getAttribute('data-cat');
+      btns.forEach((x) => { x.classList.remove('bg-[var(--color-wakaba)]','text-white'); });
+      b.classList.add('bg-[var(--color-wakaba)]','text-white');
+      document.querySelectorAll('.act-item').forEach((it) => {
+        it.style.display = (!cat || it.getAttribute('data-cat') === cat) ? '' : 'none';
+      });
+      document.querySelectorAll('.year-block').forEach((yb) => {
+        const any = [...yb.querySelectorAll('.act-item')].some((it) => it.style.display !== 'none');
+        yb.style.display = any ? '' : 'none';
+      });
+    }));
+  </script>
+</Base>

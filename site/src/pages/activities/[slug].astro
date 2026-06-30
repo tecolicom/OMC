@@ -1,0 +1,25 @@
+---
+import Base from '../../layouts/Base.astro';
+import PhotoGrid from '../../components/PhotoGrid.astro';
+import { getActivities } from '../../data/activities';
+export function getStaticPaths() {
+  return getActivities('../calendar').map((a) => ({ params: { slug: a.slug }, props: { activity: a } }));
+}
+const { activity } = Astro.props;
+const label = { announce: '📣 お知らせ', report: '📝 報告', other: '🔗 記事' };
+---
+<Base title={`${activity.title} | 奥武蔵MTB友の会`}>
+  <article class="mx-auto max-w-3xl px-4 py-10">
+    <div class="text-sm text-[var(--color-sumi)]/50">{activity.date} · {activity.category}</div>
+    <h1 class="text-3xl font-bold mt-1 mb-6">{activity.title}</h1>
+    {activity.photos.length > 0 && <div class="mb-8"><PhotoGrid filenames={activity.photos} /></div>}
+    {activity.articles.map((art) => (
+      <section class="mb-8">
+        <h2 class="text-base font-bold text-[var(--color-tsuchi)] mb-2">{label[art.kind] ?? '🔗 記事'}</h2>
+        {art.body && <p class="whitespace-pre-line leading-relaxed">{art.body}</p>}
+        <a href={art.url} class="inline-block mt-2 text-sm text-[var(--color-wakaba)]">元の記事を見る →</a>
+      </section>
+    ))}
+    <a href={`${import.meta.env.BASE_URL}activities/`} class="text-sm text-[var(--color-wakaba)]">← 活動アーカイブ</a>
+  </article>
+</Base>
