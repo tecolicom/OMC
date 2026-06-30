@@ -2,7 +2,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { parse } from 'yaml';
 
-export type Article = { kind: string; title: string; url: string; published: string; body: string; images: string[] };
+export type Article = { kind: string; title: string; url: string; published: string; body: string; images: string[]; photos: string[] };
 export type Activity = { date: string; category: string; title: string; slug: string; articles: Article[]; photos: string[] };
 export type EventRecord = { date: string; category: string; summary: string; uid: string;
   source: { posts: { kind: string; url: string; title: string; published: string }[] } };
@@ -24,14 +24,21 @@ export function buildActivities(events: EventRecord[], archive: Map<string, Arch
   const acts = events.map((ev) => {
     const articles: Article[] = (ev.source?.posts ?? []).map((p) => {
       const a = archive.get(p.url);
+      const images = a?.images ?? [];
+      const seenA = new Set<string>();
+      const photos: string[] = [];
+      for (const u of images) {
+        const f = photoFilename(u);
+        if (!seenA.has(f)) { seenA.add(f); photos.push(f); }
+      }
       return { kind: p.kind, title: a?.title ?? p.title, url: p.url,
         published: a?.published ?? p.published, body: (a?.body ?? '').trim(),
-        images: a?.images ?? [] };
+        images, photos };
     });
+    articles.sort((x, y) => x.published.localeCompare(y.published));
     const seen = new Set<string>();
     const photos: string[] = [];
-    for (const art of articles) for (const u of art.images) {
-      const f = photoFilename(u);
+    for (const art of articles) for (const f of art.photos) {
       if (!seen.has(f)) { seen.add(f); photos.push(f); }
     }
     return { date: ev.date, category: ev.category, title: ev.summary,

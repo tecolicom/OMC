@@ -37,4 +37,32 @@ describe('buildActivities', () => {
     expect(a.articles.find(x => x.kind === 'report')!.body).toBe('実施しました');
     expect(a.photos).toEqual(['c3395c_p_mv2_jpg.jpg']);
   });
+  it('sorts articles by published ascending and derives per-article photos', () => {
+    const events = [{
+      date: '2024-05-26', category: '清掃活動', summary: '日高市ごみゼロの日清掃作業',
+      uid: 'a1b2c3d4e5f6',
+      source: { posts: [
+        { kind: 'report', url: 'https://x/r', title: '報告', published: '2024-05-29' },
+        { kind: 'announce', url: 'https://x/a', title: 'お知らせ', published: '2024-05-13' },
+      ] },
+    }];
+    const archive = new Map([
+      ['https://x/r', { url: 'https://x/r', title: '報告', published: '2024-05-29',
+        body: '実施', images: [
+          'https://static.wixstatic.com/media/c3395c_p1~mv2.jpg',
+          'https://static.wixstatic.com/media/c3395c_p1~mv2.jpg', // 重複
+          'https://static.wixstatic.com/media/c3395c_p2~mv2.jpg',
+        ] }],
+      ['https://x/a', { url: 'https://x/a', title: 'お知らせ', published: '2024-05-13',
+        body: '集合', images: [] }],
+    ]);
+    const a = buildActivities(events as any, archive as any)[0];
+    // 時系列昇順: お知らせ(05-13) → 報告(05-29)
+    expect(a.articles.map(x => x.kind)).toEqual(['announce', 'report']);
+    // 記事ごとの写真(記事内で重複排除)
+    expect(a.articles[0].photos).toEqual([]);
+    expect(a.articles[1].photos).toEqual(['c3395c_p1_mv2_jpg.jpg', 'c3395c_p2_mv2_jpg.jpg']);
+    // 横断 dedup は維持
+    expect(a.photos).toEqual(['c3395c_p1_mv2_jpg.jpg', 'c3395c_p2_mv2_jpg.jpg']);
+  });
 });
