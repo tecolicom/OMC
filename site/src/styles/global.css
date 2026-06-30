@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --color-tsuchi: #6b4f3a;
+  --color-wakaba: #4f7a3a;
+  --color-sora:  #3a6b7a;
+  --color-cream: #f7f4ee;
+  --color-sumi:  #2b2622;
+  --font-sans: "Noto Sans JP", system-ui, sans-serif;
+}
+
+html { font-family: var(--font-sans); color: var(--color-sumi); background: var(--color-cream); }
