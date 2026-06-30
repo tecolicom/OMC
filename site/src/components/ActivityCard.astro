@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import { getPhoto } from '../lib/photos';
+import omcLogo from '../assets/omc-logo.jpg';
 const { activity } = Astro.props;
 const base = import.meta.env.BASE_URL;
 const cover = activity.photos.map(getPhoto).find(Boolean);
@@ -9,8 +10,11 @@ const d = activity.date;
 <a href={`${base}activities/${activity.slug}/`}
    class="group block rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-md transition no-underline">
   <div class="aspect-[4/3] bg-[var(--color-cream)] overflow-hidden">
-    {cover && <Image src={cover} alt="" widths={[400, 800]} sizes="(max-width:640px) 100vw, 400px"
-                     class="w-full h-full object-cover group-hover:scale-105 transition" loading="lazy" />}
+    {cover
+      ? <Image src={cover} alt="" widths={[400, 800]} sizes="(max-width:640px) 100vw, 400px"
+               class="w-full h-full object-cover group-hover:scale-105 transition" loading="lazy" />
+      : <Image src={omcLogo} alt="奥武蔵MTB友の会" widths={[200, 269]} sizes="200px"
+               class="w-full h-full object-contain p-6" loading="lazy" />}
   </div>
   <div class="p-3">
     <div class="text-xs text-[var(--color-sumi)]/50">{d} · {activity.category}</div>
