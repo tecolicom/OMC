@@ -1,0 +1,14 @@
+---
+import { Image } from 'astro:assets';
+import { getPhoto } from '../lib/photos';
+const { filenames } = Astro.props;
+const photos = (filenames ?? []).map(getPhoto).filter(Boolean);
+---
+{photos.length > 0 && (
+  <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+    {photos.map((p) => (
+      <Image src={p} alt="" widths={[300, 600]} sizes="(max-width:640px) 50vw, 300px"
+             class="w-full aspect-square object-cover rounded-lg" loading="lazy" />
+    ))}
+  </div>
+)}
