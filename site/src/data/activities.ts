@@ -4,7 +4,7 @@ import { parse } from 'yaml';
 
 export type Article = { kind: string; title: string; url: string; published: string; body: string; images: string[]; photos: string[] };
 export type Activity = { date: string; category: string; title: string; slug: string; articles: Article[]; photos: string[] };
-export type EventRecord = { date: string; category: string; summary: string; uid: string;
+export type EventRecord = { date: string; category: string; summary: string;
   source: { posts: { kind: string; url: string; title: string; published: string }[] } };
 export type ArchiveArticle = { url: string; title: string; published: string; body?: string; images?: string[] };
 
@@ -15,9 +15,6 @@ export function mediaId(url: string): string | null {
 export function photoFilename(url: string): string {
   const id = mediaId(url) ?? url;
   return id.replace(/[~./,]/g, '_') + '.jpg';
-}
-export function slugForDate(date: string, uid: string): string {
-  return `${date}-${(uid || '').slice(0, 6)}`;
 }
 
 export function buildActivities(events: EventRecord[], archive: Map<string, ArchiveArticle>): Activity[] {
@@ -42,9 +39,16 @@ export function buildActivities(events: EventRecord[], archive: Map<string, Arch
       if (!seen.has(f)) { seen.add(f); photos.push(f); }
     }
     return { date: ev.date, category: ev.category, title: ev.summary,
-      slug: slugForDate(ev.date, ev.uid), articles, photos };
+      slug: ev.date, articles, photos };
   });
   acts.sort((a, b) => a.date.localeCompare(b.date));
+  // 同日複数イベントのみ日付昇順で2件目以降に -2, -3... を付与し slug 衝突を防ぐ
+  const dateSeen = new Map<string, number>();
+  for (const a of acts) {
+    const n = (dateSeen.get(a.date) ?? 0) + 1;
+    dateSeen.set(a.date, n);
+    if (n > 1) a.slug = `${a.date}-${n}`;
+  }
   return acts;
 }
 
