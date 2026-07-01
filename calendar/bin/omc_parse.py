@@ -37,6 +37,48 @@ def _clean_body(text: str) -> str:
     return "\n".join(lines).strip("\n")
 
 
+_P_BLOCK_RE = re.compile(r"<p\b[^>]*>(.*?)</p>", re.S)
+_TAG_RE = re.compile(r"<[^>]+>")
+
+
+def _description_from_jsonld(html: str) -> str:
+    for block in re.findall(r'<script type="application/ld\+json">(.*?)</script>', html, re.S):
+        try:
+            data = json.loads(block)
+        except ValueError:
+            continue
+        for item in (data if isinstance(data, list) else [data]):
+            if (isinstance(item, dict)
+                    and item.get("@type") in ("BlogPosting", "Article", "NewsArticle")
+                    and item.get("description") is not None):
+                return item["description"]
+    return ""
+
+
+def _is_footer_line(t: str) -> bool:
+    s = t.lstrip()
+    return ("Proudly created with Wix" in t) or s.startswith("©") or s.startswith("(c)")
+
+
+def extract_post_body(html: str) -> str:
+    """記事HTMLの本文を段落(改行)付きで返す。
+
+    post-description コンテナ内の <p> ブロックを段落として \n 連結する。
+    見つからない/空の場合は従来どおり JSON-LD description を _clean_body した値。
+    """
+    idx = html.find('data-hook="post-description"')
+    if idx != -1:
+        lines = []
+        for block in _P_BLOCK_RE.findall(html[idx:]):
+            t = unicodedata.normalize("NFKC", _html.unescape(_TAG_RE.sub("", block))).strip()
+            if t and not _is_footer_line(t):
+                lines.append(t)
+        body = "\n".join(lines)
+        if body:
+            return body
+    return _clean_body(_description_from_jsonld(html))
+
+
 def extract_post_meta(html: str) -> dict | None:
     for block in re.findall(r'<script type="application/ld\+json">(.*?)</script>', html, re.S):
         try:
@@ -58,7 +100,7 @@ def extract_post_meta(html: str) -> dict | None:
                     pub = datetime.date.fromisoformat(str(published)[:10])
                 except ValueError:
                     continue
-                body = _clean_body(item.get("description") or "")
+                body = extract_post_body(html)
                 return {"title": headline, "pub_date": pub, "body": body}
     return None
 

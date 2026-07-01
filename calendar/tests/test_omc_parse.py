@@ -382,3 +382,33 @@ def test_build_events_carries_body_and_images():
     assert "body" not in posts["report"]                 # 報告は本文なし
     assert posts["report"]["images"] == ["https://static.wixstatic.com/media/p.jpg"]
     assert "images" not in posts["announce"]             # 空 images は省略
+
+
+def test_extract_post_body_paragraphs():
+    h = open(os.path.join(os.path.dirname(__file__), "fixtures", "post-body-paragraphs.html"),
+             encoding="utf-8").read()
+    body = omc_parse.extract_post_body(h)
+    # post-description 内の <p> が段落として \n 連結される。nav とフッターは除外
+    assert body == "見回りを行います。\nご参加ください。\n■集合:8:30"
+
+
+def test_extract_post_body_falls_back_to_description():
+    # post-description が無い記事は従来どおり JSON-LD description(1行)を返す
+    h = ('<script type="application/ld+json">'
+         '{"@type":"BlogPosting","headline":"x","datePublished":"2020-01-01T00:00:00Z",'
+         '"description":"一行の説明文です。"}</script>')
+    assert omc_parse.extract_post_body(h) == "一行の説明文です。"
+
+
+def test_extract_post_body_empty_when_no_body():
+    h = ('<script type="application/ld+json">'
+         '{"@type":"BlogPosting","headline":"x","datePublished":"2020-01-01T00:00:00Z"}</script>')
+    assert omc_parse.extract_post_body(h) == ""
+
+
+def test_extract_post_meta_uses_post_body_paragraphs():
+    h = open(os.path.join(os.path.dirname(__file__), "fixtures", "post-body-paragraphs.html"),
+             encoding="utf-8").read()
+    meta = omc_parse.extract_post_meta(h)
+    assert "\n" in meta["body"]
+    assert meta["body"].splitlines()[0] == "見回りを行います。"
