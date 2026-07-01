@@ -1,0 +1,43 @@
+#!/usr/bin/env python3
+"""cal-omc-body-refresh — 既存アーカイブを再取得し body だけ段落付きに更新する。
+
+events は再生成しない。内容が一致する場合のみ改行を追加(content-changed は上書きしない)。
+"""
+from __future__ import annotations
+
+import argparse
+import os
+import sys
+import time
+import urllib.parse
+import urllib.request
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import omc_refresh  # noqa: E402
+
+
+def _fetch(url: str) -> str:
+    sp = urllib.parse.urlsplit(url)
+    u2 = urllib.parse.urlunsplit(
+        (sp.scheme, sp.netloc, urllib.parse.quote(sp.path), sp.query, sp.fragment))
+    req = urllib.request.Request(u2, headers={"User-Agent": "Mozilla/5.0"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return r.read().decode("utf-8", "replace")
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--cache-dir", default="sources/blog")
+    ap.add_argument("--limit", type=int, default=None)
+    args = ap.parse_args()
+    summary = omc_refresh.refresh_dir(
+        args.cache_dir, _fetch, sleep_fn=lambda: time.sleep(0.3), limit=args.limit)
+    print("updated=%d unchanged=%d content-changed=%d error=%d" % (
+        summary["updated"], summary["unchanged"], summary["content-changed"], summary["error"]))
+    for path, status, info in summary["files"]:
+        print("  %s\t%s\t%s" % (status, path, info))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
