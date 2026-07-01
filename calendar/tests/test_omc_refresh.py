@@ -26,6 +26,7 @@ def test_reconcile_body_content_changed_is_not_overwritten():
 def test_reconcile_body_unchanged_when_already_equal():
     new, status = omc_refresh.reconcile_body("あ。\nい。\nう。", PD)
     assert status == "unchanged"
+    assert new == "あ。\nい。\nう。"                    # 旧body(=同一)を返す
 
 
 def test_refresh_dir_updates_only_body(tmp_path):
@@ -39,4 +40,21 @@ def test_refresh_dir_updates_only_body(tmp_path):
     rec = yaml.safe_load(p.read_text(encoding="utf-8"))
     assert rec["body"] == "あ。\nい。\nう。"      # 改行が入った
     assert rec["title"] == "T"                     # 他フィールドは保持
+    assert rec["published"] == "2023-09-10"          # published も保持
     assert rec["images"] == ["https://static.wixstatic.com/media/z.jpg"]
+
+
+def test_refresh_dir_counts_fetch_errors(tmp_path):
+    p = tmp_path / "post-e.yaml"
+    p.write_text(yaml.safe_dump(
+        {"url": "https://x/post/e", "title": "T", "published": "2023-09-10",
+         "body": "あ。い。う。"}, allow_unicode=True, sort_keys=False), encoding="utf-8")
+
+    def bad_fetch(url):
+        raise IOError("timeout")
+
+    summary = omc_refresh.refresh_dir(str(tmp_path), fetch_fn=bad_fetch, sleep_fn=lambda: None)
+    assert summary["error"] == 1
+    assert summary["updated"] == 0
+    # 取得失敗時はファイルを書き換えない
+    assert yaml.safe_load(p.read_text(encoding="utf-8"))["body"] == "あ。い。う。"
