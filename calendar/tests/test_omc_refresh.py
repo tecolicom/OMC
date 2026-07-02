@@ -11,10 +11,10 @@ PD = ('<div data-hook="post-description">'
 
 
 def test_reconcile_body_updated_when_content_matches():
-    # 旧body は同じ内容の1行、HTML は段落あり → 空行区切りの改行を足して更新
+    # 旧body は同じ内容の1行、HTML は連続<p>あり → 改行(\n)を足して更新
     new, status = omc_refresh.reconcile_body("あ。い。う。", PD)
     assert status == "updated"
-    assert new == "あ。\n\nい。\n\nう。"
+    assert new == "あ。\nい。\nう。"
 
 
 def test_reconcile_body_content_changed_is_not_overwritten():
@@ -24,9 +24,9 @@ def test_reconcile_body_content_changed_is_not_overwritten():
 
 
 def test_reconcile_body_unchanged_when_already_equal():
-    new, status = omc_refresh.reconcile_body("あ。\n\nい。\n\nう。", PD)
+    new, status = omc_refresh.reconcile_body("あ。\nい。\nう。", PD)
     assert status == "unchanged"
-    assert new == "あ。\n\nい。\n\nう。"                    # 旧body(=同一)を返す
+    assert new == "あ。\nい。\nう。"                    # 旧body(=同一)を返す
 
 
 def test_refresh_dir_updates_only_body(tmp_path):
@@ -38,7 +38,7 @@ def test_refresh_dir_updates_only_body(tmp_path):
     summary = omc_refresh.refresh_dir(str(tmp_path), fetch_fn=lambda url: PD, sleep_fn=lambda: None)
     assert summary["updated"] == 1
     rec = yaml.safe_load(p.read_text(encoding="utf-8"))
-    assert rec["body"] == "あ。\n\nい。\n\nう。"      # 空行区切りの改行が入った
+    assert rec["body"] == "あ。\nい。\nう。"      # 段落内改行(\n)が入った
     assert rec["title"] == "T"                     # 他フィールドは保持
     assert rec["published"] == "2023-09-10"          # published も保持
     assert rec["images"] == ["https://static.wixstatic.com/media/z.jpg"]
@@ -67,7 +67,7 @@ def test_reconcile_body_adopts_full_body_when_old_is_prefix():
             '<p><span>う。</span></p><p><span>え。</span></p></div>')
     new, status = omc_refresh.reconcile_body("あ。い。", html)
     assert status == "updated"
-    assert new == "あ。\n\nい。\n\nう。\n\nえ。"
+    assert new == "あ。\nい。\nう。\nえ。"
 
 
 def test_reconcile_body_divergent_stays_content_changed():

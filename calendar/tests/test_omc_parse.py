@@ -388,8 +388,8 @@ def test_extract_post_body_paragraphs():
     h = open(os.path.join(os.path.dirname(__file__), "fixtures", "post-body-paragraphs.html"),
              encoding="utf-8").read()
     body = omc_parse.extract_post_body(h)
-    # post-description 内の <p> が段落として \n\n 連結される。nav とフッターは除外
-    assert body == "見回りを行います。\n\nご参加ください。\n\n■集合:8:30"
+    # <br>スペーサーで段落区切り(\n\n)、連続<p>は段落内改行(\n)として連結
+    assert body == "見出しの段落。\n\n本文1行目。\n本文2行目。"
 
 
 def test_extract_post_body_falls_back_to_description():
@@ -411,4 +411,4 @@ def test_extract_post_meta_uses_post_body_paragraphs():
              encoding="utf-8").read()
     meta = omc_parse.extract_post_meta(h)
     assert "\n" in meta["body"]
-    assert meta["body"].splitlines()[0] == "見回りを行います。"
+    assert meta["body"].splitlines()[0] == "見出しの段落。"

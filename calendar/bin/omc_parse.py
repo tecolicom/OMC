@@ -37,7 +37,6 @@ def _clean_body(text: str) -> str:
     return "\n".join(lines).strip("\n")
 
 
-_P_BLOCK_RE = re.compile(r"<p\b[^>]*>(.*?)</p>", re.S)
 _TAG_RE = re.compile(r"<[^>]+>")
 
 
@@ -61,20 +60,36 @@ def _is_footer_line(t: str) -> bool:
 
 
 def extract_post_body(html: str) -> str:
-    """記事HTMLの本文を段落(空行)区切りで返す。
+    """記事HTMLの本文を段落構造付きで返す。
 
-    post-description コンテナ内の各 <p> を1段落とし、段落間を空行(\\n\\n)で区切る。
-    <br> は段落内の改行。見つからない/空なら JSON-LD description を _clean_body した値。
+    post-description コンテナ内で、<p> 間の <br> スペーサー(空段落)を段落区切り(\\n\\n)、
+    スペーサーの無い連続する <p> を段落内の改行(\\n)として組み立てる。<p> 内の <br> も改行。
+    見つからない/空なら JSON-LD description を _clean_body した値。
     """
     idx = html.find('data-hook="post-description"')
     if idx != -1:
-        paras = []
-        for block in _P_BLOCK_RE.findall(html[idx:]):
-            block = re.sub(r"<br\s*/?>", "\n", block)  # <br> は段落内の改行
-            t = unicodedata.normalize("NFKC", _html.unescape(_TAG_RE.sub("", block)))
-            t = "\n".join(ln.strip() for ln in t.split("\n")).strip()
-            if t and not _is_footer_line(t):
-                paras.append(t)
+        end = html.find("Proudly created with Wix", idx)
+        region = html[idx:end] if end > idx else html[idx:]
+        parts = re.split(r"(<p\b[^>]*>.*?</p>)", region, flags=re.S)
+        paras: list[str] = []
+        cur: list[str] = []
+        pending_break = False
+        for seg in parts:
+            if seg.startswith("<p"):
+                seg = re.sub(r"<br\s*/?>", "\n", seg)
+                t = unicodedata.normalize("NFKC", _html.unescape(_TAG_RE.sub("", seg)))
+                t = "\n".join(ln.strip() for ln in t.split("\n")).strip()
+                if not t or _is_footer_line(t):
+                    continue
+                if pending_break and cur:
+                    paras.append("\n".join(cur))
+                    cur = []
+                cur.append(t)
+                pending_break = False
+            elif "<br" in seg:
+                pending_break = True
+        if cur:
+            paras.append("\n".join(cur))
         body = "\n\n".join(paras)
         if body:
             return body
