@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import PhotoGrid from '../../components/PhotoGrid.astro';
+import Lightbox from '../../components/Lightbox.astro';
 import { getActivities } from '../../data/activities';
 export function getStaticPaths() {
   return getActivities('../calendar').map((a) => ({ params: { slug: a.slug }, props: { activity: a } }));
@@ -30,4 +31,5 @@ const label = { announce: '📣 お知らせ', report: '📝 報告', other: '�
     ))}
     <a href={`${import.meta.env.BASE_URL}activities/`} class="text-sm text-[var(--color-wakaba)]">← 活動アーカイブ</a>
   </article>
+  <Lightbox />
 </Base>

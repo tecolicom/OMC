@@ -1,14 +1,17 @@
 ---
-import { Image } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
 import { getPhoto } from '../lib/photos';
 const { filenames } = Astro.props;
 const photos = (filenames ?? []).map(getPhoto).filter(Boolean);
+const fulls = await Promise.all(photos.map((p) => getImage({ src: p, format: 'webp' })));
 ---
 {photos.length > 0 && (
   <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
-    {photos.map((p) => (
-      <Image src={p} alt="" widths={[300, 600]} sizes="(max-width:640px) 50vw, 300px"
-             class="w-full aspect-square object-cover rounded-lg" loading="lazy" />
+    {photos.map((p, i) => (
+      <button type="button" class="lb-item block cursor-zoom-in" data-full={fulls[i].src} aria-label="写真を拡大表示">
+        <Image src={p} alt="" widths={[300, 600]} sizes="(max-width:640px) 50vw, 300px"
+               class="w-full aspect-square object-cover rounded-lg" loading="lazy" />
+      </button>
     ))}
   </div>
 )}
