@@ -58,3 +58,30 @@ def test_refresh_dir_counts_fetch_errors(tmp_path):
     assert summary["updated"] == 0
     # 取得失敗時はファイルを書き換えない
     assert yaml.safe_load(p.read_text(encoding="utf-8"))["body"] == "あ。い。う。"
+
+
+def test_reconcile_body_adopts_full_body_when_old_is_prefix():
+    # 旧body が新body の接頭辞(=descriptionが切り詰められていた) → HTML全文を採用
+    html = ('<div data-hook="post-description">'
+            '<p><span>あ。</span></p><p><span>い。</span></p>'
+            '<p><span>う。</span></p><p><span>え。</span></p></div>')
+    new, status = omc_refresh.reconcile_body("あ。い。", html)
+    assert status == "updated"
+    assert new == "あ。\nい。\nう。\nえ。"
+
+
+def test_reconcile_body_divergent_stays_content_changed():
+    html = ('<div data-hook="post-description">'
+            '<p><span>まったく別の本文です。</span></p></div>')
+    new, status = omc_refresh.reconcile_body("元の全然違う本文", html)
+    assert status == "content-changed"
+    assert new == "元の全然違う本文"
+
+
+def test_reconcile_body_empty_old_is_not_prefix_adopted():
+    # 旧body が空の場合は接頭辞採用しない(保守的に content-changed)
+    html = ('<div data-hook="post-description">'
+            '<p><span>何かの本文。</span></p></div>')
+    new, status = omc_refresh.reconcile_body("", html)
+    assert status == "content-changed"
+    assert new == ""

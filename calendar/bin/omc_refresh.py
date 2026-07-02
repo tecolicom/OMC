@@ -17,11 +17,13 @@ def _norm(s: str) -> str:
 
 def reconcile_body(old_body: str, html: str) -> tuple[str, str]:
     new = omc_parse.extract_post_body(html)
-    if _norm(new) != _norm(old_body):
-        return old_body, "content-changed"
-    if new == old_body:
-        return old_body, "unchanged"
-    return new, "updated"
+    n_new, n_old = _norm(new), _norm(old_body)
+    if n_new == n_old:
+        return (old_body, "unchanged") if new == old_body else (new, "updated")
+    # 旧body が新body の接頭辞 = description が切り詰められていた記事。HTML全文(段落付き)を採用
+    if n_old and n_new.startswith(n_old):
+        return new, "updated"
+    return old_body, "content-changed"
 
 
 def refresh_dir(cache_dir: str, fetch_fn, sleep_fn=lambda: None, limit=None) -> dict:
