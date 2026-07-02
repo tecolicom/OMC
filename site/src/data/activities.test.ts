@@ -73,4 +73,36 @@ describe('buildActivities', () => {
     // 単独日はそのまま、同日は2件目以降に -2 を付与
     expect(acts.map(a => a.slug)).toEqual(['2024-05-26', '2024-06-02', '2024-06-02-2']);
   });
+
+  it('includes archive cover in article photos (appended after images, deduped)', () => {
+    const events = [{
+      date: '2025-12-07', category: '定期作業', summary: '名栗定期作業',
+      source: { posts: [
+        { kind: 'announce', url: 'https://x/a', title: 'お知らせ', published: '2025-12-01' },
+      ] },
+    }];
+    const archive = new Map([
+      ['https://x/a', { url: 'https://x/a', title: 'お知らせ', published: '2025-12-01',
+        body: '', cover: 'https://static.wixstatic.com/media/c3395c_cov~mv2.png' }],
+    ]);
+    const a = buildActivities(events as any, archive as any)[0];
+    expect(a.articles[0].photos).toEqual(['c3395c_cov_mv2_png.jpg']);
+    expect(a.photos).toEqual(['c3395c_cov_mv2_png.jpg']);
+  });
+
+  it('does not duplicate a cover that is already among images', () => {
+    const events = [{
+      date: '2025-01-01', category: 'x', summary: 's',
+      source: { posts: [
+        { kind: 'report', url: 'https://x/r', title: 'r', published: '2025-01-01' },
+      ] },
+    }];
+    const archive = new Map([
+      ['https://x/r', { url: 'https://x/r', title: 'r', published: '2025-01-01', body: '',
+        images: ['https://static.wixstatic.com/media/c3395c_p~mv2.jpg'],
+        cover: 'https://static.wixstatic.com/media/c3395c_p~mv2.jpg/v1/fill/w_1000/x.jpg' }],
+    ]);
+    const a = buildActivities(events as any, archive as any)[0];
+    expect(a.articles[0].photos).toEqual(['c3395c_p_mv2_jpg.jpg']);
+  });
 });

@@ -6,7 +6,7 @@ export type Article = { kind: string; title: string; url: string; published: str
 export type Activity = { date: string; category: string; title: string; slug: string; articles: Article[]; photos: string[] };
 export type EventRecord = { date: string; category: string; summary: string;
   source: { posts: { kind: string; url: string; title: string; published: string }[] } };
-export type ArchiveArticle = { url: string; title: string; published: string; body?: string; images?: string[] };
+export type ArchiveArticle = { url: string; title: string; published: string; body?: string; images?: string[]; cover?: string };
 
 export function mediaId(url: string): string | null {
   const m = url.match(/\/media\/([^/]+)/);
@@ -22,9 +22,11 @@ export function buildActivities(events: EventRecord[], archive: Map<string, Arch
     const articles: Article[] = (ev.source?.posts ?? []).map((p) => {
       const a = archive.get(p.url);
       const images = a?.images ?? [];
+      // cover(og:image=記事の主写真)も含める。extract_post_images は cover を images から除外するため
+      const rawPhotos = a?.cover ? [...images, a.cover] : images;
       const seenA = new Set<string>();
       const photos: string[] = [];
-      for (const u of images) {
+      for (const u of rawPhotos) {
         const f = photoFilename(u);
         if (!seenA.has(f)) { seenA.add(f); photos.push(f); }
       }
