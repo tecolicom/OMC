@@ -61,19 +61,21 @@ def _is_footer_line(t: str) -> bool:
 
 
 def extract_post_body(html: str) -> str:
-    """記事HTMLの本文を段落(改行)付きで返す。
+    """記事HTMLの本文を段落(空行)区切りで返す。
 
-    post-description コンテナ内の <p> ブロックを段落として \n 連結する。
-    見つからない/空の場合は従来どおり JSON-LD description を _clean_body した値。
+    post-description コンテナ内の各 <p> を1段落とし、段落間を空行(\\n\\n)で区切る。
+    <br> は段落内の改行。見つからない/空なら JSON-LD description を _clean_body した値。
     """
     idx = html.find('data-hook="post-description"')
     if idx != -1:
-        lines = []
+        paras = []
         for block in _P_BLOCK_RE.findall(html[idx:]):
-            t = unicodedata.normalize("NFKC", _html.unescape(_TAG_RE.sub("", block))).strip()
+            block = re.sub(r"<br\s*/?>", "\n", block)  # <br> は段落内の改行
+            t = unicodedata.normalize("NFKC", _html.unescape(_TAG_RE.sub("", block)))
+            t = "\n".join(ln.strip() for ln in t.split("\n")).strip()
             if t and not _is_footer_line(t):
-                lines.append(t)
-        body = "\n".join(lines)
+                paras.append(t)
+        body = "\n\n".join(paras)
         if body:
             return body
     return _clean_body(_description_from_jsonld(html))

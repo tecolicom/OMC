@@ -388,8 +388,8 @@ def test_extract_post_body_paragraphs():
     h = open(os.path.join(os.path.dirname(__file__), "fixtures", "post-body-paragraphs.html"),
              encoding="utf-8").read()
     body = omc_parse.extract_post_body(h)
-    # post-description 内の <p> が段落として \n 連結される。nav とフッターは除外
-    assert body == "見回りを行います。\nご参加ください。\n■集合:8:30"
+    # post-description 内の <p> が段落として \n\n 連結される。nav とフッターは除外
+    assert body == "見回りを行います。\n\nご参加ください。\n\n■集合:8:30"
 
 
 def test_extract_post_body_falls_back_to_description():
