@@ -16,7 +16,15 @@ const label = { announce: '📣 お知らせ', report: '📝 報告', other: '�
       <section class="mb-8">
         <h2 class="text-base font-bold text-[var(--color-tsuchi)] mb-2">{label[art.kind] ?? '🔗 記事'}</h2>
         {art.photos.length > 0 && <div class="mb-3"><PhotoGrid filenames={art.photos} /></div>}
-        {art.body && <p class="whitespace-pre-line leading-relaxed">{art.body}</p>}
+        {art.body && (
+          <p class="whitespace-pre-line leading-relaxed">
+            {art.body.split(/(https?:\/\/[^\s、。）)]+)/g).map((seg) => (
+              /^https?:\/\//.test(seg)
+                ? <a href={seg} target="_blank" rel="noopener noreferrer" class="text-[var(--color-wakaba)] underline break-all">{seg}</a>
+                : seg
+            ))}
+          </p>
+        )}
         <a href={art.url} class="inline-block mt-2 text-sm text-[var(--color-wakaba)]">元の記事を見る →</a>
       </section>
     ))}
