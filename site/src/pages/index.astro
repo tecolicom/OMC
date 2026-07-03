@@ -30,4 +30,14 @@ const base = import.meta.env.BASE_URL;
       {recent.map((a) => <ActivityCard activity={a} />)}
     </div>
   </section>
+  <section class="mx-auto max-w-5xl px-4 pb-16">
+    <h2 class="text-2xl font-bold mb-4">活動カレンダー</h2>
+    <div class="rounded-xl overflow-hidden border border-[var(--color-sumi)]/10 bg-white">
+      <iframe
+        src="https://calendar.google.com/calendar/embed?src=okumusashi.mtb%40gmail.com&ctz=Asia%2FTokyo&mode=MONTH&showTitle=0&showPrint=0&showTabs=1&showCalendars=0&showTz=0"
+        class="w-full h-[520px] sm:h-[640px]" style="border:0" loading="lazy"
+        title="奥武蔵マウンテンバイク友の会 活動カレンダー"></iframe>
+    </div>
+    <p class="mt-2 text-sm text-[var(--color-sumi)]/60">Google カレンダーで今後の活動予定を表示しています。</p>
+  </section>
 </Base>
