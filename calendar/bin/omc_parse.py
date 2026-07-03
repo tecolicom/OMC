@@ -78,7 +78,7 @@ def extract_post_body(html: str) -> str:
         for seg in parts:
             if seg.startswith("<p"):
                 seg = re.sub(r"<br\s*/?>", "\n", seg)
-                t = unicodedata.normalize("NFKC", _html.unescape(_TAG_RE.sub("", seg)))
+                t = _html.unescape(_TAG_RE.sub("", seg))
                 t = "\n".join(ln.rstrip() for ln in t.split("\n")).strip("\n")
                 if not t.strip():          # 空/空白のみの <p> は段落区切り
                     pending_break = True

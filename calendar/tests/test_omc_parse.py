@@ -404,6 +404,14 @@ def test_extract_post_body_keeps_indent_and_space_paragraph():
     assert body == "見出し。\n\n日 時:10時\n    続き行の字下げ"
 
 
+def test_extract_post_body_preserves_fullwidth():
+    h = ('<div data-hook="post-description">'
+         '<p><span>日　時：１０月１５日</span></p></div>'
+         '<footer><p>Proudly created with Wix</p></footer>')
+    # NFKCしないので全角スペース・全角数字・全角コロンがそのまま残る
+    assert omc_parse.extract_post_body(h) == "日　時：１０月１５日"
+
+
 def test_extract_post_body_falls_back_to_description():
     # post-description が無い記事は従来どおり JSON-LD description(1行)を返す
     h = ('<script type="application/ld+json">'
