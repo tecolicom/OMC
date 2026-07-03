@@ -392,6 +392,18 @@ def test_extract_post_body_paragraphs():
     assert body == "見出しの段落。\n\n本文1行目。\n本文2行目。"
 
 
+def test_extract_post_body_keeps_indent_and_space_paragraph():
+    h = ('<div data-hook="post-description">'
+         '<p><span>見出し。</span></p>'
+         '<p><span> </span></p>'
+         '<p><span>日 時:10時<br>    続き行の字下げ</span></p>'
+         '</div>'
+         '<footer><p>Proudly created with Wix</p></footer>')
+    body = omc_parse.extract_post_body(h)
+    # 空白のみの<p>で段落区切り、<br>の続き行は字下げ(先頭空白)を保持
+    assert body == "見出し。\n\n日 時:10時\n    続き行の字下げ"
+
+
 def test_extract_post_body_falls_back_to_description():
     # post-description が無い記事は従来どおり JSON-LD description(1行)を返す
     h = ('<script type="application/ld+json">'

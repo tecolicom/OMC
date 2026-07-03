@@ -62,8 +62,9 @@ def _is_footer_line(t: str) -> bool:
 def extract_post_body(html: str) -> str:
     """記事HTMLの本文を段落構造付きで返す。
 
-    post-description コンテナ内で、<p> 間の <br> スペーサー(空段落)を段落区切り(\\n\\n)、
-    スペーサーの無い連続する <p> を段落内の改行(\\n)として組み立てる。<p> 内の <br> も改行。
+    post-description コンテナ内で、<p> 間の <br> スペーサーや空白のみの <p> を段落区切り(\\n\\n)、
+    それ以外の連続する <p> を段落内の改行(\\n)として組み立てる。<p> 内の <br> も改行。
+    行頭の字下げ(桁揃えの空白)は保持する(各行 rstrip のみ)。
     見つからない/空なら JSON-LD description を _clean_body した値。
     """
     idx = html.find('data-hook="post-description"')
@@ -78,8 +79,11 @@ def extract_post_body(html: str) -> str:
             if seg.startswith("<p"):
                 seg = re.sub(r"<br\s*/?>", "\n", seg)
                 t = unicodedata.normalize("NFKC", _html.unescape(_TAG_RE.sub("", seg)))
-                t = "\n".join(ln.strip() for ln in t.split("\n")).strip()
-                if not t or _is_footer_line(t):
+                t = "\n".join(ln.rstrip() for ln in t.split("\n")).strip("\n")
+                if not t.strip():          # 空/空白のみの <p> は段落区切り
+                    pending_break = True
+                    continue
+                if _is_footer_line(t):
                     continue
                 if pending_break and cur:
                     paras.append("\n".join(cur))
