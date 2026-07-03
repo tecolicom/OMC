@@ -11,13 +11,13 @@ const hero = (heroAct?.photos ?? []).map(getPhoto).find(Boolean)
   ?? [...acts].reverse().flatMap((a) => a.photos).map(getPhoto).find(Boolean);
 const base = import.meta.env.BASE_URL;
 ---
-<Base title="奥武蔵マウンテンバイク友の会" description="飯能・奥武蔵エリアで里山整備やトレイル整備、清掃、子ども自転車教室などを行うマウンテンバイク愛好家の会。">
+<Base title="奥武蔵マウンテンバイク友の会" description="奥武蔵の里山で、マウンテンバイカーが里山保全活動に取り組む有志の会です。">
   <section class="relative">
     {hero && <Image src={hero} alt="" widths={[800,1600]} sizes="100vw" class="w-full h-[60vh] object-cover object-bottom" />}
     <div class="absolute inset-0 bg-black/35 flex items-center">
       <div class="mx-auto max-w-5xl px-4 text-white">
         <h1 class="text-4xl sm:text-6xl font-bold drop-shadow">奥武蔵マウンテンバイク友の会</h1>
-        <p class="mt-3 text-lg drop-shadow">里山を整え、自転車で楽しむ。飯能・奥武蔵の有志の会です。</p>
+        <p class="mt-3 text-lg drop-shadow">奥武蔵の里山を整えて、自転車を楽しむ。</p>
       </div>
     </div>
   </section>
