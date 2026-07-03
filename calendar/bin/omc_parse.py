@@ -253,7 +253,11 @@ _TRAILING_PAREN_RE = re.compile(r"[（(]\s*\d{1,2}\s*月\s*\d{1,2}\s*日\s*[）)
 
 def clean_summary(title: str) -> str:
     s = unicodedata.normalize("NFKC", title)
-    s = _LEADING_DATE_RE.sub("", s)
+    stripped = _LEADING_DATE_RE.sub("", s)
+    # 日付除去の結果が助詞で始まる(=日付が文に組み込まれている)場合は、日付を残す
+    if re.match(r"^\s*[はがのをにへとでも]", stripped):
+        stripped = s
+    s = stripped
     s = _TRAILING_PAREN_RE.sub("", s)
     s = _TRAILING_RE.sub("", s)
     s = s.strip(" 　【】[]-－、，")

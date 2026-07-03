@@ -264,6 +264,12 @@ def test_clean_summary_strips_leading_punctuation():
     assert omc_parse.clean_summary("3/18、子どもマウンテンバイク教室") == "子どもマウンテンバイク教室"
 
 
+def test_clean_summary_keeps_date_when_stripping_breaks_grammar():
+    # 日付除去で助詞始まりになる場合は日付を残す
+    assert omc_parse.clean_summary("4月14日に開催されたじてんしゃ教室") == "4月14日に開催されたじてんしゃ教室"
+    assert omc_parse.clean_summary("11月4日と10日のじてんしゃ広場整備について") == "11月4日と10日のじてんしゃ広場整備について"
+
+
 def test_classify_activity_more_vocab():
     assert omc_parse.classify_activity("名栗定期整備について") == "定期作業"
     assert omc_parse.classify_activity("子どもマウンテンバイク教室開催") == "自転車教室"
