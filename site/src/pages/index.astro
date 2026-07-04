@@ -12,12 +12,12 @@ const hero = (heroAct?.photos ?? []).map(getPhoto).find(Boolean)
 const base = import.meta.env.BASE_URL;
 ---
 <Base title="奥武蔵マウンテンバイク友の会" description="奥武蔵の里山で、マウンテンバイカーが里山保全活動に取り組む有志の会です。">
-  <section class="relative">
-    {hero && <Image src={hero} alt="" widths={[800,1600]} sizes="100vw" class="w-full h-[60vh] object-cover object-bottom" />}
-    <div class="absolute inset-0 bg-black/35 flex items-center">
-      <div class="mx-auto max-w-5xl px-4 text-white">
-        <h1 class="text-4xl sm:text-6xl font-bold drop-shadow">奥武蔵マウンテンバイク友の会</h1>
-        <p class="mt-3 text-lg drop-shadow">奥武蔵の里山を整えて、自転車を楽しむ。</p>
+  <section class="mx-auto max-w-5xl px-4 pt-6">
+    <div class="relative rounded-2xl overflow-hidden bg-[var(--color-sumi)]">
+      {hero && <Image src={hero} alt="" widths={[800,1600]} sizes="(max-width:1024px) 100vw, 1024px" class="w-full h-auto" />}
+      <div class="absolute inset-x-0 top-0 bg-gradient-to-b from-black/65 to-transparent p-4 sm:p-6 text-white">
+        <h1 class="text-2xl sm:text-4xl font-bold drop-shadow">奥武蔵マウンテンバイク友の会</h1>
+        <p class="mt-1 text-sm sm:text-lg drop-shadow">奥武蔵の里山を整えて、自転車を楽しむ。</p>
       </div>
     </div>
   </section>
