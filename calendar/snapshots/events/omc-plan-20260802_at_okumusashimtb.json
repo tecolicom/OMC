@@ -3,11 +3,11 @@
   "creator": {
     "email": "myhanno-bot@city-tecoli.iam.gserviceaccount.com"
   },
-  "description": "奥武蔵マウンテンバイク友の会 活動予定",
+  "description": "8月2日（日）は名栗じてんしゃ広場の定期整備を行います。草刈りをメインに行いつつ、荒れた路面を補修します。同広場に午前9時にお集まりください。11時頃まで作業を行う予定です。\n\nなお、前日午後5時の気象庁発表による埼玉県南部の天気予報で降水確率が50％以上の場合は中止といたしますのでご了承ください。\n\n📣 お知らせ: https://okumusashimtb.wixsite.com/omcweb/post/8-2名栗定期作業のお知らせ",
   "end": {
     "date": "2026-08-03"
   },
-  "etag": "\"3566254526036862\"",
+  "etag": "\"3569230395835262\"",
   "eventType": "default",
   "htmlLink": "https://www.google.com/calendar/event?eid=X2R0bW02YmJnZGhnbXNiOWk2MHAzY2MxbzYwcDQwcnJiZWxtbmFzcjFlZGs2aXJia2M4IG9rdW11c2FzaGkubXRiQG0",
   "iCalUID": "omc-plan-20260802@okumusashimtb",
@@ -28,5 +28,5 @@
   "status": "confirmed",
   "summary": "パンプトラック整備",
   "transparency": "transparent",
-  "updated": "2026-07-04T01:07:43.018Z"
+  "updated": "2026-07-21T06:26:37.917Z"
 }
