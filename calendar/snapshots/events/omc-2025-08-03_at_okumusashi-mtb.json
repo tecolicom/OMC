@@ -3,11 +3,11 @@
   "creator": {
     "email": "myhanno-bot@city-tecoli.iam.gserviceaccount.com"
   },
-  "description": "8月3日(日)は名栗じてんしゃ広場の定期整備を行います。草刈りをメインに行いつつ、荒れた路面を補修します。同広場に午前9時にお集まりください。11時頃まで作業を行う予定です。なお、前日17時の気象庁発表による埼玉県南部の天気予報で、当日6時〜12時の降水確率が50%以上およびまたは予想最高気温が35°以上の場合は中止といたしますのでご了承ください。\n\n明日の名栗じてんしゃ広場の定期作業ですが、35度以上の気温が予測されますので中止といたします。\n\n⚠️ 中止: https://okumusashimtb.wixsite.com/omcweb/post/8-3活動中止のお知らせ\n📝 報告: https://okumusashimtb.wixsite.com/omcweb/post/8-3名栗定期作業の報告\n📣 お知らせ: https://okumusashimtb.wixsite.com/omcweb/post/8-3-名栗定期作業のお知らせ",
+  "description": "8月3日（日）は名栗じてんしゃ広場の定期整備を行います。草刈りをメインに行いつつ、荒れた路面を補修します。同広場に午前9時にお集まりください。11時頃まで作業を行う予定です。\n\nなお、前日17時の気象庁発表による埼玉県南部の天気予報で、当日6時〜12時の降水確率が50%以上およびまたは予想最高気温が35°以上の場合は中止といたしますのでご了承ください。\n\n明日の名栗じてんしゃ広場の定期作業ですが、35度以上の気温が予測されますので中止といたします。\n\n📣 お知らせ: https://okumusashimtb.wixsite.com/omcweb/post/8-3-名栗定期作業のお知らせ\n📝 報告: https://okumusashimtb.wixsite.com/omcweb/post/8-3名栗定期作業の報告\n⚠️ 中止: https://okumusashimtb.wixsite.com/omcweb/post/8-3活動中止のお知らせ",
   "end": {
     "date": "2025-08-04"
   },
-  "etag": "\"3565227686103390\"",
+  "etag": "\"3569212823884798\"",
   "eventType": "default",
   "htmlLink": "https://www.google.com/calendar/event?eid=X2R0bW02YjlpNjBwM2FiOWc3MG1qMGNxMGR0bG5hcmJsZWRnbjZxMzk1bG1uOG9nIG9rdW11c2FzaGkubXRiQG0",
   "iCalUID": "omc-2025-08-03@okumusashi-mtb",
@@ -26,5 +26,5 @@
   },
   "status": "confirmed",
   "summary": "名栗定期作業",
-  "updated": "2026-06-28T02:30:43.051Z"
+  "updated": "2026-07-21T04:00:11.942Z"
 }

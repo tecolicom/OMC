@@ -3,11 +3,11 @@
   "creator": {
     "email": "myhanno-bot@city-tecoli.iam.gserviceaccount.com"
   },
-  "description": "12月1日(日)は名栗じてんしゃ広場の定期作業日です。路面補修を行う予定です。同広場に午前9時にお集まりください。11時頃まで作業を行います。なお、前日17時の気象庁発表による埼玉県南部の天気予報で、当日6時〜12時の降水確率が50%以上の場合は中止といたしますのでご了承ください。\n\n📝 報告: https://okumusashimtb.wixsite.com/omcweb/post/12-1名栗定期整備の報告\n📣 お知らせ: https://okumusashimtb.wixsite.com/omcweb/post/12-1名栗じてんしゃ広場定期整備のお知らせ",
+  "description": "12月1日（日）は名栗じてんしゃ広場の定期作業日です。路面補修を行う予定です。同広場に午前9時にお集まりください。11時頃まで作業を行います。\n\nなお、前日17時の気象庁発表による埼玉県南部の天気予報で、当日6時〜12時の降水確率が50%以上の場合は中止といたしますのでご了承ください。\n\n📝 報告: https://okumusashimtb.wixsite.com/omcweb/post/12-1名栗定期整備の報告\n📣 お知らせ: https://okumusashimtb.wixsite.com/omcweb/post/12-1名栗じてんしゃ広場定期整備のお知らせ",
   "end": {
     "date": "2024-12-02"
   },
-  "etag": "\"3565235541562686\"",
+  "etag": "\"3569212786081182\"",
   "eventType": "default",
   "htmlLink": "https://www.google.com/calendar/event?eid=X2R0bW02YjlpNjBwMzhiOWg2OG1qMGNhMGR0bG5hcmJsZWRnbjZxMzk1bG1uOG9nIG9rdW11c2FzaGkubXRiQG0",
   "iCalUID": "omc-2024-12-01@okumusashi-mtb",
@@ -26,5 +26,5 @@
   },
   "status": "confirmed",
   "summary": "名栗定期整備",
-  "updated": "2026-06-28T03:36:10.781Z"
+  "updated": "2026-07-21T03:59:53.040Z"
 }

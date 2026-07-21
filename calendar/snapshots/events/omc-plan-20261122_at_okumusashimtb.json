@@ -1,0 +1,32 @@
+{
+  "created": "2026-07-04T01:07:47.000Z",
+  "creator": {
+    "email": "myhanno-bot@city-tecoli.iam.gserviceaccount.com"
+  },
+  "description": "奥武蔵マウンテンバイク友の会 活動予定",
+  "end": {
+    "date": "2026-11-23"
+  },
+  "etag": "\"3566254536218942\"",
+  "eventType": "default",
+  "htmlLink": "https://www.google.com/calendar/event?eid=X2R0bW02YmJnZGhnbXNiOWk2MHAzY2M5aDY4cDQwcnJiZWxtbmFzcjFlZGs2aXJia2M4IG9rdW11c2FzaGkubXRiQG0",
+  "iCalUID": "omc-plan-20261122@okumusashimtb",
+  "id": "_dtmm6bbgdhgmsb9i60p3cc9h68p40rrbelmnasr1edk6irbkc8",
+  "kind": "calendar#event",
+  "location": "飯能市",
+  "organizer": {
+    "email": "okumusashi.mtb@gmail.com",
+    "self": true
+  },
+  "reminders": {
+    "useDefault": false
+  },
+  "sequence": 0,
+  "start": {
+    "date": "2026-11-22"
+  },
+  "status": "confirmed",
+  "summary": "市民清掃デー",
+  "transparency": "transparent",
+  "updated": "2026-07-04T01:07:48.109Z"
+}

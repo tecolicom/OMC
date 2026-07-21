@@ -4,12 +4,12 @@
     "email": "okumusashi.mtb@gmail.com",
     "self": true
   },
-  "description": "6月4日(日)は名栗じてんしゃ広場の定期整備となります。ご都合よろしい方はご参加ください。集合場所:名栗じてんしゃ広場作業時間:9時から11時頃までなお、前日17時の気象庁発表による埼玉県南部の天気予報で、当日6時~12時の降水確率が50%以上だった場合は中止といたします。\n\n📣 お知らせ: https://okumusashimtb.wixsite.com/omcweb/post/6月4日名栗定期作業のお知らせ\n📝 報告: https://okumusashimtb.wixsite.com/omcweb/post/6月4日じてんしゃ広場定期作業の報告",
+  "description": "6月4日（日）は名栗じてんしゃ広場の定期整備となります。ご都合よろしい方はご参加ください。\n集合場所:名栗じてんしゃ広場\n作業時間:9時から11時頃まで\nなお、前日17時の気象庁発表による埼玉県南部の天気予報で、当日6時～12時の降水確率が50%以上だった場合は中止といたします。\n\n📝 報告: https://okumusashimtb.wixsite.com/omcweb/post/6月4日じてんしゃ広場定期作業の報告\n📣 お知らせ: https://okumusashimtb.wixsite.com/omcweb/post/6月4日名栗定期作業のお知らせ",
   "end": {
     "dateTime": "2023-06-04T11:00:00+09:00",
     "timeZone": "Asia/Tokyo"
   },
-  "etag": "\"3565235441019870\"",
+  "etag": "\"3569212701252254\"",
   "eventType": "default",
   "htmlLink": "https://www.google.com/calendar/event?eid=NzdsNTlkdmpxYmt2dTJtYmRiZ2gxc24wOHEgb2t1bXVzYXNoaS5tdGJAbQ",
   "iCalUID": "77l59dvjqbkvu2mbdbgh1sn08q@google.com",
@@ -29,5 +29,5 @@
   },
   "status": "confirmed",
   "summary": "名栗定期整備",
-  "updated": "2026-06-28T03:35:20.509Z"
+  "updated": "2026-07-21T03:59:10.626Z"
 }
