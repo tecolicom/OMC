@@ -6,13 +6,8 @@ description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/11-16-子ど
 source:
   type: omc-blog
   crawler: cal-omc-archive-fetch
-  fetched: '2026-06-22'
+  fetched: '2026-07-21'
   posts:
-  - kind: announce
-    url: https://okumusashimtb.wixsite.com/omcweb/post/11-16-子ども自転車教室を開催します
-    title: 11/16 子ども自転車教室を開催します
-    published: '2025-10-16'
-    body: 飯能市広報でお伝えしましたが、11月16日(日)に名栗ふれあい公園じてんしゃ広場で子ども自転車教室を開催します。詳しくは以下のフライヤー、そして質問集をご覧ください。応募フォームはこちらです。ご参加お待ちしています。
   - kind: report
     url: https://okumusashimtb.wixsite.com/omcweb/post/11-16-子ども自転車教室を実施しました
     title: 11/16 子ども自転車教室を実施しました
@@ -28,3 +23,11 @@ source:
     - https://static.wixstatic.com/media/c3395c_48890ed661d14bdc90f8822040a90fa7~mv2.jpg
     - https://static.wixstatic.com/media/c3395c_b327eae92f634129902536a43bba6e0a~mv2.jpg
     - https://static.wixstatic.com/media/c3395c_3058f9ef28d84c278be41ab62d015672~mv2.jpg
+  - kind: announce
+    url: https://okumusashimtb.wixsite.com/omcweb/post/11-16-子ども自転車教室を開催します
+    title: 11/16 子ども自転車教室を開催します
+    published: '2025-10-16'
+    body: |-
+      飯能市広報でお伝えしましたが、11月16日（日）に名栗ふれあい公園じてんしゃ広場で子ども自転車教室を開催します。詳しくは以下のフライヤー、そして質問集をご覧ください。
+
+      応募フォームはこちらです。ご参加お待ちしています。

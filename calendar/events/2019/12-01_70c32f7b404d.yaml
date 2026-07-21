@@ -6,8 +6,15 @@ description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/2019/12/02/1
 source:
   type: omc-blog
   crawler: cal-omc-archive-fetch
-  fetched: '2026-06-22'
+  fetched: '2026-07-21'
   posts:
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/2019/12/02/12月1日名栗じてんしゃ広場整備報告
+    title: 12月1日名栗じてんしゃ広場整備報告
+    published: '2019-12-02'
+    images:
+    - https://static.wixstatic.com/media/c3395c_7c6295487ff64f56b4329a0d5b8f16fa~mv2_d_4032_3024_s_4_2.jpeg
+    - https://static.wixstatic.com/media/c3395c_b9706f45cd73451e92451441d1f7d50a~mv2_d_4032_3024_s_4_2.jpeg
   - kind: other
     url: https://okumusashimtb.wixsite.com/omcweb/post/2019/11/22/【12月1日-名栗じてんしゃ広場の定期整備について】
     title: 【12月1日 名栗じてんしゃ広場の定期整備について】
@@ -19,14 +26,7 @@ source:
       寒くなり、草刈りの必要はありませんので、路面の整備を行う予定です。
       台風の影響で痛んだ箇所も多いため、会員の皆さんにはお力添えをお願い申し上げます。
 
-       日時     12月1日 9時より
-       場所     名栗じてんしゃ広場
+      　日時　　　　　12月1日 9時より
+      　場所　　　　　名栗じてんしゃ広場
 
       尚、気象庁による埼玉県南部の降水確率が前日土曜日17時の時点で50%以上の場合は、作業を中止といたします。
-  - kind: report
-    url: https://okumusashimtb.wixsite.com/omcweb/post/2019/12/02/12月1日名栗じてんしゃ広場整備報告
-    title: 12月1日名栗じてんしゃ広場整備報告
-    published: '2019-12-02'
-    images:
-    - https://static.wixstatic.com/media/c3395c_7c6295487ff64f56b4329a0d5b8f16fa~mv2_d_4032_3024_s_4_2.jpeg
-    - https://static.wixstatic.com/media/c3395c_b9706f45cd73451e92451441d1f7d50a~mv2_d_4032_3024_s_4_2.jpeg

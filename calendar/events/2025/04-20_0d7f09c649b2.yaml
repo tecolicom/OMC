@@ -1,31 +1,29 @@
-summary: 子ども自転車教室
+summary: 子ども自転車教室開催
 date: '2025-04-20'
 all_day: true
 category: 自転車教室
-description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/4-20子ども自転車教室のお知らせ'
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/4-20子ども自転車教室開催'
 source:
   type: omc-blog
   crawler: cal-omc-archive-fetch
-  fetched: '2026-06-22'
+  fetched: '2026-07-21'
   posts:
-  - kind: announce
-    url: https://okumusashimtb.wixsite.com/omcweb/post/4-20子ども自転車教室のお知らせ
-    title: 4/20子ども自転車教室のお知らせ
-    published: '2025-04-06'
-    body: 4月20日は子ども自転車教室を開催します。コチラからご応募ください。一般的な質問はコチラをお読みください。教室の開催を前に、4月6日に自転車広場の定期作業を行いました。会員9名で、土が流出してしまったコースを改修。新たに土を入れ、路面を整えました。当日は良いコンディションで教室を行えるはずです。皆さんのご応募お待ちしています!
-    images:
-    - https://static.wixstatic.com/media/c3395c_6c2f5b80265841219bae2ada45821cb4~mv2.jpg
-    - https://static.wixstatic.com/media/c3395c_285ec76cde894bbca497b121c3ed74b2~mv2.png
-    - https://static.wixstatic.com/media/c3395c_7e2a8daf4dcf4d67ae9652637630035b~mv2.png
-    - https://static.wixstatic.com/media/c3395c_98b5e9d590604379be35b6bccc184df7~mv2.png
-    - https://static.wixstatic.com/media/c3395c_24e958db7a314aa6bbeda227fedc7dba~mv2.png
-    - https://static.wixstatic.com/media/c3395c_af1bb856abdb4799b57b91c10441f475~mv2.png
-    - https://static.wixstatic.com/media/c3395c_58c4c13511f8452ea2a0b8dfe1659eea~mv2.jpg
   - kind: other
     url: https://okumusashimtb.wixsite.com/omcweb/post/4-20子ども自転車教室開催
     title: 4/20子ども自転車教室開催
     published: '2025-04-29'
-    body: 4月20日は名栗で子ども自転車教室を開催しました。集まった子どもは10名。自転車の点検や入念な準備運動を行ったのち、年齢や経験に合わせて3つのグループに分けました。最年少グループは、自転車の走行に慣れるべく、公園全体を楽しくツーリング。でこぼこ道の上を走る面白さを体感できたのではないでしょうか?ある程度の経験があるグループは、実際にパンプトラックを走行。OMC会員からの指導を受け、よりスムーズに走れるようになったことでしょう。何度も子ども自転車教室に参加しているベテラングループは、パンプトラックでペダルを漕がずに加速するコツを伝授。後半は、一本橋やランプを組み合わせたコースの攻略を楽しみました。子ども同士でコース設定を工夫し、ゲーム感覚で楽しめたようです。次回の子ども自転車教室は11月中旬を予定しています。開催をお楽しみに!
+    body: |-
+      4月20日は名栗で子ども自転車教室を開催しました。
+
+      集まった子どもは10名。自転車の点検や入念な準備運動を行ったのち、年齢や経験に合わせて3つのグループに分けました。
+
+      最年少グループは、自転車の走行に慣れるべく、公園全体を楽しくツーリング。でこぼこ道の上を走る面白さを体感できたのではないでしょうか？
+
+      ある程度の経験があるグループは、実際にパンプトラックを走行。OMC会員からの指導を受け、よりスムーズに走れるようになったことでしょう。
+
+      何度も子ども自転車教室に参加しているベテラングループは、パンプトラックでペダルを漕がずに加速するコツを伝授。後半は、一本橋やランプを組み合わせたコースの攻略を楽しみました。子ども同士でコース設定を工夫し、ゲーム感覚で楽しめたようです。
+
+      次回の子ども自転車教室は11月中旬を予定しています。開催をお楽しみに！
     images:
     - https://static.wixstatic.com/media/c3395c_04ee8a5f5b4248e5a23fdf32f53cfcb9~mv2.jpg
     - https://static.wixstatic.com/media/c3395c_038b419eb93648a9b43afb1369eabc32~mv2.jpg
@@ -36,3 +34,21 @@ source:
     - https://static.wixstatic.com/media/c3395c_070032af47b94d388d443b433a0580aa~mv2.jpg
     - https://static.wixstatic.com/media/c3395c_e4dd466f421f4c5b84886f4bb6500340~mv2.jpg
     - https://static.wixstatic.com/media/c3395c_83cc5a4fc7aa41bfa67a46bb9b35adad~mv2.jpg
+  - kind: announce
+    url: https://okumusashimtb.wixsite.com/omcweb/post/4-20子ども自転車教室のお知らせ
+    title: 4/20子ども自転車教室のお知らせ
+    published: '2025-04-06'
+    body: |-
+      4月20日は子ども自転車教室を開催します。コチラからご応募ください。一般的な質問はコチラをお読みください。
+
+      教室の開催を前に、4月6日に自転車広場の定期作業を行いました。会員9名で、土が流出してしまったコースを改修。新たに土を入れ、路面を整えました。
+
+      当日は良いコンディションで教室を行えるはずです。皆さんのご応募お待ちしています！
+    images:
+    - https://static.wixstatic.com/media/c3395c_6c2f5b80265841219bae2ada45821cb4~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_285ec76cde894bbca497b121c3ed74b2~mv2.png
+    - https://static.wixstatic.com/media/c3395c_7e2a8daf4dcf4d67ae9652637630035b~mv2.png
+    - https://static.wixstatic.com/media/c3395c_98b5e9d590604379be35b6bccc184df7~mv2.png
+    - https://static.wixstatic.com/media/c3395c_24e958db7a314aa6bbeda227fedc7dba~mv2.png
+    - https://static.wixstatic.com/media/c3395c_af1bb856abdb4799b57b91c10441f475~mv2.png
+    - https://static.wixstatic.com/media/c3395c_58c4c13511f8452ea2a0b8dfe1659eea~mv2.jpg

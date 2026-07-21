@@ -6,8 +6,22 @@ description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/11-19-里山
 source:
   type: omc-blog
   crawler: cal-omc-archive-fetch
-  fetched: '2026-06-22'
+  fetched: '2026-07-21'
   posts:
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/11月19日-里山整備活動のご案内
+    title: 11月19日 里山整備活動のご案内
+    published: '2023-11-13'
+    body: |-
+      飯能市道路美化活動団体として整備を行っている里山道の草刈りや周辺道路の清掃などを行います。 軍手などご持参の上、汚れても構わない服装でお集まりください。 持ち運び可能なノコギリ、スコップなど、ご自身で使用する道具があればお持ち込みください。 みなさまのご参加をお待ちしております。
+
+      ■集合日時：11月19日（日）8:30
+      ■集合場所：あいわ広場（お車の駐車が可能です）
+      あいわ広場に集合し、ミーティング後にMTBで作業箇所に向かいます。
+
+      【注意事項】 ●各自で水分補給やおやつの準備をお願いします。
+
+      ●前日午後5時の気象庁発表による埼玉県南部の天気予報で、当日6時～12時の降水確率 が50％以上だった場合は作業を中止といたします。
   - kind: report
     url: https://okumusashimtb.wixsite.com/omcweb/post/11-19-里山道整備の報告
     title: 11/19 里山道整備の報告
@@ -17,10 +31,3 @@ source:
     - https://static.wixstatic.com/media/c3395c_20990960e7294c608f3e48a804ae9149~mv2.jpg
     - https://static.wixstatic.com/media/c3395c_3e7ffe1a59d74dd4a5a97283d52f0062~mv2.jpg
     - https://static.wixstatic.com/media/c3395c_9c37df949ad942198960f23090d521f7~mv2.jpg
-  - kind: other
-    url: https://okumusashimtb.wixsite.com/omcweb/post/11月19日-里山整備活動のご案内
-    title: 11月19日 里山整備活動のご案内
-    published: '2023-11-13'
-    body: 飯能市道路美化活動団体として整備を行っている里山道の草刈りや周辺道路の清掃などを行います。 軍手などご持参の上、汚れても構わない服装でお集まりください。
-      持ち運び可能なノコギリ、スコップなど、ご自身で使用する道具があればお持ち込みください。 みなさまのご参加をお待ちしております。■集合日時:11月19日(日)8:30■集合場所:あいわ広場(お車の駐車が可能です)あいわ広場に集合し、ミーティング後にMTBで作業箇所に向かいます。【注意事項】
-      ●各自で水分補給やおやつの準備をお願いします。●前日午後5時の気象庁発表による埼玉県南部の天気予報で、当日6時~12時の降水確率 が50%以上だった場合は作業を中止といたします。

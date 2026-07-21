@@ -6,14 +6,14 @@ description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/2019/04/16/4
 source:
   type: omc-blog
   crawler: cal-omc-archive-fetch
-  fetched: '2026-06-22'
+  fetched: '2026-07-21'
   posts:
   - kind: other
     url: https://okumusashimtb.wixsite.com/omcweb/post/2019/04/16/4月14日に開催されたじてんしゃ教室
     title: 4月14日に開催されたじてんしゃ教室
     published: '2019-04-16'
-    body: |2-
-                                 ここ数日の寒さの戻りで、桜は散らずに持ちこたえ、名栗ふれあい公園じてんしゃ広場の周囲をピンク色に染めていました。
+    body: |-
+      ここ数日の寒さの戻りで、桜は散らずに持ちこたえ、名栗ふれあい公園じてんしゃ広場の周囲をピンク色に染めていました。
 
       この日集まったのは、13名の子ども達。何度転んでもめげずに立ち上がり、大人達のアドバイスに真剣に耳を傾け、そして何より、コースを楽しそうにグルグル回っていました。自転車で凸凹道を走る楽しさが伝われば幸いです。
 

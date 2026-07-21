@@ -2,12 +2,21 @@ summary: 名栗じてんしゃ広場定期整備
 date: '2019-08-04'
 all_day: true
 category: 定期作業
-description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/2019/07/23/8月4日名栗じてんしゃ広場定期整備のお知らせ'
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/2019/08/03/8月4日名栗定例整備中止のお知らせ'
 source:
   type: omc-blog
   crawler: cal-omc-archive-fetch
-  fetched: '2026-06-22'
+  fetched: '2026-07-21'
   posts:
+  - kind: announce
+    url: https://okumusashimtb.wixsite.com/omcweb/post/2019/08/03/8月4日名栗定例整備中止のお知らせ
+    title: 8月4日名栗定例整備中止のお知らせ
+    published: '2019-08-03'
+    body: |-
+      いつも奥武蔵マウンテンバイク友の会の活動に参加してくださってありがとうございます！
+      明日の名栗定例整備は飯能の予報が35度以上なので中止とさせて頂きます。
+      ご予定を入れて頂いた方申し訳ございません。
+      次回の参加よろしくお願いします！
   - kind: announce
     url: https://okumusashimtb.wixsite.com/omcweb/post/2019/07/23/8月4日名栗じてんしゃ広場定期整備のお知らせ
     title: 8月4日名栗じてんしゃ広場定期整備のお知らせ
@@ -28,12 +37,3 @@ source:
 
       日時   8月4日   9時より
       場所    名栗じてんしゃ広場
-  - kind: announce
-    url: https://okumusashimtb.wixsite.com/omcweb/post/2019/08/03/8月4日名栗定例整備中止のお知らせ
-    title: 8月4日名栗定例整備中止のお知らせ
-    published: '2019-08-03'
-    body: |2-
-       いつも奥武蔵マウンテンバイク友の会の活動に参加してくださってありがとうございます!
-      明日の名栗定例整備は飯能の予報が35度以上なので中止とさせて頂きます。
-      ご予定を入れて頂いた方申し訳ございません。
-      次回の参加よろしくお願いします!

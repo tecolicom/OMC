@@ -6,7 +6,7 @@ description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/8-21-土-里
 source:
   type: omc-blog
   crawler: cal-omc-archive-fetch
-  fetched: '2026-06-22'
+  fetched: '2026-07-21'
   posts:
   - kind: announce
     url: https://okumusashimtb.wixsite.com/omcweb/post/8-21-土-里山整備作業中止のお知らせ
@@ -14,4 +14,6 @@ source:
     published: '2021-08-16'
     body: |-
       8/21(土)に予定していた里山整備活動ですが、埼玉県全域に緊急事態宣言が発令中であるため中止とさせていただきます。
-      皆様におかれましてもコロナ対策万全にお過ごしいただき、宣言が解除された後にはまたご協力いただけたらと思います。よろしくお願いします。
+      皆様におかれましてもコロナ対策万全にお過ごしいただき、宣言が解除された後にはまたご協力いただけたらと思います。
+
+      よろしくお願いします。

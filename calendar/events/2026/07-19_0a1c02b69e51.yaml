@@ -1,0 +1,62 @@
+summary: 里山整備活動
+date: '2026-07-19'
+all_day: true
+category: 里山整備
+description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/7-19里山整備活動の報告'
+source:
+  type: omc-blog
+  crawler: cal-omc-archive-fetch
+  fetched: '2026-07-21'
+  posts:
+  - kind: announce
+    url: https://okumusashimtb.wixsite.com/omcweb/post/7-19里山整備活動のお知らせ
+    title: 7/19里山整備活動のお知らせ
+    published: '2026-07-05'
+    body: |-
+      飯能市道路美化活動団体として整備を行っている里山で整備活動を行います。
+      軍手などご持参の上、汚れても構わない服装でお集まりください。
+      持ち運び可能なノコギリなど、ご自身で使用する道具があればお持ち込みください。
+      みなさまのご参加をお待ちしております。
+
+      ■集合日時：7月19日（日）8:30
+
+      ■集合場所：あいわ広場（お車の駐車が可能です）
+      あいわ広場に集合し、ミーティング後にMTBで作業箇所に向かいます。
+
+      【注意事項】
+      ●各自で水分補給やおやつの準備をお願いします。
+      ●前日17時の気象庁発表による埼玉県南部の天気予報で、当日6時～12時の降水確率が50％以上の場合は作業を中止といたします。
+    images:
+    - https://static.wixstatic.com/media/c3395c_5e644f5d2d99428d86bb61c59d93f904.jpg
+    - https://static.wixstatic.com/media/c3395c_58a6ea367ffd42b98475ed2951dcfbe0.jpg
+  - kind: report
+    url: https://okumusashimtb.wixsite.com/omcweb/post/7-19里山整備活動の報告
+    title: 7/19里山整備活動の報告
+    published: '2026-07-20'
+    images:
+    - https://static.wixstatic.com/media/c3395c_5e644f5d2d99428d86bb61c59d93f904.jpg
+    - https://static.wixstatic.com/media/c3395c_58a6ea367ffd42b98475ed2951dcfbe0.jpg
+    - https://static.wixstatic.com/media/c3395c_366b57f1147446499dd83a551cd30717~mv2.jpeg
+    - https://static.wixstatic.com/media/c3395c_8025961049634774b77a3e317982110d~mv2.jpeg
+    - https://static.wixstatic.com/media/c3395c_849fd324925645c0adb553436bf9edc8~mv2.jpeg
+    - https://static.wixstatic.com/media/c3395c_ea4fe7587d314ef19bcd4a16ff8a6a31~mv2.jpeg
+    - https://static.wixstatic.com/media/c3395c_75c62e36bc414b0c816fe31b3a1a65fb~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_4c25a50e6b6649c2bd6fa0cd7ef67d65~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_97870cb20e474d1387b938a7daa87a41~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_5ac30452c9a74a78a7a1d965f06f0d7e~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_4b934c4d0c3f4ef0bb2fc67cafa25ea2~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_aeb115ee24e249f09337b195541b040e~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_021b6c86ef194ad08dd914fe2ba9ac67~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_2de3c454706c490a9d440190aec4f385~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_f0372b7161c94f3294657fb711ecb387~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_8cb0f655ce494bc080b1cbe10c2ee4db~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_0d43c70b87c4489c9b7bacd77b2f0b17~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_2f4dbd50ccda4a8eb600c1dd820359e2~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_674629021f4f442884fb548b32ca7444~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_7b02517838e642eaba0c5cedc150b422~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_cd3d6738e06745b5944e1956fe0f3d8e~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_c6379588ea714437a0194930e5690bf5~mv2.jpeg
+    - https://static.wixstatic.com/media/c3395c_1c9df6cf29ed48b3b27995160866b033~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_809ff5087da14869a107db4d6ef4767b~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_d69f161962844505836652440fbffd6d~mv2.jpg
+    - https://static.wixstatic.com/media/c3395c_c95e72873e7c483c9176585277b72aa7~mv2.jpg

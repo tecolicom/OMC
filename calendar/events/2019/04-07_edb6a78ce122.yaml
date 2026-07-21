@@ -6,8 +6,23 @@ description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/2019/04/08/4
 source:
   type: omc-blog
   crawler: cal-omc-archive-fetch
-  fetched: '2026-06-22'
+  fetched: '2026-07-21'
   posts:
+  - kind: other
+    url: https://okumusashimtb.wixsite.com/omcweb/post/2019/03/26/4月7日名栗じてんしゃ広場定例整備
+    title: 4月7日名栗じてんしゃ広場定例整備
+    published: '2019-03-26'
+    body: |-
+      こちら翔んで埼玉でも各地で桜の便りが聞こえる今日この頃、会員の皆さんいかがお過ごしでしょうか。
+      偶数月第1日曜日は名栗じてんしゃ広場の定例整備です。
+      翌週にじてんしゃ広場にてキッズスクールを開催しますので、子供達に安全に乗って貰える様整備したいと思います。
+      いつもの様に2時間整備して後はライド楽しみたいと思います。
+      会員の皆さんのお力添え宜しくお願いします。
+
+      日時      4月7日(日曜日)9時より
+      場所      名栗じてんしゃ広場
+
+      土曜日の午後5時の予報で降水確率50%以上の場合は中止とさせて頂きます。
   - kind: report
     url: https://okumusashimtb.wixsite.com/omcweb/post/2019/04/08/4月7日定例整備報告
     title: 4月7日定例整備報告
@@ -21,18 +36,3 @@ source:
     - https://static.wixstatic.com/media/c3395c_e742d63a41c04f22b01b0ff605fdb4af~mv2_d_4032_3024_s_4_2.jpg
     - https://static.wixstatic.com/media/c3395c_7f1eea5d8e124afdad18b46f8fc10098~mv2_d_4032_3024_s_4_2.jpg
     - https://static.wixstatic.com/media/c3395c_5e162fad951b4d0684e90b3cf9372bd4~mv2_d_4032_3024_s_4_2.jpg
-  - kind: other
-    url: https://okumusashimtb.wixsite.com/omcweb/post/2019/03/26/4月7日名栗じてんしゃ広場定例整備
-    title: 4月7日名栗じてんしゃ広場定例整備
-    published: '2019-03-26'
-    body: |2-
-       こちら翔んで埼玉でも各地で桜の便りが聞こえる今日この頃、会員の皆さんいかがお過ごしでしょうか。
-      偶数月第1日曜日は名栗じてんしゃ広場の定例整備です。
-      翌週にじてんしゃ広場にてキッズスクールを開催しますので、子供達に安全に乗って貰える様整備したいと思います。
-      いつもの様に2時間整備して後はライド楽しみたいと思います。
-      会員の皆さんのお力添え宜しくお願いします。
-
-      日時      4月7日(日曜日)9時より
-      場所      名栗じてんしゃ広場
-
-      土曜日の午後5時の予報で降水確率50%以上の場合は中止とさせて頂きます。

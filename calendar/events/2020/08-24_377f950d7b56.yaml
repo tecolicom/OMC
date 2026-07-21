@@ -6,7 +6,7 @@ description: '出典: https://okumusashimtb.wixsite.com/omcweb/post/８月２４
 source:
   type: omc-blog
   crawler: cal-omc-archive-fetch
-  fetched: '2026-06-22'
+  fetched: '2026-07-21'
   posts:
   - kind: report
     url: https://okumusashimtb.wixsite.com/omcweb/post/８月２４日-第７回総会実施報告
